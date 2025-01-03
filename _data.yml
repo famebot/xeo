@@ -1,0 +1,17 @@
+lang: en
+
+home:
+  title: '<a href="https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xeo&op=translate">Lume e Xeo</a> 🔥🧊'
+  intro: "Welcome to **Xeo**, a deluxe variant of [**Lume Simple Blog**](https://lume.land/theme/simple-blog/)"
+
+menu_links: []
+extra_head: []
+
+# Metas plugin https://lume.land/plugins/metas/#description
+metas:
+  site: Xeo (demo)
+  description: Lume Simple Blog variant
+  title: "=title"
+  image: "=image"
+  twitter: "@username"
+  lang: en

@@ -1,0 +1,37 @@
+.postList {
+  list-style: none;
+  padding: 0;
+
+  & article.post + article.post {
+    margin-top: var(--row-gap-small);
+  }
+  & li.post + li.post {
+    margin-top: var(--row-gap-small);
+  }
+
+  & .post {
+    margin-bottom: 1.5rem;
+  }
+
+  & .post:last-of-type {
+    margin-bottom: 0;
+  }
+
+  & .post-header {
+    margin-bottom: var(--row-gap-xsmall);
+  }
+
+  & .post-details {
+    font: var(--font-small);
+  }
+
+  & .post-title {
+    font: var(--font-title);
+    letter-spacing: var(--font-title-spacing);
+    display: block;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+}
