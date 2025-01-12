@@ -14,10 +14,93 @@
 @import "css/post-list.css";
 @import "css/post.css";
 
-/* Make the links black */
 :root {
-  --color-link: var(--color-base);
-  --color-link-hover: var(--color-dim);
+  /* HSL hues, 1-359 */
+  --h: 172; /* hue */
+  --c: 351; /* complement */
+  --a: 38; /* analogous (to complement) */
+
+  /* color mixing values */
+  --s: 94%; /* 80-100, saturation */
+  --xl: 92%; /* 84-92, xlight */
+  --lr: 83%; /* 76-84, lighter */
+  --l: 65%; /* 64-72, lightness */
+  --m: 54%; /* 48-64, midrange */
+  --lm: 36%; /* 28-36, lowmid */
+  --d: 20%; /* 16-24, darkness */
+  --dr: 9%; /* 0-12, darker */
+
+  /* mixed colors */
+  --color-base: hsl(var(--a), var(--d), var(--dr));
+  --color-text: hsl(var(--a), var(--d), var(--d));
+  --color-dim: hsl(var(--a), var(--d), var(--lm));
+
+  --color-line: hsl(var(--a), var(--d), var(--lr));
+  --color-highlight: hsl(var(--a), var(--d), var(--xl));
+
+  --color-background: hsl(
+    var(--a),
+    var(--d),
+    100%
+  ); /* = #fff, white, browser default */
+
+  --color-primary: hsl(var(--h), var(--m), var(--d));
+  --color-primary-highlight: hsl(var(--h), var(--m), var(--m));
+
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-primary-highlight);
+
+  --code-text: var(--color-base);
+  --code-comment: #708090;
+  --code-token-1: #aa0909;
+  --code-token-2: #909;
+  --code-token-3: #06c;
+  --code-token-4: #00802b;
+  --code-inserted: #639108;
+  --code-deleted: #910853;
+  --code-border: var(--color-line);
+  --code-background: var(--color-highlight);
+  --code-background-selection: #b3d4fc;
+
+  /* -apple-system irrelevant now https://caniuse.com/font-family-system-ui */
+  --font-family-ui: system-ui,sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-family-ui: InterVariable,system-ui,sans-serif;
+  }
+}
+
+[data-theme="dark"] {
+  --color-base: hsl(var(--a), var(--l), var(--xl));
+  --color-text: hsl(var(--a), var(--l), var(--lr));
+  --color-dim: hsl(var(--a), var(--l), var(--l));
+
+  --color-line: hsl(var(--a), var(--l), var(--d));
+  --color-highlight: hsl(var(--a), var(--l), var(--dr));
+
+  --color-background: hsl(
+    var(--a),
+    var(--l),
+    0%
+  ); /* = #000, black, energy saving on OLED */
+
+  --color-primary: hsl(var(--h), var(--s), var(--lr));
+  --color-primary-highlight: hsl(var(--h), var(--s), var(--m));
+
+  --code-text: var(--color-base);
+  --code-comment: grey;
+  --code-token-1: #f66;
+  --code-token-2: #d65cd6;
+  --code-token-3: #75b3f0;
+  --code-token-4: #52e081;
+  --code-inserted: #8c9966;
+  --code-deleted: #d16a47;
+  --code-border: var(--color-line);
+  --code-background: var(--color-highlight);
+  --code-background-selection: hsla(0, 0%, 93%, 0.15);
+  color-scheme: dark;
 }
 
 /* Page layout */
@@ -36,6 +119,10 @@ main {
   margin-top: var(--row-gap-xsmall);
 }
 
+footer {
+  margin-bottom: var(--row-gap-small);
+}
+
 .html-only {
   display: none;
 }
@@ -43,4 +130,21 @@ main {
 .center {
   padding-inline: min(5vw, 5rem);
   text-align: center;
+}
+
+/*
+prevent --color-text override in _includes/css/ds.css 0.5.2 L604
+https://github.com/lumeland/ds/blob/v0.5.2/src/reset.css#L78
+*/
+b, h1, h2, h3, h4, h5, h6, strong {
+  color: currentColor;
+}
+/*
+prevent --color-base override in _includes/css/ds.css 0.5.2 L656
+https://github.com/lumeland/ds/blob/v0.5.2/src/components/body.css#L34
+*/
+.body {
+  :not(pre) > code, b, h1, h2, strong {
+    color: currentColor;
+  }
 }

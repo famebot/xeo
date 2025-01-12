@@ -7,8 +7,8 @@
     <title>{{ it.title || metas.title }} - {{ metas.site }}</title>
 
     <meta name="supported-color-schemes" content="light dark">
-    <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="hsl(38, 20%, 100%)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="hsl(38, 65%, 0%)" media="(prefers-color-scheme: dark)">
     
     <link rel="stylesheet" href="/styles.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metas.site }}">
@@ -64,6 +64,8 @@
 
     {{ content }}
 
+    <footer class="center">{{ i18n.copyright |> md }}</footer>
+    
     <!-- Current page: {{ url }} -->
   </body>
 </html>

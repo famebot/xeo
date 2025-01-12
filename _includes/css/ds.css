@@ -1,12 +1,14 @@
-@import "css/inter/inter.css";
+@import "css/inter.css";
 /* 
  * Inter version 4.1
+ * Local to support offline dev, with paths updated by Ricky
  * https://rsms.me/inter/
  * https://rsms.me/inter/inter.css
  */
 
 /* 
  * Lume Design System 0.5.2
+ * Local to support offline dev
  * https://github.com/lumeland/ds
  * https://unpkg.com/@lumeland/ds@0.5.2/ds.css
  */

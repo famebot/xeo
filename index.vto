@@ -6,7 +6,7 @@ title: Home
 
 <header class="page-header center">
   <h1 class="page-title">{{ home.title }}</h1>
-  <div class="page-subtitle">{{ home.intro |> md }}</div>
+  <div class="page-subtitle">{{ i18n.intro |> md }}</div>
 </header>
 
 <main class="{{ it.bodyClass }}">
@@ -42,6 +42,6 @@ title: Home
 
   <hr>
 
-  <p>{{ i18n.nav.archive }}</p>
+  <p>{{ i18n.nav.archive |> md }}</p>
   <div class="search" id="search"></div>
 </main>

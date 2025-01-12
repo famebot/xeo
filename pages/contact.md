@@ -6,4 +6,5 @@ menu:
   order: 2
 ---
 
-Aloha 🌺
+[Aloha](https://translate.google.com/details?sl=auto&tl=en&text=Aloha&op=translate)
+🌺
