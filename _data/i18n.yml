@@ -4,7 +4,7 @@ nav:
   previous_post: ← Older post
   continue_reading: Continue reading →
   archive_title: Archive
-  archive: More posts can be found in [the&nbsp;archive](/archive/).
+  archive: 'More posts can be found in [the&nbsp;archive](/archive/).'
   back: ← Back
   page: Page
   next: Next →
@@ -16,5 +16,5 @@ search:
   by_author: Posts by
   by_tag: Tagged
   tags: Tags
-intro: Welcome to **Xeo**, a *deluxe* variant of [**Lume&nbsp;Simple&nbsp;Blog**](https://lume.land/theme/simple-blog/)
-copyright: Xeo &copy; 2024-2025 [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/), [Óscar&nbsp;Otero](https://oscarotero.com/), &amp; *fellow*&nbsp;contributors.
+intro: 'Welcome to [**Xeo**](https://github.com/famebot/xeo), a *deluxe* variant of [**Lume&nbsp;Simple&nbsp;Blog**](https://lume.land/theme/simple-blog/)'
+copyright: '[Xeo](https://github.com/famebot/xeo) &copy; 2022-2025 [Óscar&nbsp;Otero](https://oscarotero.com/) &amp; [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/)'

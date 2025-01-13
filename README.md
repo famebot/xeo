@@ -1,13 +1,28 @@
 # Benvido ao [Lume e Xeo](https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xeo&op=translate) 🔥🧊<br>Welcome to [Lume](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate) 🔥 + [Xeo](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate) 🧊
 
-Welcome to **Xeo**, a deluxe variant of
-[**Lume Simple Blog**](https://lume.land/theme/simple-blog/)
+Welcome to [**Xeo**](https://xeo.land), a _deluxe_ variant of
+[**Lume&nbsp;Simple&nbsp;Blog**](https://lume.land/theme/simple-blog/).
 
-## Quick Start
+Contributions welcome: [famebot/xeo on GitHub](https://github.com/famebot/xeo)
 
-`deno task serve` to start a local server
+&copy; 2022-2025 [Óscar&nbsp;Otero](https://oscarotero.com/) &amp;
+[Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/); [MIT License](./LICENSE.md)
 
-`deno task cms` to start the CMS
+## Quick Start 🎬
+
+- `deno task serve` to start a local server
+
+- [`deno task d`](./deno.json) also runs `deno task lume -s`, if you are into
+  the whole brevity thing
+
+- `deno task lup` upgrades Lume via `deno task lume upgrade`
+
+- `deno task up` upgrades dependencies with
+  [`nudd`](https://github.com/oscarotero/nudd)
+
+- `deno task cms` to start the CMS
+
+## Explore Lume 🔥
 
 - Browse [Lume documentation](https://lume.land)
 
