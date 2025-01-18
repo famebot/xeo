@@ -66,11 +66,11 @@
   --font-family-ui: system-ui,sans-serif;
 }
 
-@supports (font-variation-settings: normal) {
+/* @supports (font-variation-settings: normal) {
   :root {
     --font-family-ui: InterVariable,system-ui,sans-serif;
   }
-}
+} */
 
 [data-theme="dark"] {
   --color-base: hsl(var(--a), var(--l), var(--xl));

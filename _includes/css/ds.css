@@ -1,14 +1,6 @@
-@import "css/inter.css";
-/* 
- * Inter version 4.1
- * Local to support offline dev, with paths updated by Ricky
- * https://rsms.me/inter/
- * https://rsms.me/inter/inter.css
- */
-
 /* 
  * Lume Design System 0.5.2
- * Local to support offline dev
+ * Local to support offline dev, removed Inter
  * https://github.com/lumeland/ds
  * https://unpkg.com/@lumeland/ds@0.5.2/ds.css
  */
@@ -536,8 +528,8 @@ button[role="switch"][aria-checked="true"]:before {
 }
 @supports (font-variation-settings: normal) {
   :root {
-    --font-family-display: InterDisplay,var(--font-family-ui);
-    --font-family-ui: InterVariable,-apple-system,system-ui,sans-serif;
+    --font-family-display: var(--font-family-ui); /* InterDisplay, */
+    --font-family-ui: -apple-system,system-ui,sans-serif; /* InterVariable, */
     --font-display-spacing: -0.03em;
     --font-title-spacing: -0.015em;
     --font-body-spacing: -0.01em;
