@@ -28,6 +28,7 @@
     "jsr:@std/html@^1.0.3": "1.0.3",
     "jsr:@std/http@1.0.12": "1.0.12",
     "jsr:@std/io@0.225": "0.225.0",
+    "jsr:@std/json@1": "1.0.1",
     "jsr:@std/jsonc@1.0.1": "1.0.1",
     "jsr:@std/log@0.224.11": "0.224.11",
     "jsr:@std/log@0.224.12": "0.224.12",
@@ -44,6 +45,7 @@
     "jsr:@std/yaml@^1.0.5": "1.0.5",
     "npm:@js-temporal/polyfill@0.4.4": "0.4.4",
     "npm:@mdit/plugin-alert@0.14.0": "0.14.0_markdown-it@14.1.0",
+    "npm:@types/estree@1.0.6": "1.0.6",
     "npm:autoprefixer@10.4.20": "10.4.20_postcss@8.4.49",
     "npm:date-fns@4.1.0": "4.1.0",
     "npm:estree-walker@3.0.3": "3.0.3",
@@ -143,8 +145,14 @@
     "@std/io@0.225.0": {
       "integrity": "c1db7c5e5a231629b32d64b9a53139445b2ca640d828c26bf23e1c55f8c079b3"
     },
+    "@std/json@1.0.1": {
+      "integrity": "1f0f70737e8827f9acca086282e903677bc1bb0c8ffcd1f21bca60039563049f"
+    },
     "@std/jsonc@1.0.1": {
-      "integrity": "6b36956e2a7cbb08ca5ad7fbec72e661e6217c202f348496ea88747636710dda"
+      "integrity": "6b36956e2a7cbb08ca5ad7fbec72e661e6217c202f348496ea88747636710dda",
+      "dependencies": [
+        "jsr:@std/json"
+      ]
     },
     "@std/log@0.224.11": {
       "integrity": "df5e5a6d6ab8bcea016a17982cd2435f65234d6618bf631925587c0b2eae2a4e",
@@ -1046,6 +1054,7 @@
     "https://deno.land/x/lume@v2.5.0/core/fs.ts": "0409ca756906a066300e8bdbad590a122aeffa4fa4192cd20b854c6f555bf00d",
     "https://deno.land/x/lume@v2.5.0/core/loaders/binary.ts": "bb1e1cf3faac49f6007dc6814168dc0f633da17356db18e68862e4b2a87a3f33",
     "https://deno.land/x/lume@v2.5.0/core/loaders/json.ts": "632e840340edf7d79091fb37474a1cbf86dd2d218090fb6f6c0420f5f5e9c2ce",
+    "https://deno.land/x/lume@v2.5.0/core/loaders/mod.ts": "f33af1a2fa0913cf393cd9ef6bf5aea2d03d1058e8966ad7f1483efbcc7df118",
     "https://deno.land/x/lume@v2.5.0/core/loaders/module.ts": "abcb210fa6724b83407407cd0f7ef90462b35a2017bc135a3d124dd7f38843f6",
     "https://deno.land/x/lume@v2.5.0/core/loaders/text.ts": "42860fc3482651fa6cfba18a734bb548d6e6e1163bf1015c2abc447ab150acbd",
     "https://deno.land/x/lume@v2.5.0/core/loaders/toml.ts": "72ddfef2deea62815c28e27faa2c5356e09b3109e9547e47a6defea3d3332452",
@@ -1119,6 +1128,7 @@
     "https://deno.land/x/lume@v2.5.0/plugins/base_path.ts": "ddaffaac8166137244c79cf72b1cd77a074160e52ec59ad49c06cfee4aef7f64",
     "https://deno.land/x/lume@v2.5.0/plugins/date.ts": "d92823f67326e4f5d73d8cda2e357d36c07a30f4824d95b9402ae4202b336e0c",
     "https://deno.land/x/lume@v2.5.0/plugins/feed.ts": "1cf98f3d8723e396d7f36e918e9de77611bf4e409b30e0a17aa24d410d92e9de",
+    "https://deno.land/x/lume@v2.5.0/plugins/google_fonts.ts": "8efc57a1c7d58a1751118b3b87b7dab8178323948298df1670c1e753759aae79",
     "https://deno.land/x/lume@v2.5.0/plugins/json.ts": "67e5e2e00f8e8640f33c1f97a2bf82a7c97a67a838804637b87b16b72f9042e1",
     "https://deno.land/x/lume@v2.5.0/plugins/markdown.ts": "c7027605edee274762edb20f7040ccba6415c5fe656cc6e25ce91c448f467fd8",
     "https://deno.land/x/lume@v2.5.0/plugins/metas.ts": "f15088136492bf6ffe869afd029467cd5a46099a273571b1e74beda2553708d7",
@@ -1187,6 +1197,7 @@
     "https://deno.land/x/lume_markdown_plugins@v0.8.0/utils.ts": "6e6c3c394709eff39080562732c2dafe404f225253aaded937133ea694c4b735",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.10/mod.ts": "18cc116c75ad85dc3e86407487f5555ac8b051b26ba90dd7f78cc5f724d6cff2",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.10/plugins.ts": "30bb1262d867b41b3f25bf9b036703f7646cfd0a16ee75623aabaf771520c3df",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1736540729773": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1736637418405": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1736637611595": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
@@ -1216,6 +1227,29 @@
     "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1736812042204": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737006361071": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737227678409": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737238173638": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737239798897": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737239907946": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737239967480": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737240727573": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737241447187": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737241615888": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737241718506": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737241861136": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737242152210": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737264817342": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737306255003": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737309950007": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737309982536": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737309985687": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737311816122": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737315988534": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737319495921": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737319524046": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737319584934": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737319870291": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737320042468": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
+    "https://deno.land/x/lume_theme_simple_blog@v0.15.10/src/archive_result.page.js#1737326668102": "0b40382fb881a044a2fffa75927c979c4403c472a7ac390c81bd51907d3e28c7",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.8/_cms.ts": "2ec61f55969bd76c2183cc2268021107d8394d2c9754e61becb4fa14ddf89435",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.8/mod.ts": "18cc116c75ad85dc3e86407487f5555ac8b051b26ba90dd7f78cc5f724d6cff2",
     "https://deno.land/x/lume_theme_simple_blog@v0.15.8/plugins.ts": "a9748fff373bd694776d7bb1888023e25728bd61c7ffd34201d851f8756d5526",
@@ -1286,6 +1320,7 @@
     "https://deno.land/x/vento@v1.12.14/src/loader.ts": "c05add67f582e937ee611852075ce2cc038b5e80e3e609eef96fa5ed74a5086c",
     "https://deno.land/x/vento@v1.12.14/src/tokenizer.ts": "127ddad02054f63b8b646e4dfbf555e1e34e9b8dcbd58d86b3729a4de95abd27",
     "https://deno.land/x/vento@v1.12.14/src/transformer.ts": "1dd0fb9c2a14bc8384b2dc557ab1131b2f9728cdbe1c47ac35bc3bd3b0ba4d47",
+    "https://deno.land/x/xml@6.0.4/_types.ts": "a7435282a7a775d80f8528aeec49996192c47fef8a8f616a1b216792424dc125",
     "https://deno.land/x/xml@6.0.4/mod.ts": "b59e5c0dd9fe7ed597c21c39aacf089aa82fe5c5eaad3f411a43a9c104359f4e",
     "https://deno.land/x/xml@6.0.4/parse.ts": "1302c75d8fd40df39310bb8ae6716302f0b77c61c607437dc023d3d792a0df54",
     "https://deno.land/x/xml@6.0.4/stringify.ts": "0e2f79798d413c5386bf5de90bbe9901f99951ceae484050a8ef89e2b4da9dd0",

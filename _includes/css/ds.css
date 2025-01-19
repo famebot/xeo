@@ -43,7 +43,7 @@ code, kbd, pre, samp {
     ui-monospace,
     SFMono-Regular,
     Consolas,
-    Liberation Mono,
+    "Liberation Mono",
     Menlo,
     monospace;
   font-size: 1em;
@@ -252,7 +252,7 @@ input[type="range"] {
   background-color: transparent;
   color: currentColor;
   cursor: pointer;
-  display: block;
+  /* display: block; */
   height: 1.5em;
   margin: 0;
   vertical-align: middle;
@@ -466,7 +466,7 @@ button[role="switch"][aria-checked="true"]:before {
   --code-background: var(--color-highlight);
   --code-background-selection: #b3d4fc;
   --font-family-code:
-    Consolas,Menlo,Monaco,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace;
+    Monaco,ui-monospace,SFMono-Regular,Menlo,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace;
   --font-family-ui: -apple-system,system-ui,sans-serif;
   --font-family-display: var(--font-family-ui);
   --font-bold: 600;
@@ -476,7 +476,7 @@ button[role="switch"][aria-checked="true"]:before {
   );
   --font-display-spacing: -0.02em;
   --font-title: var(--font-bold) clamp(1.5rem, 8vw, 2rem)/1.2 var(
-    --font-family-ui
+    --font-family-display
   );
   --font-title-spacing: -0.015em;
   --font-body: clamp(1rem, 5vw, 1.125rem)/1.6 var(--font-family-ui);
@@ -528,11 +528,11 @@ button[role="switch"][aria-checked="true"]:before {
 }
 @supports (font-variation-settings: normal) {
   :root {
-    --font-family-display: var(--font-family-ui); /* InterDisplay, */
-    --font-family-ui: -apple-system,system-ui,sans-serif; /* InterVariable, */
-    --font-display-spacing: -0.03em;
-    --font-title-spacing: -0.015em;
-    --font-body-spacing: -0.01em;
+    --font-family-display: display, var(--font-family-ui);
+    --font-family-ui: text,system-ui,sans-serif;
+    --font-display-spacing: 0;
+    --font-title-spacing: 0.00625em;
+    --font-body-spacing: 0;
     font-feature-settings: "liga" 1, "calt" 1;
   }
 }

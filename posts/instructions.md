@@ -1,6 +1,6 @@
 ---
 title: How to install Xeo
-date: '2025-01-13T00:00:00.000Z'
+date: '2025-01-13T16:00:00.000Z'
 author: Ricky de Laveaga
 tags:
   - Instructions
@@ -13,9 +13,8 @@ draft: false
 [Ricky de Laveaga’s](https://rdela.com/) variant of
 [**Simple Blog**](https://lume.land/theme/simple-blog/) by
 [Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
-[Lume](https://lume.land/) with support for tags and authors. It allows you to
-build your own blog **in seconds**, and provides Atom and JSON feeds for your
-subscribers.
+[Lume](https://lume.land/) with support for tags and authors. Simple Blog and
+Xeo both provide Atom and JSON feeds for subscribers.
 
 <!--more-->
 
@@ -32,14 +31,19 @@ deno run -A https://lume.land/init.ts --theme=simple-blog
 will create a new project with Simple Blog configured.
 -->
 
-Edit the the [\_data.yml](https://github.com/famebot/xeo/blob/trunk/_data.yml)
-and [_data/i18n.yml](https://github.com/famebot/xeo/blob/trunk/_data/i18n.yml)
-files in your blog root folder with your data to customize the site title,
-description, and metadata.
+## Initialize your copy of Xeo
+
+Edit the [`_config.ts`](https://github.com/famebot/xeo/blob/trunk/_config.ts),
+[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) and
+[`_data/i18n.yml`](https://github.com/famebot/xeo/blob/trunk/_data/i18n.yml)
+files in your blog root folder with your data to customize the
+[`location`](https://lume.land/docs/configuration/config-file/#location) (aka
+domain, “the public URL of the site”), [fonts](/differences/#typography), site
+title, description, and metadata.
 
 Posts must be saved in the `posts` folder (for example,
-`posts/my-first-posts.md`). Unlike Simple Blog, Xeo serves them from the root
-directory setting
+`posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
+directory, by setting
 [`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/` in
 `posts/_data.yml`.
 
@@ -69,9 +73,10 @@ file to your blog root folder and edit it with your data.
 ## Use Xeo as a base template
 
 To use this theme as a base template for a more customized blog, clone
-[famebot/xeo on GitHub](https://github.com/famebot/xeo) and edit the
-[/\_data.yml](https://github.com/famebot/xeo/blob/trunk/_data.yml) and
-[_data/i18n.yml](https://github.com/famebot/xeo/blob/trunk/_data/i18n.yml)
+[famebot/xeo](https://github.com/famebot/xeo) on GitHub and edit the
+[`_config.ts`](https://github.com/famebot/xeo/blob/trunk/_config.ts),
+[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) and
+[`_data/i18n.yml`](https://github.com/famebot/xeo/blob/trunk/_data/i18n.yml)
 files.
 
 ## Customization
@@ -79,4 +84,4 @@ files.
 > [!tip]
 >
 > You can use [LumeCMS](https://lume.land/cms) to customize the blog and add
-> content easily
+> content easily.

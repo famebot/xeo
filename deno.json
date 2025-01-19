@@ -2,7 +2,7 @@
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.5.0/",
     "blog/": "https://deno.land/x/lume_theme_simple_blog@v0.15.10/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.8.3/"
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.9.0/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
@@ -16,6 +16,21 @@
   "compilerOptions": {
     "types": [
       "lume/types.ts"
+    ]
+  },
+  "lint": {
+    "exclude": [
+      "./_site"
+    ],
+    "rules": {
+      "tags": [
+        "recommended"
+      ]
+    }
+  },
+  "fmt": {
+    "exclude": [
+      "./_site"
     ]
   }
 }
