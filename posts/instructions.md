@@ -14,7 +14,7 @@ draft: false
 [**Simple Blog**](https://lume.land/theme/simple-blog/) by
 [Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
 [Lume](https://lume.land/) with support for tags and authors. Simple Blog and
-Xeo both provide Atom and JSON feeds for subscribers.
+Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
 
 <!--more-->
 
@@ -33,13 +33,13 @@ will create a new project with Simple Blog configured.
 
 ## Initialize your copy of Xeo
 
-Edit the [`_config.ts`](https://github.com/famebot/xeo/blob/trunk/_config.ts),
-[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) and
-[`_data/i18n.yml`](https://github.com/famebot/xeo/blob/trunk/_data/i18n.yml)
-files in your blog root folder with your data to customize the
+Edit the
+[`_config.json`](https://github.com/famebot/xeo/blob/trunk/_config.json) and
+[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) files in your
+blog root folder with your data to customize the
 [`location`](https://lume.land/docs/configuration/config-file/#location) (aka
 domain, “the public URL of the site”), [fonts](/differences/#typography), site
-title, description, and metadata.
+title, description, and&nbsp;metadata.
 
 Posts must be saved in the `posts` folder (for example,
 `posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
@@ -74,14 +74,12 @@ file to your blog root folder and edit it with your data.
 
 To use this theme as a base template for a more customized blog, clone
 [famebot/xeo](https://github.com/famebot/xeo) on GitHub and edit the
-[`_config.ts`](https://github.com/famebot/xeo/blob/trunk/_config.ts),
-[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) and
-[`_data/i18n.yml`](https://github.com/famebot/xeo/blob/trunk/_data/i18n.yml)
-files.
+[`_config.json`](https://github.com/famebot/xeo/blob/trunk/_config.json) and
+[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) files.
 
 ## Customization
 
 > [!tip]
 >
 > You can use [LumeCMS](https://lume.land/cms) to customize the blog and add
-> content easily.
+> content&nbsp;easily.

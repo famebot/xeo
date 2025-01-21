@@ -50,9 +50,20 @@ cms.document(
           name: "welcome",
           type: "text",
           label: "Title",
-          description: "Welcome message in the homepage",
+          description: "Homepage welcome message",
+        },
+        {
+          name: "intro",
+          type: "text",
+          label: "Introduction",
+          description: "Subtitle beneath the welcome message",
         },
       ],
+    },
+    {
+      name: "copyright",
+      type: "text",
+      description: "Footer message",
     },
     {
       name: "menu_links",
