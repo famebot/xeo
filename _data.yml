@@ -1,16 +1,12 @@
 lang: en
-
 home:
-  title: '<a href="https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xeo&op=translate">Lume e Xeo</a> 🔥🧊'
-
+  welcome: "\U0001F525 <a href=\"https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xeo&op=translate\">Lume e Xeo</a> \U0001F9CA"
 menu_links: []
-extra_head: []
-
-# Metas plugin https://lume.land/plugins/metas/#description
 metas:
   site: Xeo (demo)
   description: Lume Simple Blog variant
-  title: "=title"
-  image: "=image"
-  twitter: "@username"
+  title: =title
+  image: =image
+  # twitter: '@famebot'
   lang: en
+  generator: false

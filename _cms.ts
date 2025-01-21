@@ -23,6 +23,16 @@ const url: Field = {
   },
 };
 
+cms.document({
+  name: "Options: Set custom URLs for Google Fonts + site location/domain",
+  store: "src:_config.json",
+  fields: [
+    "location:url",
+    "gfonts_display:url",
+    "gfonts_text:url",
+  ],
+});
+
 cms.document(
   "settings: Global settings for the site",
   "src:_data.yml",
@@ -74,7 +84,7 @@ cms.document(
         "description: text",
         "title: text",
         "image: text",
-        "twitter: text",
+        // "twitter: text",
         "lang: text",
         "generator: checkbox",
       ],
