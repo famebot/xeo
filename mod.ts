@@ -21,6 +21,7 @@ export default function (options: Partial<Options> = {}) {
       "_includes/layouts/page.vto",
       "_includes/layouts/post.vto",
       "_includes/templates/post-details.vto",
+      "_includes/templates/post-list.vto",
       "posts/_data.yml",
       "_data.yml",
       "_data/i18n.yml",
