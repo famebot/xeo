@@ -15,6 +15,7 @@ export default function (options: Partial<Options> = {}) {
       "_includes/css/page.css",
       "_includes/css/post-list.css",
       "_includes/css/post.css",
+      "_includes/css/navbar.css",
       "_includes/layouts/archive_result.vto",
       "_includes/layouts/archive.vto",
       "_includes/layouts/base.vto",
