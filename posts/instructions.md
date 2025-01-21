@@ -47,7 +47,6 @@ directory, by setting
 [`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/` in
 `posts/_data.yml`.
 
-<!--
 ## Install as a remote theme
 
 To add the theme to an existing Lume project, import it in your `_config.ts`
@@ -56,19 +55,19 @@ URL:
 
 ```ts
 import lume from "lume/mod.ts";
-import blog from "https://deno.land/x/lume_theme_simple_blog@v0.15.6/mod.ts";
+import xeo from "https://deno.land/x/xeo@v1.0.1/mod.ts";
 
 const site = lume();
 
-site.use(blog());
+site.use(xeo());
 
 export default site;
 ```
 
 Copy the
-[`_data.yml`](https://github.com/lumeland/theme-simple-blog/blob/main/src/_data.yml)
-file to your blog root folder and edit it with your data.
--->
+[`_config.json`](https://github.com/famebot/xeo/blob/trunk/_config.json) and
+[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) files to your
+blog root folder and edit it with your data.
 
 ## Use Xeo as a base template
 
