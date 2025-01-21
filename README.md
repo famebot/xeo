@@ -1,4 +1,4 @@
-# Benvido ao [Lume e Xeo](https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xeo&op=translate) 🔥🧊<br>Welcome to [Lume](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate) 🔥 + [Xeo](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate) 🧊
+# Benvido ao [🔥 Lume e Xeo 🧊](https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xeo&op=translate)<br>Welcome to [🔥 Lume](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate) + [Xeo 🧊](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
 
 Welcome to **Xeo**, a _deluxe_ variant of
 [**Lume&nbsp;Simple&nbsp;Blog**](https://lume.land/theme/simple-blog/).
