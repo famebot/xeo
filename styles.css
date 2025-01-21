@@ -137,6 +137,10 @@ footer {
   margin-bottom: var(--row-gap-small);
 }
 
+.mbe-m {
+  margin-block-end: var(--row-gap-medium);
+}
+
 .html-only {
   display: none;
 }
