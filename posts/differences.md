@@ -68,7 +68,7 @@ Where do they diverge?
 
 ## Design
 
-- **Spacing:** Xeo adjusts various spacing around elements, particularly page
+- **Spacing:** Xeo adjusts spacing around various elements, particularly page
   headers and the [search box](/archive/), which is relocated to the bottom of
   pages to reduce layout shift when search results&nbsp;appear.
 
