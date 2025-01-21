@@ -1,12 +1,8 @@
-@import "css/ds.css";
 /* 
  * Lume Design System 0.5.2
  * https://github.com/lumeland/ds
- * https://unpkg.com/@lumeland/ds@0.5.2/ds.css
  */
-
-/* Lume's design system */
-/* @import "https://unpkg.com/@lumeland/ds@0.5.2/ds.css"; */
+@import "css/ds.css";
 
 /* Custom components */
 @import "css/navbar.css";
@@ -15,6 +11,10 @@
 @import "css/post.css";
 
 /* google-fonts */
+
+@view-transition {
+  navigation: auto;
+}
 
 :root {
   /* HSL hues, 1-359 */
