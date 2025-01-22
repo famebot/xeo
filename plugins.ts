@@ -1,28 +1,16 @@
-import date, { Options as DateOptions } from "lume/plugins/date.ts";
-import postcss from "lume/plugins/postcss.ts";
-import terser from "lume/plugins/terser.ts";
-import prism, { Options as PrismOptions } from "lume/plugins/prism.ts";
-import basePath from "lume/plugins/base_path.ts";
-import slugifyUrls from "lume/plugins/slugify_urls.ts";
-import resolveUrls from "lume/plugins/resolve_urls.ts";
-import metas from "lume/plugins/metas.ts";
-import pagefind, { Options as PagefindOptions } from "lume/plugins/pagefind.ts";
-import sitemap from "lume/plugins/sitemap.ts";
-import feed, { Options as FeedOptions } from "lume/plugins/feed.ts";
-import readingInfo from "lume/plugins/reading_info.ts";
+import baseBlog from "https://deno.land/x/lume_theme_simple_blog@v0.15.10/mod.ts";
+import googleFonts from "lume/plugins/google_fonts.ts";
 import { merge } from "lume/core/utils/object.ts";
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.8.0/toc.ts";
-import image from "https://deno.land/x/lume_markdown_plugins@v0.8.0/image.ts";
-import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.8.0/footnotes.ts";
-import { alert } from "npm:@mdit/plugin-alert@0.14.0";
+
+import type { Options as BaseBlogOptions } from "https://deno.land/x/lume_theme_simple_blog@v0.15.10/mod.ts";
 
 import "lume/types.ts";
 
-export interface Options {
-  prism?: Partial<PrismOptions>;
-  date?: Partial<DateOptions>;
-  pagefind?: Partial<PagefindOptions>;
-  feed?: Partial<FeedOptions>;
+export interface Options extends BaseBlogOptions {
+  fonts?: {
+    display?: string;
+    text?: string;
+  };
 }
 
 export const defaults: Options = {
@@ -37,6 +25,11 @@ export const defaults: Options = {
       title: "=title",
     },
   },
+  fonts: {
+    display: "https://fonts.google.com/share?selection.family=Bebas+Neue",
+    text:
+      "https://fonts.google.com/share?selection.family=Lexend:wght@100..900",
+  },
 };
 
 /** Configure the site */
@@ -44,35 +37,11 @@ export default function (userOptions?: Options) {
   const options = merge(defaults, userOptions);
 
   return (site: Lume.Site) => {
-    site.use(postcss())
-      .use(basePath())
-      .use(toc())
-      .use(prism(options.prism))
-      .use(readingInfo())
-      .use(date(options.date))
-      .use(metas())
-      .use(image())
-      .use(footnotes())
-      .use(resolveUrls())
-      .use(slugifyUrls())
-      .use(terser())
-      .use(pagefind(options.pagefind))
-      .use(sitemap())
-      .use(feed(options.feed))
-      .copy("fonts")
-      .copy("js")
-      .copy("favicon.png")
-      .copy("uploads")
-      .mergeKey("extra_head", "stringArray")
-      .preprocess([".md"], (pages) => {
-        for (const page of pages) {
-          page.data.excerpt ??= (page.data.content as string).split(
-            /<!--\s*more\s*-->/i,
-          )[0];
-        }
-      });
-
-    // Alert plugin
-    site.hooks.addMarkdownItPlugin(alert);
+    site.use(baseBlog(options))
+      .use(googleFonts({
+        cssFile: "styles.css",
+        placeholder: "/* google-fonts */",
+        fonts: options.fonts,
+      }));
   };
 }

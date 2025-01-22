@@ -1,20 +1,8 @@
 import lume from "lume/mod.ts";
-import blog from "blog/mod.ts";
-import googleFonts from "lume/plugins/google_fonts.ts";
-import config from "./_config.json" with { type: "json" };
+import blog from "./mod.ts";
 
-const site = lume({
-  location: new URL(config.location),
-});
+const site = lume();
 
-site.use(blog())
-  .use(googleFonts({
-    cssFile: "styles.css",
-    placeholder: "/* google-fonts */",
-    fonts: {
-      display: config.gfonts_display,
-      text: config.gfonts_text,
-    },
-  }));
+site.use(blog());
 
 export default site;

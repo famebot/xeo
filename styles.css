@@ -65,13 +65,8 @@
   --code-background-selection: #b3d4fc;
 
   /* -apple-system irrelevant now https://caniuse.com/font-family-system-ui */
-  --font-family-ui: system-ui,sans-serif;
-}
-
-@supports (font-variation-settings: normal) {
-  :root {
-    --font-family-ui: text,system-ui,sans-serif;
-  }
+  --font-family-ui: text, system-ui,sans-serif;
+  --font-family-display: display, system-ui,sans-serif;
 }
 
 [data-theme="dark"] {
