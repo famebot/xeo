@@ -27,8 +27,13 @@ Where do they diverge?
 
 ## Typography
 
+> [!tip]
+>
+> Lume’s Google Fonts plugin needs the **share page link**, or share URL, not
+> the embed&nbsp;code.
+
 - Xeo uses [Lume’s Google Fonts plugin](https://lume.land/plugins/google_fonts/)
-  in [`_config.ts`](https://github.com/famebot/xeo/blob/trunk/_config.ts) to set
+  in [`plugins.ts`](https://github.com/famebot/xeo/blob/trunk/plugins.ts) to set
   display (for larger sized headings and titles) and text (normal body and
   smaller sizes) typefaces from the
   [Google Font&nbsp;Library](https://fonts.google.com/).
@@ -37,7 +42,7 @@ Where do they diverge?
   [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue) for display and
   [Lexend](https://fonts.google.com/specimen/Lexend) for text. You can customize
   this when you
-  [set up your copy of&nbsp;Xeo](/instructions/#initialize-your-copy-of-xeo).
+  [**personalize your copy of&nbsp;Xeo**](/instructions/#personalize-xeo).
 
 - To get the correct URL for your `display` and `text` font choices, I recommend
   selecting the “Get font” button at the top right on the specimen page, which
@@ -60,11 +65,6 @@ Where do they diverge?
   and
   [Combining Typefaces](https://blog.typekit.com/2016/04/29/combining-typefaces-free-guide-to-great-typography/)
   for inspiration and&nbsp;wisdom.
-
-> [!tip]
->
-> Lume’s Google Fonts plugin needs the **share page link**, or share URL, not
-> the embed&nbsp;code.
 
 ## Design
 

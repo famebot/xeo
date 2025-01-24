@@ -6,6 +6,7 @@
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "prod": "deno task lume --location=https://xeo.land",
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "d": "deno task serve",
