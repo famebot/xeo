@@ -34,6 +34,37 @@ Edit the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
 in your blog root folder with your data to customize the site title,
 description, and&nbsp;metadata.
 
+> [!tip]
+>
+> You can use [LumeCMS](#cms) to customize the blog and add content&nbsp;easily.
+
+### Domains and URLs
+
+The [`location`](https://lume.land/docs/configuration/config-file/#location)
+(aka web address, “the public URL of the site”) depends on the environment
+(development, production) and can be changed dynamically from the CLI
+(`deno task serve --location=https://example.com`). We encourage you to either
+configure `location` dynamically, as Xeo does for [xeo.land](https://xeo.land)
+(in [`deno.json`](https://github.com/famebot/xeo/blob/trunk/deno.json#L9) and
+[`netlify.toml`](https://github.com/famebot/xeo/blob/trunk/netlify.toml#L5)), or
+to set `location` in
+[`_config.ts`](https://github.com/lumeland/lume.land/blob/2f6da036fb0be93d9689ca29bb87c57c08b7f560/_config.ts#L34)
+as [lume.land](https://lume.land/) does. The default value is
+[`https://localhost`](https://github.com/lumeland/lume.land/blob/main/docs/advanced/cheatsheet.md?plain=1#L27).
+
+> [!note]
+>
+> You may also want to set the local server
+> [`port`](https://lume.land/docs/configuration/config-file/#port). For even
+> more flexibility in local development,
+> [Lume 2.5.1](https://github.com/lumeland/lume/blob/v2.5.1/CHANGELOG.md#251---2025-01-28)
+> added a new `--hostname` argument to
+> [`lume --serve`](https://lume.land/docs/overview/command-line/#start-a-local-server)
+> and [`lume cms`](https://lume.land/cms/#run-in-localhost) to change the
+> default `localhost` value there as&nbsp;well.
+
+### Typography
+
 To configure which Google [**fonts**](/differences/#typography) your site uses,
 provide an object with options to the&nbsp;theme:
 
@@ -61,29 +92,21 @@ export default site;
 > [find the correct “share page link”](/differences/#typography), or URL, for
 > your font&nbsp;choices.
 
+### Blogging
+
 Posts must be saved in the `posts` folder (for example,
 `posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
 directory, by setting
 [`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/` in
-`posts/_data.yml`.
+[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml#L3).
 
-> [!tip]
->
-> You can use [LumeCMS](#cms-%26-customization) to customize the blog and add
-> content&nbsp;easily.
+### CMS
 
-The [`location`](https://lume.land/docs/configuration/config-file/#location)
-(aka domain, web address, “the public URL of the site”) depends on the
-environment (development, production) and can be changed dynamically from CLI
-(`deno task serve --location=https://example.com`). We currently encourage you
-to either configure it dynamically, as Xeo currently does for
-[xeo.land](https://xeo.land) (in
-[`deno.json`](https://github.com/famebot/xeo/blob/trunk/deno.json#L9) and
-[`netlify.toml`](https://github.com/famebot/xeo/blob/trunk/netlify.toml#L5)), or
-set in
-[`_config.ts`](https://github.com/lumeland/lume.land/blob/2f6da036fb0be93d9689ca29bb87c57c08b7f560/_config.ts#L34)
-as [lume.land](https://lume.land/) currently does. The default value is
-[`https://localhost:3000`](https://github.com/lumeland/lume.land/blob/2f6da036fb0be93d9689ca29bb87c57c08b7f560/docs/advanced/cheatsheet.md#L27).
+Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
+site easily in a web browser. You can
+[run LumeCMS locally](https://lume.land/cms/#run-in-localhost) or publish it
+alongside your built site, ideally
+[deployed to a VPS](https://lume.land/cms/deployment/vps/).
 
 ## Install as a remote theme
 
@@ -110,11 +133,3 @@ to your blog root folder and edit it with your data.
 To use this theme as a base template for a more customized blog, clone
 [famebot/xeo](https://github.com/famebot/xeo) on GitHub and edit the
 [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file.
-
-## CMS &amp; Customization
-
-Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
-site easily in a web browser. You can
-[run LumeCMS locally](https://lume.land/cms/#run-in-localhost) or publish it
-alongside your built site, ideally
-[deployed to a VPS](https://lume.land/cms/deployment/vps/).
