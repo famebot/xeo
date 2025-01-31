@@ -13,23 +13,20 @@ draft: false
 [Ricky de Laveaga’s](https://rdela.com/) variant of
 [**Simple Blog**](https://lume.land/theme/simple-blog/) by
 [Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
-[Lume](https://lume.land/) with support for tags and authors. Simple Blog and
-Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
+[**Lume**](https://lume.land/) with support for tags and authors. Simple Blog
+and Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
 
 <!--more-->
 
-<!--
 The **fastest and easiest** way to configure this theme is the
 [Lume init command](https://deno.land/x/lume_init), which you can also copy
-easily from the [Simple Blog theme page](https://lume.land/theme/simple-blog/).
-Running:
+easily from the [Xeo theme page](https://lume.land/theme/xeo/). Running:
 
 ```bash
-deno run -A https://lume.land/init.ts --theme=simple-blog
+deno run -A https://lume.land/init.ts --theme=xeo
 ```
 
-will create a new project with Simple Blog configured.
--->
+will create a new project with Xeo configured.
 
 ## Personalize Xeo
 
@@ -70,6 +67,11 @@ directory, by setting
 [`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/` in
 `posts/_data.yml`.
 
+> [!tip]
+>
+> You can use [LumeCMS](#cms-%26-customization) to customize the blog and add
+> content&nbsp;easily.
+
 The [`location`](https://lume.land/docs/configuration/config-file/#location)
 (aka domain, web address, “the public URL of the site”) depends on the
 environment (development, production) and can be changed dynamically from CLI
@@ -109,9 +111,10 @@ To use this theme as a base template for a more customized blog, clone
 [famebot/xeo](https://github.com/famebot/xeo) on GitHub and edit the
 [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file.
 
-## Customization
+## CMS &amp; Customization
 
-> [!tip]
->
-> You can use [LumeCMS](https://lume.land/cms) to customize the blog and add
-> content&nbsp;easily.
+Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
+site easily in a web browser. You can
+[run LumeCMS locally](https://lume.land/cms/#run-in-localhost) or publish it
+alongside your built site, ideally
+[deployed to a VPS](https://lume.land/cms/deployment/vps/).
