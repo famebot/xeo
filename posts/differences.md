@@ -42,7 +42,7 @@ Where do they diverge?
   [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue) for display and
   [Lexend](https://fonts.google.com/specimen/Lexend) for text. You can customize
   this when you
-  [**personalize your copy of&nbsp;Xeo**](/instructions/#personalize-xeo).
+  [**personalize your copy of&nbsp;Xeo**](/instructions/#typography).
 
 - To get the correct URL for your `display` and `text` font choices, I recommend
   selecting the “Get font” button at the top right on the specimen page, which
