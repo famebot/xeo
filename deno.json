@@ -6,10 +6,13 @@
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "xogo": "deno task lume --location=https://xogo.xeo.land",
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "d": "deno task serve",
-    "cms": "deno task lume cms"
+    "cms": "deno task lume cms",
+    "lup": "deno task lume upgrade",
+    "up": "deno run -A --quiet 'https://deno.land/x/nudd@v0.2.9/cli.ts' update deno.json"
   },
   "compilerOptions": {
     "types": [
