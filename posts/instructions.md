@@ -65,7 +65,7 @@ as [lume.land](https://lume.land/) does. The default value is
 
 ### Typography
 
-To configure which Google [**fonts**](/differences/#typography) your site uses,
+To [**configure which Google fonts Xeo uses**](/differences/#typography),
 provide an object with options to the&nbsp;theme:
 
 ```ts
@@ -86,22 +86,29 @@ site.use(xeo({
 export default site;
 ```
 
-To see the change resulting from the configuration above, **visit
-[xogo.xeo.land](https://xogo.xeo.land/).**
-[Xogo means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
+**Visit [xogo.xeo.land](https://xogo.xeo.land/)** to see the change resulting
+from the configuration above, which pairs
+[Playpen](https://fonts.google.com/specimen/Playpen+Sans) &
+[Poppins](https://fonts.google.com/specimen/Poppins) for a fun, playful vibe.
+Preview the defaults,
+[Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue) +
+[Lexend](https://fonts.google.com/specimen/Lexend),
+at&nbsp;**[xeo.land](https://xeo.land/).**
+
+[**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
 in Galician, like
-[Xeo means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
+[**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
 and
-[Lume means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
+[**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
 The source code powering the example is in the
-[`xogo` branch on GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L13).
+[`xogo` branch on&nbsp;GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L13).
 
 > [!note]
 >
 > Discover how to
 > [**find the correct “share page link”**](/differences/#typography), or URL,
-> for other font&nbsp;choices and learn more about
-> [Xeo’s&nbsp;typography](/differences/#typography).
+> for other font&nbsp;choices and learn more about Xeo’s typography in
+> [Differences between Xeo and Simple&nbsp;Blog](/differences/#typography).
 
 ### Blogging
 

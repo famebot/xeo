@@ -41,8 +41,8 @@ Where do they diverge?
 - By default, Xeo uses
   [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue) for display and
   [Lexend](https://fonts.google.com/specimen/Lexend) for text. Preview Bebas
-  Neue + Lexend at [xeo.land](https://xeo.land/). You can customize this when
-  you **[personalize your copy of&nbsp;Xeo](/instructions/#typography).**
+  Neue + Lexend at **[xeo.land](https://xeo.land/).** You can customize this
+  when you **[personalize your copy of&nbsp;Xeo](/instructions/#typography).**
 
 - To get the correct URL for your `display` and `text` font choices, I recommend
   selecting the “Get font” button at the top right on the specimen page, which
@@ -55,26 +55,29 @@ Where do they diverge?
 
 - If you are looking for more options,
   [Poppins](https://fonts.google.com/specimen/Poppins) is an alternative to
-  Lexend we considered for Xeo. We chose Lexend over Poppins because
+  Lexend we considered for Xeo. The example custom font site,
+  **[xogo.xeo.land](https://xogo.xeo.land/),** showcases the fun, playful
+  pairing of Poppins &
+  [Playpen](https://fonts.google.com/specimen/Playpen+Sans).
+  [**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
+  in Galician, like
+  [**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
+  and
+  [**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
+  The source code powering the example is in the
+  [`xogo` branch on&nbsp;GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L13).
+  We chose Lexend over Poppins because
   [variable fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   have performance benefits since they combine many different variations of a
-  typeface into a single file, reducing requests. The **example custom font
-  site, [xogo.xeo.land](https://xogo.xeo.land/),** showcases Poppins paired with
-  Playpen.
-  [Xogo means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
-  in Galician, like
-  [Xeo means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
-  and
-  [Lume means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
-  The **source code powering the example is in the
-  [`xogo` branch on GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L13).**
+  typeface into a single file, reducing requests.
+
 - You can [browse variable Google fonts](https://fonts.google.com/variablefonts)
   or learn about
   [Pairing](https://fonts.google.com/knowledge/choosing_type/pairing_typefaces)
   and
   [Combining Typefaces](https://blog.typekit.com/2016/04/29/combining-typefaces-free-guide-to-great-typography/)
-  for inspiration and wisdom. Learn more about
-  [Xeo’s&nbsp;typography](/instructions/#typography).
+  for inspiration and wisdom. Learn more about Xeo’s typography in
+  [How to install&nbsp;Xeo](/instructions/#typography).
 
 ## Design
 
