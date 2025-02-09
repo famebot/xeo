@@ -1,153 +1,95 @@
 ---
-title: How to install Xeo
-date: '2025-01-13T16:00:00.000Z'
+title: Differences between Xeo and Simple Blog
+date: '2025-01-19T16:00:00.000Z'
 author: Ricky de Laveaga
 tags:
-  - Instructions
-  - Lume
+  - Design
   - Xeo
 draft: false
 ---
 
-[**Xeo**](https://github.com/famebot/xeo) is
-[Ricky de Laveaga’s](https://rdela.com/) variant of
-[**Simple Blog**](https://lume.land/theme/simple-blog/) by
-[Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
-[**Lume**](https://lume.land/) with support for tags and authors. Simple Blog
-and Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
+Wondering how [**Xeo**](https://github.com/famebot/xeo) differs from
+[**Simple Blog**](https://lume.land/theme/simple-blog/)? This post is
+for&nbsp;you!
 
 <!--more-->
 
-The **fastest and easiest** way to configure this theme is the
-[Lume init command](https://deno.land/x/lume_init), which you can also copy
-easily from the [Xeo theme page](https://lume.land/theme/xeo/). Running:
+To recap [How to install Xeo:](/instructions/)
 
-```bash
-deno run -A https://lume.land/init.ts --theme=xeo
-```
+> [**Xeo**](https://github.com/famebot/xeo) is
+> [Ricky de Laveaga’s](https://rdela.com/) variant of
+> [**Simple Blog**](https://lume.land/theme/simple-blog/) by
+> [Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
+> [Lume](https://lume.land/) with support for tags and authors. Simple Blog and
+> Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
 
-will create a new project with Xeo configured.
+Where do they diverge?
 
-## Personalize Xeo
-
-Edit the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
-in your blog root folder with your data to customize the site title,
-description, and&nbsp;metadata.
+## Typography
 
 > [!tip]
 >
-> You can use [LumeCMS](#cms) to customize the blog and add content&nbsp;easily.
+> Lume’s Google Fonts plugin needs the **share page link**, or share URL, not
+> the embed&nbsp;code.
 
-### Domains and URLs
+- Xeo uses [Lume’s Google Fonts plugin](https://lume.land/plugins/google_fonts/)
+  in [`plugins.ts`](https://github.com/famebot/xeo/blob/trunk/plugins.ts) to set
+  display (for larger sized headings and titles) and text (normal body and
+  smaller sizes) typefaces from the
+  [Google Font&nbsp;Library](https://fonts.google.com/).
 
-The [`location`](https://lume.land/docs/configuration/config-file/#location)
-(aka web address, “the public URL of the site”) depends on the environment
-(development, production) and can be changed dynamically from the CLI
-(`deno task serve --location=https://example.com`). We encourage you to either
-configure `location` dynamically, as Xeo does for [xeo.land](https://xeo.land)
-(in [`deno.json`](https://github.com/famebot/xeo/blob/trunk/deno.json#L9) and
-[`netlify.toml`](https://github.com/famebot/xeo/blob/trunk/netlify.toml#L5)), or
-to set `location` in
-[`_config.ts`](https://github.com/lumeland/lume.land/blob/2f6da036fb0be93d9689ca29bb87c57c08b7f560/_config.ts#L34)
-as [lume.land](https://lume.land/) does. The default value is
-[`https://localhost`](https://github.com/lumeland/lume.land/blob/main/docs/advanced/cheatsheet.md?plain=1#L27).
+- By default, Xeo uses
+  [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue) for display and
+  [Lexend](https://fonts.google.com/specimen/Lexend) for text. Preview Bebas
+  Neue + Lexend at **[xeo.land](https://xeo.land/).** You can customize this
+  when you **[personalize your copy of&nbsp;Xeo](/instructions/#typography).**
 
-> [!note]
->
-> You may also want to set the local server
-> [`port`](https://lume.land/docs/configuration/config-file/#port). For even
-> more flexibility in local development,
-> [Lume 2.5.1](https://github.com/lumeland/lume/blob/v2.5.1/CHANGELOG.md#251---2025-01-28)
-> added a new `--hostname` argument to
-> [`lume --serve`](https://lume.land/docs/overview/command-line/#start-a-local-server)
-> and [`lume cms`](https://lume.land/cms/#run-in-localhost) to change the
-> default `localhost` value there as&nbsp;well.
+- To get the correct URL for your `display` and `text` font choices, I recommend
+  selecting the “Get font” button at the top right on the specimen page, which
+  will take you the [selection](https://fonts.google.com/selection) page where
+  you can select the “Share” button and then the “Copy share page link” button,
+  which shows a copy icon that looks like one rectangle stacked on top of
+  another rectangle. The share button should be underneath the text “1 font
+  family selected.” Use the “Remove all” button to clear each choice before
+  selecting another, so the share page links stay&nbsp;separate.
 
-### Typography
+- If you are looking for more options,
+  [Poppins](https://fonts.google.com/specimen/Poppins) is an alternative to
+  Lexend we considered for Xeo. The example custom font site,
+  **[xogo.xeo.land](https://xogo.xeo.land/),** showcases the fun, playful
+  pairing of Poppins &
+  [Playpen](https://fonts.google.com/specimen/Playpen+Sans).
+  [**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
+  in Galician, like
+  [**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
+  and
+  [**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
+  The source code powering the example is in the
+  [`xogo` branch on&nbsp;GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L13).
+  We chose Lexend over Poppins because
+  [variable fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+  have performance benefits since they combine many different variations of a
+  typeface into a single file, reducing requests.
 
-To [**configure which Google fonts Xeo uses**](/differences/#typography),
-provide an object with options to the&nbsp;theme:
+- You can [browse variable Google fonts](https://fonts.google.com/variablefonts)
+  or learn about
+  [Pairing](https://fonts.google.com/knowledge/choosing_type/pairing_typefaces)
+  and
+  [Combining Typefaces](https://blog.typekit.com/2016/04/29/combining-typefaces-free-guide-to-great-typography/)
+  for inspiration and wisdom. Learn more about Xeo’s typography in
+  [How to install&nbsp;Xeo](/instructions/#typography).
 
-```ts
-import lume from "lume/mod.ts";
-import xeo from "xeo/mod.ts";
+## Design
 
-const site = lume();
+- **Spacing:** Xeo adjusts spacing around various elements, particularly page
+  headers and the [search box](/archive/), which is relocated to the bottom of
+  pages to reduce layout shift when search results&nbsp;appear.
 
-site.use(xeo({
-  fonts: {
-    display:
-      "https://fonts.google.com/share?selection.family=Playpen+Sans:wght@100..800",
-    text:
-      "https://fonts.google.com/share?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900",
-  },
-}));
-
-export default site;
-```
-
-**Visit [xogo.xeo.land](https://xogo.xeo.land/)** to see the change resulting
-from the configuration above, which pairs
-[Playpen](https://fonts.google.com/specimen/Playpen+Sans) &
-[Poppins](https://fonts.google.com/specimen/Poppins) for a fun, playful vibe.
-Preview the defaults,
-[Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue) +
-[Lexend](https://fonts.google.com/specimen/Lexend),
-at&nbsp;**[xeo.land](https://xeo.land/).**
-
-[**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
-in Galician, like
-[**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
-and
-[**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
-The source code powering the example is in the
-[`xogo` branch on&nbsp;GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L13).
-
-> [!note]
->
-> Discover how to
-> [**find the correct “share page link”**](/differences/#typography), or URL,
-> for other font&nbsp;choices and learn more about Xeo’s typography in
-> [Differences between Xeo and Simple&nbsp;Blog](/differences/#typography).
-
-### Blogging
-
-Posts must be saved in the `posts` folder (for example,
-`posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
-directory, by setting
-[`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/` in
-[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml#L3).
-
-### CMS
-
-Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
-site easily in a web browser. You can
-[run LumeCMS locally](https://lume.land/cms/#run-in-localhost) or publish it
-alongside your built site, ideally
-[deployed to a VPS](https://lume.land/cms/deployment/vps/).
-
-## Install as a remote theme
-
-To add the theme to an existing Lume project, import it in your `_config.ts`
-file as a remote module. Update it by changing the version number in the import
-URL:
-
-```ts
-import lume from "lume/mod.ts";
-import xeo from "https://deno.land/x/xeo@v5.0.0/mod.ts";
-
-const site = lume();
-
-site.use(xeo());
-
-export default site;
-```
-
-Copy the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
-to your blog root folder and edit it with your data.
-
-## Use Xeo as a base template
-
-To use this theme as a base template for a more customized blog, clone
-[famebot/xeo](https://github.com/famebot/xeo) on GitHub and edit the
-[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file.
+- **Color:** Xeo has a
+  [foundation](https://github.com/famebot/xeo/blob/trunk/styles.css) that will
+  lead to eventual support of
+  [Rainbow Mode](https://eleventeen.blog/about/#rainbow-mode) powered by
+  [Chromagen](https://chromagen.io/), like Xeo’s predecessor
+  [eleventeen](https://eleventeen.blog/about/). Chromagen generated Xeo’s
+  current color scheme, but has not yet been wired up to Xeo to the degree it
+  has been integrated into&nbsp;eleventeen.
