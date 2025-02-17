@@ -18,6 +18,10 @@ Edit the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
 in your blog root folder with your data to customize the site title,
 description, and metadata.
 
+Xeo uses [Lume’s Google Fonts plugin](https://lume.land/plugins/google_fonts/) in [`plugins.ts`](https://github.com/famebot/xeo/blob/trunk/plugins.ts) to set display (for larger sized headings and titles) and text (normal body and smaller sizes) typefaces from the [Google Font&nbsp;Library](https://fonts.google.com/).
+
+By default, Xeo sets [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue) for display and [Lexend](https://fonts.google.com/specimen/Lexend) for text. Preview Bebas Neue + Lexend at **[xeo.land](https://xeo.land/).**
+
 To configure which Google [**fonts**](/differences/#typography) your site uses,
 provide an object with options to the theme in your `_config.ts`:
 
@@ -37,7 +41,11 @@ site.use(xeo({
 }));
 ```
 
-Discover how to
+The example custom font site, **[xogo.xeo.land](https://xogo.xeo.land/),** showcases the results of the configuration above: a fun, playful pairing of [Poppins](https://fonts.google.com/specimen/Poppins) & [Playpen](https://fonts.google.com/specimen/Playpen+Sans). [**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate) in Galician, like [**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate) and [**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
+
+The source code powering the example is in the [`xogo` branch on&nbsp;GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L13).
+
+> ℹ️ Discover how to
 [find the correct “share page link”](https://xeo.land/differences/#typography),
 or URL, for your font choices.
 
@@ -68,4 +76,4 @@ or URL, for your font choices.
   [Simple Blog source code](https://github.com/lumeland/theme-simple-blog) and
   report issues
 
-- [Support Lume](https://opencollective.com/lume) development
+- [Support Lume](https://opencollective.com/lume) development ❤️‍🔥
