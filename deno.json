@@ -1,8 +1,8 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@6ca5a17973f4391bd03710888ae51c5a0af08bd5/",
+    "lume/": "https://deno.land/x/lume@v2.5.2/",
     "blog/": "https://deno.land/x/lume_theme_simple_blog@v0.15.10/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0a3d1ffb097b2f5d38a66d31adbe749a53492bf0/"
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.9.4/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",

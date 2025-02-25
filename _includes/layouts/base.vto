@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ it.title || metas.title }} - {{ metas.site }}</title>
 
-    <meta name="supported-color-schemes" content="light dark">
-    <meta name="theme-color" content="hsl(38, 20%, 100%)" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="hsl(38, 65%, 0%)" media="(prefers-color-scheme: dark)">
-    
     <link rel="stylesheet" href="/styles.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metas.site }}">
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ metas.site }}">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link rel="canonical" href="{{ url |> url(true) }}">
-    <!-- <script src="/js/main.js" type="module"></script> -->
+
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="theme-color" content="hsl(var(--a), 20%, 100%)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="hsl(var(--a), 65%, 0%)" media="(prefers-color-scheme: dark)">
+
     {{ it.extra_head?.join("\n") }}
   </head>
   <body>
@@ -54,6 +54,21 @@
             localStorage.setItem("theme", theme);
             document.documentElement.dataset.theme = theme;
           }
+          {{# respond to prefers-color-scheme changes #}}
+          function darkChange() {
+            if (theme === "light") {
+              changeTheme()
+            }
+          }
+          function lightChange() {
+            if (theme === "dark") {
+              changeTheme()
+            }
+          }
+          const darkPreference = window.matchMedia("(prefers-color-scheme: dark)");
+          const lightPreference = window.matchMedia("(prefers-color-scheme: light)");
+          darkPreference.addEventListener("change", e => e.matches && darkChange());
+          lightPreference.addEventListener("change", e => e.matches && lightChange());
         </script>
         <button class="button" onclick="changeTheme()">
           <span class="icon">◐</span>
@@ -65,7 +80,12 @@
     {{ content }}
 
     <footer class="center">{{ copyright |> md }}</footer>
-    
+    <script>
+      const docstyle = document.documentElement.style;
+      docstyle.setProperty('--h', '320');
+      docstyle.setProperty('--c', '140');
+      docstyle.setProperty('--a', '186');
+    </script>
     <!-- Current page: {{ url }} -->
   </body>
 </html>
