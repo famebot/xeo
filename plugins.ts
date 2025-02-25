@@ -11,6 +11,11 @@ export interface Options extends BaseBlogOptions {
     display?: string;
     text?: string;
   };
+  colors?: {
+    hue?: number;
+    complement?: number;
+    analogous?: number;
+  };
 }
 
 export const defaults: Options = {
@@ -29,6 +34,13 @@ export const defaults: Options = {
     display: "https://fonts.google.com/share?selection.family=Bebas+Neue",
     text:
       "https://fonts.google.com/share?selection.family=Lexend:wght@100..900",
+  },
+  // 0-360 integers 
+  // As an `<angle>` is periodic, `<hue>` is normalized to the range [0deg, 360deg). It implicitly wraps around such that 480deg is the same as 120deg, -120deg is the same as 240deg, -1turn is the same as 1turn, and so on.
+  colors: {
+    hue: "172",
+    complement: "351",
+    analogous: "38",
   },
 };
 
