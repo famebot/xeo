@@ -20,8 +20,8 @@ To recap [How to install Xeo:](/instructions/)
 > [Ricky de Laveaga’s](https://rdela.com/) variant of
 > [**Simple Blog**](https://lume.land/theme/simple-blog/) by
 > [Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
-> [**Lume**](https://lume.land/) with support for tags and authors. Simple Blog and
-> Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
+> [**Lume**](https://lume.land/) with support for tags and authors. Simple Blog
+> and Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
 
 Where do they diverge?
 

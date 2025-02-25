@@ -1,0 +1,26 @@
+---
+url: /color-options.css
+---
+
+:root {
+  {{# HSL hues, 1-359 #}}
+  --h: {{ colorscheme.hue }};
+  --c: {{ colorscheme.complement }};
+  --a: {{ colorscheme.analogous }}; /* analogous to complement, not hue */
+
+  {{# color mixing values #}}
+  
+  {{# saturations #}}
+  --sh: {{ colorscheme.sathi}}%; /* saturation high */
+  --sm: {{ colorscheme.satmid}}%; /* saturation medium */
+  --sl: {{ colorscheme.satlo}}%; /* saturation low (muted) */
+  
+  {{# shades #}}
+  --xl: {{ colorscheme.xlight}}%; /* xlight */
+  --lr: {{ colorscheme.lighter}}%; /* lighter */
+  --l: {{ colorscheme.lightness}}%; /* lightness */
+  --m: {{ colorscheme.midrange}}%; /* midrange */
+  --lm: {{ colorscheme.lowmid}}%; /* lowmid */
+  --d: {{ colorscheme.darkness}}%; /* darkness */
+  --dr: {{ colorscheme.darker}}%; /* darker */
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ it.title || metas.title }} - {{ metas.site }}</title>
 
+    <link rel="stylesheet" href="/color-options.css">
     <link rel="stylesheet" href="/styles.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metas.site }}">
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ metas.site }}">
@@ -80,12 +81,6 @@
     {{ content }}
 
     <footer class="center">{{ copyright |> md }}</footer>
-    <script>
-      const docstyle = document.documentElement.style;
-      docstyle.setProperty('--h', '320');
-      docstyle.setProperty('--c', '140');
-      docstyle.setProperty('--a', '186');
-    </script>
     <!-- Current page: {{ url }} -->
   </body>
 </html>
