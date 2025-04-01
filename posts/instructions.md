@@ -18,7 +18,9 @@ and Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
 
 <!--more-->
 
-The **fastest and easiest** way to configure this theme is the
+Once you
+[install Deno](https://docs.deno.com/runtime/getting_started/installation/), the
+**fastest and easiest** way to configure this theme is the
 [Lume init command](https://deno.land/x/lume_init), which you can also copy
 easily from the [Xeo theme page](https://lume.land/theme/xeo/). Running:
 
@@ -109,6 +111,46 @@ The source code powering the example is in the
 > [**find the correct “share page link”**](/differences/#typography), or URL,
 > for other font&nbsp;choices and learn more about Xeo’s typography in
 > [Differences between Xeo and Simple&nbsp;Blog](/differences/#typography).
+
+### Color
+
+Like with fonts above, to **configure which colors Xeo uses**, provide an object
+with options to the&nbsp;theme:
+
+```ts
+import lume from "lume/mod.ts";
+import xeo from "xeo/mod.ts";
+
+const site = lume();
+
+site.use(xeo({
+  colors: {
+    // HSL hues
+    // In CSS, an `<angle>` is periodic, `<hue>` is normalized to the range
+    // [0deg, 360deg). It implicitly wraps around such that 480deg is the same
+    // as 120deg, -120deg is the same as 240deg, -1turn is the same as 1turn,
+    // and so on. Yet, here we pass an integer 1-359 for each of the
+    // 3 hue values, to get type checking.
+    hue: 172,
+    complement: 351,
+    analogous: 38,
+
+    // color mixing values
+    sathi: 94, // 80-100
+    satmid: 54, // 50-70
+    satlo: 20, // 10-30
+    xlight: 92, // 84-92
+    lighter: 83, // 76-84
+    lightness: 65, // 64-72
+    midrange: 54, // 48-64
+    lowmid: 36, // 28-36
+    darkness: 20, // 16-24
+    darker: 9, // 0-12
+  },
+}));
+
+export default site;
+```
 
 ### Blogging
 
