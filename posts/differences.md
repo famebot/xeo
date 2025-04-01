@@ -20,8 +20,8 @@ To recap [How to install Xeo:](/instructions/)
 > [Ricky de Laveaga’s](https://rdela.com/) variant of
 > [**Simple Blog**](https://lume.land/theme/simple-blog/) by
 > [Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
-> [Lume](https://lume.land/) with support for tags and authors. Simple Blog and
-> Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
+> [**Lume**](https://lume.land/) with support for tags and authors. Simple Blog
+> and Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
 
 Where do they diverge?
 
@@ -38,7 +38,7 @@ Where do they diverge?
   smaller sizes) typefaces from the
   [Google Font&nbsp;Library](https://fonts.google.com/).
 
-- By default, Xeo uses
+- By default, Xeo sets
   [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue) for display and
   [Lexend](https://fonts.google.com/specimen/Lexend) for text. Preview Bebas
   Neue + Lexend at **[xeo.land](https://xeo.land/).** You can customize this

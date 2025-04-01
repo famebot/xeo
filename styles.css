@@ -16,38 +16,21 @@
   navigation: auto;
 }
 
+/* Color scheme and mixing values set in pages/color-options.vto and imported in base.vto */
 :root {
-  /* HSL hues, 1-359 */
-  --h: 172; /* hue */
-  --c: 351; /* complement */
-  --a: 38; /* analogous (to complement) */
-
-  /* color mixing values */
-  --s: 94%; /* 80-100, saturation */
-  --xl: 92%; /* 84-92, xlight */
-  --lr: 83%; /* 76-84, lighter */
-  --l: 65%; /* 64-72, lightness */
-  --m: 54%; /* 48-64, midrange */
-  --lm: 36%; /* 28-36, lowmid */
-  --d: 20%; /* 16-24, darkness */
-  --dr: 9%; /* 0-12, darker */
-
   /* mixed colors */
-  --color-base: hsl(var(--a), var(--d), var(--dr));
-  --color-text: hsl(var(--a), var(--d), var(--d));
-  --color-dim: hsl(var(--a), var(--d), var(--lm));
+  --color-base: hsl(var(--a), var(--sl), var(--dr));
+  --color-text: hsl(var(--a), var(--sl), var(--d));
+  --color-dim: hsl(var(--a), var(--sl), var(--lm));
 
-  --color-line: hsl(var(--a), var(--d), var(--lr));
-  --color-highlight: hsl(var(--a), var(--d), var(--xl));
+  --color-line: hsl(var(--a), var(--sl), var(--lr));
+  --color-highlight: hsl(var(--a), var(--sl), var(--xl));
 
-  --color-background: hsl(
-    var(--a),
-    var(--d),
-    100%
-  ); /* = #fff, white, browser default */
+  /* = #fff, white, browser default */
+  --color-background: hsl(var(--a), var(--sl), 100%);
 
-  --color-primary: hsl(var(--h), var(--m), var(--d));
-  --color-primary-highlight: hsl(var(--h), var(--m), var(--m));
+  --color-primary: hsl(var(--h), var(--sm), var(--d));
+  --color-primary-highlight: hsl(var(--h), var(--sm), var(--m));
 
   --color-link: var(--color-primary);
   --color-link-hover: var(--color-primary-highlight);
@@ -70,21 +53,18 @@
 }
 
 [data-theme="dark"] {
-  --color-base: hsl(var(--a), var(--l), var(--xl));
-  --color-text: hsl(var(--a), var(--l), var(--lr));
-  --color-dim: hsl(var(--a), var(--l), var(--l));
+  --color-base: hsl(var(--a), var(--sm), var(--xl));
+  --color-text: hsl(var(--a), var(--sm), var(--lr));
+  --color-dim: hsl(var(--a), var(--sm), var(--l));
 
-  --color-line: hsl(var(--a), var(--l), var(--d));
-  --color-highlight: hsl(var(--a), var(--l), var(--dr));
+  --color-line: hsl(var(--a), var(--sm), var(--d));
+  --color-highlight: hsl(var(--a), var(--sm), var(--dr));
 
-  --color-background: hsl(
-    var(--a),
-    var(--l),
-    0%
-  ); /* = #000, black, energy saving on OLED */
+  /* = #000, black, energy saving on OLED */
+  --color-background: hsl(var(--a), var(--sm), 0%);
 
-  --color-primary: hsl(var(--h), var(--s), var(--lr));
-  --color-primary-highlight: hsl(var(--h), var(--s), var(--m));
+  --color-primary: hsl(var(--h), var(--sh), var(--lr));
+  --color-primary-highlight: hsl(var(--h), var(--sh), var(--m));
 
   --code-text: var(--color-base);
   --code-comment: grey;
