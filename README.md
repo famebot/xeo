@@ -44,8 +44,6 @@ Edit the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
 in your blog root folder with your data to customize the site title,
 description, and metadata.
 
-> 💡 You can use [LumeCMS](#cms) to customize the blog and add content easily.
-
 ### Domains and URLs&nbsp;🕸️
 
 The [`location`](https://lume.land/docs/configuration/config-file/#location)
@@ -172,6 +170,8 @@ directory, by setting
 [`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml#L3).
 
 ## CMS ✍️
+
+> 💡 Use [LumeCMS](https://lume.land/cms/) to customize the blog and add content easily.
 
 Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
 site easily in a web browser. You can
