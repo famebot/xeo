@@ -13,9 +13,9 @@ site.use(xeo({
   colors: {
     // HSL hues
     // Pass an integer 1-359 for each of the 3 hue values, to get type checking.
-    hue: 177,
-    complement: 356,
-    analogous: 43,
+    hue: 288,
+    complement: 108,
+    analogous: 154,
 
     // color mixing values
     sathi: 90, // 80-100
