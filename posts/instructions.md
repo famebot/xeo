@@ -115,7 +115,7 @@ The source code powering the example is in the
 ### Color
 
 Like with fonts above, to **configure which colors Xeo uses**, provide an object
-with options to the theme:
+with options to the&nbsp;theme:
 
 ```ts
 import lume from "lume/mod.ts";
@@ -135,7 +135,7 @@ export default site;
 ```
 
 **Visit [xogo.xeo.land](https://xogo.xeo.land/)** to see the change resulting
-from the configuration above.
+from the configuration&nbsp;above.
 
 ### Blogging
 
