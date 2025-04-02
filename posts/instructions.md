@@ -28,7 +28,7 @@ easily from the [Xeo theme page](https://lume.land/theme/xeo/). Running:
 deno run -A https://lume.land/init.ts --theme=xeo
 ```
 
-will create a new project with Xeo configured.
+will create a new project with Xeo&nbsp;configured.
 
 ## Personalize Xeo
 
@@ -125,40 +125,25 @@ const site = lume();
 
 site.use(xeo({
   colors: {
-    // HSL hues
-    // In CSS, an `<angle>` is periodic, `<hue>` is normalized to the range
-    // [0deg, 360deg). It implicitly wraps around such that 480deg is the same
-    // as 120deg, -120deg is the same as 240deg, -1turn is the same as 1turn,
-    // and so on. Yet, here we pass an integer 1-359 for each of the
-    // 3 hue values, to get type checking.
-    hue: 172,
-    complement: 351,
-    analogous: 38,
-
-    // color mixing values
-    sathi: 94, // 80-100
-    satmid: 54, // 50-70
-    satlo: 20, // 10-30
-    xlight: 92, // 84-92
-    lighter: 83, // 76-84
-    lightness: 65, // 64-72
-    midrange: 54, // 48-64
-    lowmid: 36, // 28-36
-    darkness: 20, // 16-24
-    darker: 9, // 0-12
+    hue: 288,
+    complement: 108,
+    analogous: 154,
   },
 }));
 
 export default site;
 ```
 
+**Visit [xogo.xeo.land](https://xogo.xeo.land/)** to see the change resulting
+from the configuration&nbsp;above.
+
 ### Blogging
 
 Posts must be saved in the `posts` folder (for example,
 `posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
 directory, by setting
-[`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/` in
-[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml#L3).
+[`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/`
+in&nbsp;[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml#L3).
 
 ### CMS
 
@@ -166,13 +151,13 @@ Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
 site easily in a web browser. You can
 [run LumeCMS locally](https://lume.land/cms/#run-in-localhost) or publish it
 alongside your built site, ideally
-[deployed to a VPS](https://lume.land/cms/deployment/vps/).
+[deployed to a&nbsp;VPS](https://lume.land/cms/deployment/vps/).
 
 ## Install as a remote theme
 
 To add the theme to an existing Lume project, import it in your `_config.ts`
-file as a remote module. Update it by changing the version number in the import
-URL:
+file as a remote module. Update it by changing the version number in the
+import&nbsp;URL:
 
 ```ts
 import lume from "lume/mod.ts";
@@ -186,10 +171,10 @@ export default site;
 ```
 
 Copy the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
-to your blog root folder and edit it with your data.
+to your blog root folder and edit it with your&nbsp;data.
 
 ## Use Xeo as a base template
 
 To use this theme as a base template for a more customized blog, clone
 [famebot/xeo](https://github.com/famebot/xeo) on GitHub and edit the
-[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file.
+[`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml)&nbsp;file.

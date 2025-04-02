@@ -69,7 +69,7 @@ Where do they diverge?
   We chose Lexend over Poppins because
   [variable fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   have performance benefits since they combine many different variations of a
-  typeface into a single file, reducing requests.
+  typeface into a single file, reducing&nbsp;requests.
 
 - You can [browse variable Google fonts](https://fonts.google.com/variablefonts)
   or learn about
@@ -91,5 +91,5 @@ Where do they diverge?
   [Rainbow Mode](https://eleventeen.blog/about/#rainbow-mode) powered by
   [Chromagen](https://chromagen.io/), like Xeo’s predecessor
   [eleventeen](https://eleventeen.blog/about/). Chromagen generated Xeo’s
-  current color scheme, but has not yet been wired up to Xeo to the degree it
+  current color schemes, but has not yet been wired up to Xeo to the degree it
   has been integrated into&nbsp;eleventeen.
