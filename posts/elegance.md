@@ -1,7 +1,6 @@
 ---
 title: Elegance
 date: '2025-04-18T16:00:00.000Z'
-author: Ricky de Laveaga
 draft: false
 ---
 
