@@ -16,7 +16,7 @@
 
   <p>{{ it.readingInfo.minutes }} {{ i18n.post.reading_time}}</p>
 
-  {{ if tags }}
+  {{ if tags?.length }}
   <p class="post-tags">
     <span class="html-only">🏷️ </span>{{ for tag of tags }}
       {{ set page = search.page(`type=tag tag="${tag}"`) }}
