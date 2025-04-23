@@ -31,7 +31,7 @@
 
   & p:last-of-type {
     margin-right: 0.5em;
-    
+
     &::after {
       display: none;
     }
