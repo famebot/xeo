@@ -145,10 +145,3 @@ https://github.com/lumeland/ds/blob/v0.5.2/src/components/body.css#L34
     color: currentColor;
   }
 }
-
-/*
-balance spacing before and after separating middot •
-*/
-.post-details time {
-  margin-inline-end: -0.59375ch;
-}
