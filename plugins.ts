@@ -1,4 +1,4 @@
-import baseBlog from "https://deno.land/x/lume_theme_simple_blog@v0.15.10/mod.ts";
+import baseBlog from "https://deno.land/x/lume_theme_simple_blog@v0.16.0/mod.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
 import { merge } from "lume/core/utils/object.ts";
 
