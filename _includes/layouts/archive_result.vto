@@ -8,5 +8,6 @@ bodyClass: body-tag
     <h1 class="page-title">{{ title }}</h1>
   </header>
   <p class="nav-back"><a href="/archive/">{{ i18n.nav.back }}</a></p><br>
-  {{ include "templates/post-list.vto" { postslist: search.pages(search_query) } }}
+  {{ include "templates/post-list.vto" { postslist: results } }}
+  {{ include "templates/pagination.vto" }}
 </main>
