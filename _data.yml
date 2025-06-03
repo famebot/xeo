@@ -6,6 +6,10 @@ home:
 copyright: "[Xeo](https://github.com/famebot/xeo) &copy; 2022-2025 [Óscar&nbsp;Otero](https://oscarotero.com/) &amp; [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/)"
 
 menu_links: []
+
+logo: /favicon.svg
+logo_height: 48
+
 metas:
   site: Xogo (Xeo demo)
   description: Lume Simple Blog variant with custom fonts and colors
