@@ -27,6 +27,7 @@ export default function (options: Partial<Options> = {}) {
       "_data/i18n.yml",
       "404.md",
       "archive.page.js",
+      "favicon.svg",
       "index.vto",
       "styles.css",
     ];
