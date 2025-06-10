@@ -15,7 +15,7 @@ bodyClass: body-tag
   {{ set pageAuthors = search.pages("type=author pagination.page=1", "author") }}
   {{ if pageAuthors.length > 1 }}
   <nav class="page-navigation">
-    <h2>{{ i18n.search.authors }}:</h2>
+    <h2>{{ i18n.search.authors }}</h2>
     
     <ul class="page-navigation-tags">
     {{ for page of pageAuthors }}
