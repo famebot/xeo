@@ -42,6 +42,7 @@
     ]
   },
   "unstable": [
-    "temporal"
+    "temporal",
+    "fmt-component"
   ]
 }
