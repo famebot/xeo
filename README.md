@@ -124,8 +124,9 @@ The source code powering the example is in the
 
 ### Color 🎨
 
-Like with fonts above, to **configure which colors Xeo uses**, provide an object
-with options to the theme:
+Like with fonts above, to **configure which colors Xeo uses**, provide `xeo`
+with a `colors` object with the options you want to override in your
+`_config.ts`:
 
 ```ts
 import lume from "lume/mod.ts";
@@ -146,6 +147,10 @@ export default site;
 
 **Visit [xogo.xeo.land](https://xogo.xeo.land/)** to see the change resulting
 from the configuration above.
+
+See the defaults in
+[`plugins.ts`](https://github.com/famebot/xeo/blob/trunk/plugins.ts) for a list
+of all `colors` options.
 
 ## Blogging 📝
 
