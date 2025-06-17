@@ -68,7 +68,8 @@ as [lume.land](https://lume.land/) does. The default value is
 ### Typography
 
 To [**configure which Google fonts Xeo uses**](/differences/#typography),
-provide an object with options to the&nbsp;theme:
+provide a `fonts` object with `display` and/or `text` options to `xeo` in your
+`_config.ts`:
 
 ```ts
 import lume from "lume/mod.ts";

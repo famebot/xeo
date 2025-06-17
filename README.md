@@ -80,7 +80,8 @@ Preview Bebas Neue + Lexend at **[xeo.land](https://xeo.land/).**
 
 To
 [**configure which Google fonts Xeo uses**](https://xeo.land/differences/#typography),
-provide an object with options to the in your `_config.ts`:
+provide a `fonts` object with `display` and/or `text` options to `xeo` in your
+`_config.ts`:
 
 ```ts
 import lume from "lume/mod.ts";
