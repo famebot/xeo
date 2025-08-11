@@ -38,8 +38,8 @@
       {{ /for }}
       {{- for link of it.menu_links }}
         <li>
-          <a href="{{ link.href }}"{{ if link.target }} target="{{link.target}}"{{ /if }}>
-            {{ link.text }}
+          <a href="{{ link.url }}"{{ if link.target }} target="{{link.target}}"{{ /if }}>
+            {{ link.title }}
           </a>
         </li>
       {{ /for }}
@@ -79,7 +79,13 @@
 
     {{ content }}
 
-    <footer class="center">{{ copyright |> md }}</footer>
+    <footer class="center">
+      <p class="feed-bar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="13" r="2" fill="currentColor"/><path d="M14 13C14 6.925 9.075 2 3 2M9 13a6 6 0 0 0-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Feed:
+        <a href="/feed.xml">Atom</a>, <a href="/feed.json">JSON</a>
+      </p>
+      {{ copyright |> md }}
+    </footer>
     <!-- Current page: {{ url }} -->
   </body>
 </html>

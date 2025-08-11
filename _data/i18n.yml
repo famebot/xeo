@@ -4,7 +4,8 @@ nav:
   previous_post: ← Older post
   continue_reading: Continue reading →
   archive_title: Archive
-  archive: More posts can be found in <a href="/archive/">the&nbsp;archive</a>.
+  archive: Search <a href="/archive/">the&nbsp;archive</a>
+  archive_search: Search
   back: ← Back
   page: Page
   next: Next →

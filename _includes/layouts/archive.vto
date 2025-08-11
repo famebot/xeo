@@ -7,38 +7,48 @@ bodyClass: body-tag
   <header class="page-header">
     <h1 class="page-title">{{ title }}</h1>
   </header>
-  <p>
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="13" r="2" fill="currentColor"/><path d="M14 13C14 6.925 9.075 2 3 2M9 13a6 6 0 0 0-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Feed:
-    <a href="/feed.xml">Atom</a>, <a href="/feed.json">JSON</a>
-  </p>
-  {{ if pagination.page === 1 }}
-  {{ set pageAuthors = search.pages("type=author pagination.page=1", "author") }}
-  {{ if pageAuthors.length > 1 }}
-  <nav class="page-navigation">
-    <h2>{{ i18n.search.authors }}</h2>
-    
-    <ul class="page-navigation-tags">
-    {{ for page of pageAuthors }}
-      <li><a href="{{ page.url }}" class="badge">{{ page.author }}</a></li>
-    {{ /for }}
-    </ul>
-  </nav>
-  {{ /if }}
+  <section class="archive-main">
+    {{ include "templates/post-list.vto" { postslist: results } }}
+    <div class="archive-filters">
+      {{ if pagination.page === 1 }}
+        {{
+          set pageAuthors = search.pages("type=author pagination.page=1", "author")
+        }}
+        {{ if pageAuthors.length > 1 }}
+          <nav class="page-navigation">
+            <h2>{{ i18n.search.authors }}</h2>
 
-  {{ set pageTags = search.pages("type=tag pagination.page=1", "tag") }}
-  {{ if pageTags.length }}
-  <nav class="page-navigation">
-    <h2>{{ i18n.search.tags }}<span class="html-only"> 🏷️</span></h2>
-    
-    <ul class="page-navigation-tags">
-    {{ for page of pageTags }}
-      <li><a href="{{ page.url }}" class="badge">{{ page.tag }}</a></li>
-    {{ /for }}
-    </ul>
-  </nav>
-  {{ /if }}
-  {{ /if }}
+            <ul class="page-navigation-tags">
+              {{ for page of pageAuthors }}
+                <li>
+                  <a href="{{ page.url }}" class="badge">{{ page.author }}</a>
+                </li>
+              {{ /for }}
+            </ul>
+          </nav>
+        {{ /if }}
 
-  {{ include "templates/post-list.vto" { postslist: results } }}
+        {{ set pageTags = search.pages("type=tag pagination.page=1", "tag") }}
+        {{ if pageTags.length }}
+          <nav class="page-navigation">
+            <h2>{{ i18n.search.tags }}<span class="html-only"> 🏷️</span></h2>
+
+            <ul class="page-navigation-tags">
+              {{ for page of pageTags }}
+                <li>
+                  <a href="{{ page.url }}" class="badge">{{ page.tag }}</a>
+                </li>
+              {{ /for }}
+            </ul>
+          </nav>
+        {{ /if }}
+      {{ /if }}
+    </div>
+  </section>
   {{ include "templates/pagination.vto" }}
+
+  <hr>
+
+  <p class="archive-search">{{ i18n.nav.archive_search }}</p>
+  <div class="search" id="search"></div>
 </main>

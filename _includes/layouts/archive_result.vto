@@ -10,4 +10,9 @@ bodyClass: body-tag
   <p class="nav-back"><a href="/archive/">{{ i18n.nav.back }}</a></p><br>
   {{ include "templates/post-list.vto" { postslist: results } }}
   {{ include "templates/pagination.vto" }}
+
+  <hr>
+
+  <p class="archive-search">{{ i18n.nav.archive_search }}</p>
+  <div class="search" id="search"></div>
 </main>
