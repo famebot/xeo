@@ -1,8 +1,8 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.6/",
-    "xeo/": "https://deno.land/x/xeo@v6.3.0/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.12.5/",
+    "lume/": "https://deno.land/x/lume@v3.1.2/",
+    "xeo/": "https://deno.land/x/xeo@v6.3.1/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.2/",
     "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.12/jsx-runtime.ts"
   },
   "tasks": {
