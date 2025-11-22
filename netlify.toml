@@ -2,5 +2,5 @@
   publish = "_site"
   command = """
   curl -fsSL https://deno.land/install.sh | sh && \
-  /opt/buildhome/.deno/bin/deno task prod --allow-net fonts.googleapis.com:443 \
+  /opt/buildhome/.deno/bin/deno task prod --allow-net=fonts.googleapis.com:443 \
 """
