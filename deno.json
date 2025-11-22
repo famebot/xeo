@@ -11,7 +11,6 @@
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "d": "deno task serve",
-    "cms": "deno task lume cms",
     "lup": "deno task lume upgrade",
     "up": "deno run -A --quiet 'https://deno.land/x/nudd@v0.2.10/cli.ts' update deno.json"
   },
