@@ -8,7 +8,7 @@
   "tasks": {
     "lume": {
       "description": "Run Lume command",
-      "command": "deno run -P=lume lume/cli.ts"
+      "command": "deno run --allow-net=fonts.googleapis.com:443,cdn.jsdelivr.net:443,0.0.0.0:3000 -P=lume lume/cli.ts"
     },
     "prod": "deno task lume --location=https://xeo.land",
     "build": {
