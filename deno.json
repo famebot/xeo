@@ -1,12 +1,12 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.1.2/",
-    "xeo/": "https://deno.land/x/xeo@v6.3.2/",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.2/",
+    "xeo/": "https://deno.land/x/xeo@v6.3.3/",
     "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.2/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.12/jsx-runtime.ts"
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.12/jsx-runtime.ts"
   },
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "lume": "deno run -A lume/cli.ts",
     "xogo": "deno task lume --location=https://xogo.xeo.land",
     "build": "deno task lume",
     "serve": "deno task lume -s",
