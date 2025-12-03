@@ -13,31 +13,39 @@ title: Home
   <section class="postList">
     <br>
     {{ for post of search.pages("type=post", "date=desc", 3) }}
-    <article class="post">
-      <header class="post-header">
-        <h2 class="post-title">
-          <a href="{{ post.url }}" {{ if post.url == url }} aria-current="page"{{ /if }}>
-            {{ post.title || post.url }}
+      <article class="post">
+        <header class="post-header">
+          <h2 class="post-title">
+            <a
+              href="{{ post.url }}"
+              {{ if post.url == url }}
+                aria-current="page"{{ /if }}
+            >
+              {{ post.title || post.url }}
+            </a>
+          </h2>
+
+          {{
+            include "templates/post-details.vto" {
+              date: post.date,
+              tags: post.tags,
+              author: post.author,
+              readingInfo: post.readingInfo,
+            }
+          }}
+        </header>
+
+        <div class="post-excerpt body">
+          {{ post.excerpt |> md }}
+        </div>
+
+        <p>
+          <a href="{{ post.url }}" class="post-link">
+            {{ i18n.nav.continue_reading }}
           </a>
-        </h2>
-
-        {{ include "templates/post-details.vto" {
-          date: post.date,
-          tags: post.tags,
-          author: post.author,
-          readingInfo: post.readingInfo
-          } }}
-      </header>
-
-      <div class="post-excerpt body">
-        {{ post.excerpt |> md }}
-      </div>
-
-      <p><a href="{{ post.url }}" class="post-link">
-        {{ i18n.nav.continue_reading }}
-      </a></p>
-    </article>
-  {{ /for }}
+        </p>
+      </article>
+    {{ /for }}
   </section>
 
   <hr>

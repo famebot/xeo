@@ -4,6 +4,6 @@ import blog from "./mod.ts";
 const site = lume();
 
 site
-  .use(blog())
+  .use(blog());
 
 export default site;
