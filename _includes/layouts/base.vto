@@ -4,8 +4,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ it.title || metas.title }} - {{ metas.site }}</title>
-
+    {{ if !it.title && metas.title == "=title" }}
+      <title>
+        {{ url.substr(1, url.length - 2) |> replaceAll(/-(?!\d)/g, ` `) }} - {{
+          metas.site
+        }}
+      </title>
+    {{ else }}
+      <title>{{ it.title || metas.title }} - {{ metas.site }}</title>
+    {{ /if }}
     <link rel="stylesheet" href="/color-options.css">
     <link rel="stylesheet" href="/styles.css">
     <link

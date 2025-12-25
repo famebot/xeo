@@ -21,7 +21,11 @@ title: Home
               {{ if post.url == url }}
                 aria-current="page"{{ /if }}
             >
-              {{ post.title || post.url }}
+              {{
+                post.title ||
+                  post.url.substr(1, post.url.length - 2)
+                |> replaceAll(/-(?!\d)/g, ` `)
+              }}
             </a>
           </h2>
 
