@@ -1,9 +1,9 @@
 {
   "imports": {
     "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.2/",
-    "xeo/": "https://deno.land/x/xeo@v6.3.4/",
+    "xeo/": "https://deno.land/x/xeo@v6.3.5/",
     "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.2/",
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.12/jsx-runtime.ts"
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
   },
   "tasks": {
     "lume": "deno run -A lume/cli.ts",
