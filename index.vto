@@ -20,13 +20,11 @@ title: Home
               href="{{ post.url }}"
               {{ if post.url == url }}
                 aria-current="page"{{ /if }}
-            >
-              {{
-                post.title ||
-                  post.url.substr(1, post.url.length - 2)
-                |> replaceAll(/-(?!\d)/g, ` `)
-              }}
-            </a>
+            >{{-
+              post.title || post.basename
+              |> replaceAll(/-(?!\d)/g, ` `)
+              |> replace(/\b\w/g, (char) => char.toUpperCase())
+            -}}</a>
           </h2>
 
           {{

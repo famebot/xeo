@@ -1,5 +1,7 @@
 ---
-date: '2025-01-01T16:00:00Z'
+date: "2025-01-01T13:00Z"
+author: Ricky de Laveaga
 ---
 
-a titleless post in file named `index.md` in a folder named `no-title`
+A post with `date` and `author` in the frontmatter but no title, in a file named
+`index.md` inside a folder named `no-title`.

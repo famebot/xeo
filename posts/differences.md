@@ -1,6 +1,6 @@
 ---
 title: Differences between Xeo and Simple Blog
-date: "2025-01-19T16:00:00.000Z"
+date: "2025-01-19T13:00Z"
 author: Ricky de Laveaga
 tags:
   - Design

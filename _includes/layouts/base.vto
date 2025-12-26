@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{ if !it.title && metas.title == "=title" }}
       <title>
-        {{ url.substr(1, url.length - 2) |> replaceAll(/-(?!\d)/g, ` `) }} - {{
-          metas.site
-        }}
+        {{-
+          basename
+          |> replaceAll(/-(?!\d)/g, ` `)
+          |> replace(/\b\w/, (char) => char.toUpperCase())
+        }} - {{ metas.site -}}
       </title>
     {{ else }}
-      <title>{{ it.title || metas.title }} - {{ metas.site }}</title>
+      <title>{{- it.title || metas.title }} - {{ metas.site -}}</title>
     {{ /if }}
     <link rel="stylesheet" href="/color-options.css">
     <link rel="stylesheet" href="/styles.css">
