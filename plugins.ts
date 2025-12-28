@@ -78,7 +78,10 @@ export default function (userOptions?: Options) {
   return (site: Lume.Site) => {
     site.data("colorscheme", options.colors);
 
-    site.use(baseBlog(options))
+    site
+      .ignore("README.md")
+      .ignore("LICENSE.md")
+      .use(baseBlog(options))
       .use(extractDate())
       .use(favicon())
       .use(googleFonts({
