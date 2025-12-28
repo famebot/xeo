@@ -9,15 +9,6 @@ const site = lume();
    it in the templates.
 */
 site
-  .use(blog())
-  .preprocess([".md"], (pages) => {
-    for (const page of pages) {
-      if (!page.data.title) {
-        page.data.title = page.data.basename
-          .replaceAll(/-(?!\d)/g, ` `) // remove hyphens unless followed by 0-9
-          .replace(/\b\w/, (char) => char.toUpperCase()); // sentence case
-      } // for title case use /\b\w/g
-    }
-  });
+  .use(blog());
 
 export default site;

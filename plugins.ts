@@ -85,6 +85,15 @@ export default function (userOptions?: Options) {
         cssFile: "styles.css",
         placeholder: "/* google-fonts */",
         fonts: options.fonts,
-      }));
+      }))
+      .preprocess([".md"], (pages) => {
+        for (const page of pages) {
+          if (!page.data.title) {
+            page.data.title = page.data.basename
+              .replaceAll(/-(?!\d)/g, ` `) // remove hyphens unless followed by 0-9
+              .replace(/\b\w/, (char) => char.toUpperCase()); // sentence case
+          } // for title case use /\b\w/g
+        }
+      });
   };
 }
