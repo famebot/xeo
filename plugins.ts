@@ -1,5 +1,6 @@
 import baseBlog from "https://deno.land/x/lume_theme_simple_blog@v1.16.2/mod.ts";
 import type { Options as BaseBlogOptions } from "https://deno.land/x/lume_theme_simple_blog@v1.16.2/mod.ts";
+import extractDate from "lume/plugins/extract_date.ts";
 import favicon from "lume/plugins/favicon.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
 import { merge } from "lume/core/utils/object.ts";
@@ -78,6 +79,7 @@ export default function (userOptions?: Options) {
     site.data("colorscheme", options.colors);
 
     site.use(baseBlog(options))
+      .use(extractDate())
       .use(favicon())
       .use(googleFonts({
         cssFile: "styles.css",

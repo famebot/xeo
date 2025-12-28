@@ -6,12 +6,7 @@
           href="{{ post.url }}"
           {{ if post.url == url }}
             aria-current="page"{{ /if }}
-        >
-          {{
-            post.title || post.url.substr(1, post.url.length - 2)
-            |> replaceAll(/-(?!\d)/g, ` `)
-          }}
-        </a>
+        >{{ post.title }}</a>
       </h2>
 
       {{
