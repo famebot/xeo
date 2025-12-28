@@ -27,6 +27,6 @@ this scenario with a title in the filename but no date.
 The date at the beginning should not be parsed and is assumed here to be part of
 the title since it is incomplete. With the current implementation,
 `solstice-2025-12.md` would end up keeping the hyphen and render as
-“Solstice-2025-12” with “Solstice 2025-12” here. I consider this inconsistency a
-limitation I can live with for now. There is a draft in the example posts that
-tests the scenario with a date and title in the filename.
+“Solstice-2025-12” compared to “2025-12 solstice” here. I consider this
+inconsistency a limitation I can live with for now. There is a draft in the
+example posts that tests the scenario with a date and title in the filename.
