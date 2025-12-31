@@ -1,9 +1,12 @@
 ---
 date: "2025-01-01T13:00Z"
 author: Ricky de Laveaga
+tags:
+  - Front Matter
+  - Title
 ---
 
-A post with `date` and `author` in the
+A post with `date`, `author`, and `tags` in the
 [front matter](https://lume.land/docs/getting-started/page-data/), but no title.
 The source file named `index.md` is inside a folder named `no-title`. The
 [`basename`](https://lume.land/docs/creating-pages/urls/#basename) gets
