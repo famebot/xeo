@@ -1,14 +1,14 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.2/",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/",
     "blog/": "https://deno.land/x/lume_theme_simple_blog@v1.16.2/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.2/",
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.12/jsx-runtime.ts"
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.4/",
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
   },
   "tasks": {
     "lume": {
       "description": "Run Lume command",
-      "command": "deno run -A lume/cli.ts"
+      "command": "deno run -P=lume lume/cli.ts"
     },
     "prod": "deno task lume --location=https://xeo.land",
     "build": {
@@ -26,7 +26,7 @@
     },
     "up": {
       "description": "Upgrade dependencies, including Lume",
-      "command": "deno run -A --quiet 'https://deno.land/x/nudd@v0.2.10/cli.ts' update plugins.ts deno.json"
+      "command": "deno run -A --quiet 'https://deno.land/x/nudd@v0.2.11/cli.ts' update plugins.ts deno.json"
     }
   },
   "compilerOptions": {
@@ -49,7 +49,7 @@
       ]
     },
     "plugins": [
-      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.2/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/lint.ts"
     ]
   },
   "fmt": {

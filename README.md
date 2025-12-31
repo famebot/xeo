@@ -47,8 +47,7 @@ will create a new project with Xeo configured.
 
 - `deno task serve` to start a local server
 
-- [`deno task d`](./deno.json) also runs `deno task lume -s`, if you are into
-  the whole
+- [`deno task d`](./deno.json) also runs `serve`, if you are into the whole
   [brevity thing](https://en.wikiquote.org/wiki/The_Big_Lebowski#Jeffrey_%22The_Dude%22_Lebowski).
 
 - `deno task lup` upgrades Lume via `deno task lume upgrade`
