@@ -105,7 +105,7 @@ Where do they diverge?
   current color schemes, but has not yet been wired up to Xeo to the degree it
   has been integrated into&nbsp;eleventeen.
 
-## [Frontmatter optional](/2025-12-solstice/)
+## [Front matter optional](/2025-12-solstice/)
 
 Xeo uses [Lume’s Extract date plugin](https://lume.land/plugins/extract_date/)
 to parse dates and titles from filenames.
@@ -125,11 +125,14 @@ tests the scenario with a date and title in the filename and supplies 13:00, as
 `-13-00-00` at the end. This gets around most
 [time offsets from UTC](https://en.wikipedia.org/wiki/List_of_UTC_offsets) that
 cause the date to shift in certain time zones, most often in New Zealand,
-Kiribati, Samoa, Tonga, and USA Minor Outlying Islands. The
-[No title](/no-title/) and [2025-12 solstice](/2025-12-solstice/) example posts
-both have `date` and `author` in the frontmatter. With [No title](/no-title/),
-the title in the built site comes from the
-[`basename`](https://lume.land/docs/creating-pages/urls/#basename) of the folder
-name (`no-title`) containing the file, `index.md`. Because the partial date in
-the [2025-12 solstice](/2025-12-solstice/) filename (`2025-12-solstice.md`) is
-incomplete and does not have a day value, it gets parsed as part of the title.
+Kiribati, Samoa, Tonga, and USA Minor Outlying&nbsp;Islands.
+
+The [No title](/no-title/) and [2025-12 solstice](/2025-12-solstice/) example
+posts both have `date` and `author` in the
+[front matter](https://lume.land/docs/getting-started/page-data/). With
+[No title](/no-title/), the title in the built site comes from the
+[`basename`](https://lume.land/docs/creating-pages/urls/#basename) of the
+`no-title` folder containing the `index.md` file. Because the partial,
+incomplete date in the `2025-12-solstice.md` source filename does not have a day
+value, it gets parsed as part of the title,
+[2025-12&nbsp;solstice](/2025-12-solstice/).

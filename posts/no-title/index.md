@@ -3,8 +3,9 @@ date: "2025-01-01T13:00Z"
 author: Ricky de Laveaga
 ---
 
-A post with `date` and `author` in the frontmatter, but no title. The source
-file named `index.md` is inside a folder named `no-title`. The
+A post with `date` and `author` in the
+[front matter](https://lume.land/docs/getting-started/page-data/), but no title.
+The source file named `index.md` is inside a folder named `no-title`. The
 [`basename`](https://lume.land/docs/creating-pages/urls/#basename) gets
 transformed to “No title” in the built site because the `index.md` file works
 like an `index.html` file and assumes the name of its directory.

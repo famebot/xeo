@@ -7,12 +7,14 @@ This post only has the title in the filename, `2025-12-solstice.md`. Because the
 partial date is incomplete and does not have a day value, it gets parsed as part
 of the title. The `date` (as `2025-12-21T15:03Z`, the
 [2025 December Solstice](https://earthsky.org/astronomy-essentials/everything-you-need-to-know-december-solstice/))
-and author are in frontmatter, but there is no need to put a `title`, thanks to
+and author are in
+[front matter](https://lume.land/docs/getting-started/page-data/), but there is
+no need to put a `title`, thanks to
 [Lume’s Extract date plugin](https://lume.land/plugins/extract_date/).
 
 <!--more-->
 
-## Frontmatter optional
+## Front matter optional
 
 > You have to prepend the date to the filename using the `yyyy-mm-dd` syntax
 > followed by a hyphen `-` or an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you
