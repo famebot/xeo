@@ -19,12 +19,12 @@ import slugifyUrls from "lume/plugins/slugify_urls.ts";
    rainbow mode JS when that lands, .use() commented out below as well */
 // import terser from "lume/plugins/terser.ts";
 // lumeland/markdown-plugins
-import footnotes from "markdown-plugins/footnotes.ts";
-import image from "markdown-plugins/image.ts";
-import toc from "markdown-plugins/toc.ts";
+import footnotes from "lume/markdown-plugins/footnotes.ts";
+import image from "lume/markdown-plugins/image.ts";
+import toc from "lume/markdown-plugins/toc.ts";
 // https://github.com/mdit-plugins/mdit-plugins
 // docs https://mdit-plugins.github.io/alert.html
-import { alert } from "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@0.22.3/lib/index.js";
+import { alert } from "mdit/plugin-alert";
 
 import "lume/types.ts";
 
