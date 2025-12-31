@@ -1,6 +1,6 @@
 ---
 title: Differences between Xeo and Simple Blog
-date: "2025-01-19T13:00Z"
+date: "2025-12-31T13:00Z"
 author: Ricky de Laveaga
 tags:
   - Design
@@ -21,17 +21,18 @@ To recap [How to install Xeo:](/instructions/)
 > [**Simple Blog**](https://lume.land/theme/simple-blog/) by
 > [Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
 > [**Lume**](https://lume.land/) with support for tags and authors. Simple Blog
-> and Xeo both provide Atom and JSON feeds for subscribers. Simple Blog and Xeo
-> both provide Atom and JSON feeds for subscribers, and share the same design
-> foundation. Over time, eventually Xeo diverged substantially enough from
-> Simple Blog that Óscar and Ricky agreed it was time for Xeo to become a fully
-> stand-alone [Lume theme](https://lume.land/theme/xeo/). As of Xeo version 7.0,
-> the successor to v6.3.8, Xeo no longer depends on Simple Blog as its parent
-> theme. Because Xeo is no longer a child theme, using Xeo as a parent theme to
-> make your own child theme just got easier. Another bonus of the split is that
-> Simple Blog can now freely implement features that landed in Xeo first (like
-> custom fonts and colors) without having to worry about compatibility issues
-> with Xeo or downstream themes and sites that depend on&nbsp;Xeo.
+> and Xeo both provide Atom and JSON feeds for subscribers, and share the same
+> design foundation. Over time, eventually Xeo diverged substantially enough
+> from Simple Blog that Óscar and Ricky agreed it was time for Xeo to become a
+> fully stand-alone [Lume theme](https://lume.land/theme/xeo/).
+>
+> As of Xeo version 7.0, the successor to v6.3.8, Xeo no longer depends on
+> Simple Blog as its parent theme. Because Xeo is no longer a child theme, using
+> Xeo as a parent theme to make your own child theme just got easier. Another
+> bonus of the split is that Simple Blog can now freely implement features that
+> landed in Xeo first (like custom fonts and colors) without having to worry
+> about compatibility issues with Xeo or downstream themes and sites that depend
+> on&nbsp;Xeo.
 
 Where do they diverge?
 
