@@ -1,6 +1,6 @@
 ---
 title: Differences between Xeo and Simple Blog
-date: "2025-01-19T13:00Z"
+date: "2025-12-31T13:00Z"
 author: Ricky de Laveaga
 tags:
   - Design
@@ -16,12 +16,23 @@ for&nbsp;you!
 
 To recap [How to install Xeo:](/instructions/)
 
-> [**Xeo**](https://github.com/famebot/xeo) is
-> [Ricky de Laveaga’s](https://rdela.com/) variant of
+> [**Xeo**](https://github.com/famebot/xeo) began as
+> [Ricky de Laveaga’s](https://rdela.com/) _deluxe_ variant of
 > [**Simple Blog**](https://lume.land/theme/simple-blog/) by
 > [Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
 > [**Lume**](https://lume.land/) with support for tags and authors. Simple Blog
-> and Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
+> and Xeo both provide Atom and JSON feeds for subscribers, and share the same
+> design foundation. Over time, eventually Xeo diverged substantially enough
+> from Simple Blog that Óscar and Ricky agreed it was time for Xeo to become a
+> fully stand-alone [Lume theme](https://lume.land/theme/xeo/).
+>
+> As of Xeo version 7.0, the successor to v6.3.8, Xeo no longer depends on
+> Simple Blog as its parent theme. Because Xeo is no longer a child theme, using
+> Xeo as a parent theme to make your own child theme just got easier. Another
+> bonus of the split is that Simple Blog can now freely implement features that
+> landed in Xeo first (like custom fonts and colors) without having to worry
+> about compatibility issues with Xeo or downstream themes and sites that depend
+> on&nbsp;Xeo.
 
 Where do they diverge?
 
@@ -93,3 +104,35 @@ Where do they diverge?
   [eleventeen](https://eleventeen.blog/about/). Chromagen generated Xeo’s
   current color schemes, but has not yet been wired up to Xeo to the degree it
   has been integrated into&nbsp;eleventeen.
+
+## [Front matter optional](/2025-12-solstice/)
+
+Xeo uses [Lume’s Extract date plugin](https://lume.land/plugins/extract_date/)
+to parse dates and titles from filenames.
+
+> You have to prepend the date to the filename using the `yyyy-mm-dd` syntax
+> followed by a hyphen `-` or an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you
+> also need the time). Note that [the date] is removed [by default] when
+> generating the final url […] Dates can be defined in folders, so it's shared
+> by all pages inside […]
+
+– [Extract date, lume.land](https://lume.land/plugins/extract_date/#description)
+
+The date must be at the beginning and complete. The trailing hyphen or
+underscore following the date and preceding the title is required by Extract
+date. Providing the time is optional. There is a draft in the example posts that
+tests the scenario with a date and title in the filename and supplies 13:00, as
+`-13-00-00` at the end. This gets around most
+[time offsets from UTC](https://en.wikipedia.org/wiki/List_of_UTC_offsets) that
+cause the date to shift in certain time zones, most often in New Zealand,
+Kiribati, Samoa, Tonga, and USA Minor Outlying&nbsp;Islands.
+
+The [No title](/no-title/) and [2025-12 solstice](/2025-12-solstice/) example
+posts both have `date` and `author` in the
+[front matter](https://lume.land/docs/getting-started/page-data/). With
+[No title](/no-title/), the title in the built site comes from the
+[`basename`](https://lume.land/docs/creating-pages/urls/#basename) of the
+`no-title` folder containing the `index.md` file. Because the partial,
+incomplete date in the `2025-12-solstice.md` source filename does not have a day
+value, it gets parsed as part of the title,
+[2025-12&nbsp;solstice](/2025-12-solstice/).

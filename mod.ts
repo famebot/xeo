@@ -12,6 +12,7 @@ export default function (options: Partial<Options> = {}) {
     // Add remote files
     const files: string[] = [
       "_includes/css/ds.css",
+      "_includes/css/navbar.css",
       "_includes/css/page.css",
       "_includes/css/post-list.css",
       "_includes/css/post.css",
@@ -20,6 +21,7 @@ export default function (options: Partial<Options> = {}) {
       "_includes/layouts/base.vto",
       "_includes/layouts/page.vto",
       "_includes/layouts/post.vto",
+      "_includes/templates/pagination.vto",
       "_includes/templates/post-details.vto",
       "_includes/templates/post-list.vto",
       "pages/color-options.vto",
@@ -27,6 +29,7 @@ export default function (options: Partial<Options> = {}) {
       "_data.yml",
       "_data/i18n.yml",
       "404.md",
+      "archive_result.page.js",
       "archive.page.js",
       "favicon.svg",
       "index.vto",

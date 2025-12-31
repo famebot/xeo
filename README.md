@@ -1,15 +1,33 @@
 # [🔥&nbsp;Lume](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate) + [Xeo&nbsp;🧊](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
 
-Welcome to **Xeo**, a _deluxe_ variant of
-[**Lume Simple Blog**](https://lume.land/theme/simple-blog/).
+Welcome to **Xeo**, a _deluxe_
+[**Lume theme**](https://lume.land/theme/simple-blog/).
 
 Visit [xeo.land](https://xeo.land) for the live demo.
 
 [**Release Notes**](https://github.com/famebot/xeo/releases) (Contributions
 welcome: [famebot/xeo on GitHub](https://github.com/famebot/xeo))
 
-&copy; 2022-2025 [Óscar Otero](https://oscarotero.com/) &amp;
+&copy; 2022-present [Óscar Otero](https://oscarotero.com/) &amp;
 [Ricky de Laveaga](https://rdela.com/); [MIT License](./LICENSE.md)
+
+> [!NOTE]
+> **Xeo** began as Ricky de Laveaga’s _deluxe_ variant of
+> [**Simple Blog**](https://lume.land/theme/simple-blog/) by Óscar Otero, a
+> clean and minimal blog theme for [**Lume**](https://lume.land/) with support
+> for tags and authors. Simple Blog and Xeo both provide Atom and JSON feeds for
+> subscribers, and share the same design foundation. Over time, eventually Xeo
+> diverged substantially enough from Simple Blog that Óscar and Ricky agreed it
+> was time for Xeo to become a fully stand-alone
+> [Lume theme](https://lume.land/theme/xeo/).
+>
+> As of Xeo version 7.0, the successor to v6.3.8, Xeo no longer depends on
+> Simple Blog as its parent theme. Because Xeo is no longer a child theme, using
+> Xeo as a parent theme to make your own child theme just got easier. Another
+> bonus of the split is that Simple Blog can now freely implement features that
+> landed in Xeo first (like custom fonts and colors) without having to worry
+> about compatibility issues with Xeo or downstream themes and sites that depend
+> on Xeo.
 
 ## Quick start 🎬
 
@@ -29,8 +47,7 @@ will create a new project with Xeo configured.
 
 - `deno task serve` to start a local server
 
-- [`deno task d`](./deno.json) also runs `deno task lume -s`, if you are into
-  the whole
+- [`deno task d`](./deno.json) also runs `serve`, if you are into the whole
   [brevity thing](https://en.wikiquote.org/wiki/The_Big_Lebowski#Jeffrey_%22The_Dude%22_Lebowski).
 
 - `deno task lup` upgrades Lume via `deno task lume upgrade`

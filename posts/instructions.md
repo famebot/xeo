@@ -1,6 +1,6 @@
 ---
 title: How to install Xeo
-date: "2025-01-13T13:00Z"
+date: "2025-12-30T13:00Z"
 author: Ricky de Laveaga
 tags:
   - Instructions
@@ -8,15 +8,6 @@ tags:
   - Xeo
 draft: false
 ---
-
-[**Xeo**](https://github.com/famebot/xeo) is
-[Ricky de Laveaga’s](https://rdela.com/) variant of
-[**Simple Blog**](https://lume.land/theme/simple-blog/) by
-[Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
-[**Lume**](https://lume.land/) with support for tags and authors. Simple Blog
-and Xeo both provide Atom and JSON feeds for&nbsp;subscribers.
-
-<!--more-->
 
 Once you
 [install Deno](https://docs.deno.com/runtime/getting_started/installation/), the
@@ -29,6 +20,27 @@ deno run -A https://lume.land/init.ts --theme=xeo
 ```
 
 will create a new project with Xeo&nbsp;configured.
+
+<!--more-->
+
+> [!NOTE]
+> [**Xeo**](https://github.com/famebot/xeo) began as
+> [Ricky de Laveaga’s](https://rdela.com/) _deluxe_ variant of
+> [**Simple Blog**](https://lume.land/theme/simple-blog/) by
+> [Óscar Otero](https://oscarotero.com/), a clean and minimal blog theme for
+> [**Lume**](https://lume.land/) with support for tags and authors. Simple Blog
+> and Xeo both provide Atom and JSON feeds for subscribers, and share the same
+> design foundation. Over time, eventually Xeo diverged substantially enough
+> from Simple Blog that Óscar and Ricky agreed it was time for Xeo to become a
+> fully stand-alone [Lume&nbsp;theme](https://lume.land/theme/xeo/).
+>
+> As of Xeo version 7.0, the successor to v6.3.8, Xeo no longer depends on
+> Simple Blog as its parent theme. Because Xeo is no longer a child theme, using
+> Xeo as a parent theme to make your own child theme just got easier. Another
+> bonus of the split is that Simple Blog can now freely implement features that
+> landed in Xeo first (like custom fonts and colors) without having to worry
+> about compatibility issues with Xeo or downstream themes and sites that depend
+> on&nbsp;Xeo.
 
 ## Personalize Xeo
 
