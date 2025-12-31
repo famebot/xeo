@@ -1,9 +1,11 @@
 {
   "imports": {
     "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/",
-    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@7.0.3/",
     "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.4/",
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts",
+    "lume/markdown-plugins/": "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.10.0/",
+    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@7.0.3/",
+    "mdit/plugin-alert": "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@0.22.3/lib/index.js"
   },
   "tasks": {
     "lume": "deno run -A lume/cli.ts",
@@ -21,13 +23,56 @@
     "jsx": "react-jsx",
     "jsxImportSource": "lume"
   },
+  "lint": {
+    "exclude": [
+      "./_site"
+    ],
+    "rules": {
+      "tags": [
+        "recommended"
+      ],
+      "exclude": [
+        "no-import-prefix"
+      ]
+    },
+    "plugins": [
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/lint.ts"
+    ]
+  },
+  "fmt": {
+    "exclude": [
+      "./_site"
+    ]
+  },
   "unstable": [
     "temporal",
     "fmt-component"
   ],
-  "lint": {
-    "plugins": [
-      "https://deno.land/x/lume@v3.1.3/lint.ts"
-    ]
-  }
+  "permissions": {
+    "lume": {
+      "read": true,
+      "write": [
+        "./"
+      ],
+      "import": [
+        "cdn.jsdelivr.net:443",
+        "jsr.io:443",
+        "deno.land:443"
+      ],
+      "net": [
+        "0.0.0.0",
+        "cdn.jsdelivr.net:443",
+        "data.jsdelivr.com:443",
+        "fonts.googleapis.com:443",
+        "fonts.gstatic.com:443",
+        "jsr.io:443",
+        "registry.npmjs.org:443"
+      ],
+      "env": true,
+      "run": true,
+      "ffi": true,
+      "sys": true
+    }
+  },
+  "lock": false
 }
