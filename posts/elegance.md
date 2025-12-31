@@ -1,6 +1,6 @@
 ---
 title: Elegance
-date: '2025-04-18T16:00:00.000Z'
+date: "2025-04-18T13:00Z"
 author: Dan Forsyth
 tags:
   - Design
@@ -14,7 +14,8 @@ draft: false
 
 <!--more-->
 
-With Xeo, we strive to reflect this _simply powerful_ aspect of elegance,
+With Xeo, we strive to reflect this _simply powerful_ aspect of elegance
+described by Dan Forsyth,
 [as quoted](https://www.google.com/search?tbm=bks&tbo=1&q=%22elegance+is+power+cloaked+in+simplicity%22+Dan+Forsyth)
 in
 [Classic Shell Scripting](https://www.oreilly.com/library/view/classic-shell-scripting/0596005954/)
