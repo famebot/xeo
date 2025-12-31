@@ -3,7 +3,11 @@ title: Differences between Xeo and Simple Blog
 date: "2025-12-31T13:00Z"
 author: Ricky de Laveaga
 tags:
+  - Date
   - Design
+  - Front Matter
+  - Lume
+  - Title
   - Xeo
 draft: false
 ---

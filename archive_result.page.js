@@ -4,7 +4,7 @@ export default function* ({ search, i18n, paginate }) {
   // Generate a page for each tag
   for (const tag of search.values("tags")) {
     const url = (n) => (n === 1) ? `/archive/${tag}/` : `/archive/${tag}/${n}/`;
-    const pages = search.pages(`type=post '${tag}'`);
+    const pages = search.pages(`type=post '${tag}'`, "date=desc");
 
     for (const page of paginate(pages, { url, size: 10 })) {
       yield {

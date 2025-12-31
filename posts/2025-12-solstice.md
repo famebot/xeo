@@ -1,13 +1,18 @@
 ---
 date: "2025-12-21T15:03Z"
 author: Ricky de Laveaga
+tags:
+  - Date
+  - Front Matter
+  - Lume
+  - Xeo
 ---
 
 This post only has the title in the filename, `2025-12-solstice.md`. Because the
 partial date is incomplete and does not have a day value, it gets parsed as part
 of the title. The `date` (as `2025-12-21T15:03Z`, the
 [2025 December Solstice](https://earthsky.org/astronomy-essentials/everything-you-need-to-know-december-solstice/))
-and author are in
+the `author`, and the `tags` are in
 [front matter](https://lume.land/docs/getting-started/page-data/), but there is
 no need to put a `title`, thanks to
 [Lume’s Extract date plugin](https://lume.land/plugins/extract_date/).
