@@ -29,12 +29,14 @@ underscore is required by Extract date. Providing the time is optional, here
 13:00, as `-13-00-00` at the end, gets around most
 [time offsets from UTC](https://en.wikipedia.org/wiki/List_of_UTC_offsets) that
 cause the date to shift in certain time zones, most often in New Zealand,
-Kiribati, Samoa, Tonga, and USA Minor Outlying Islands. Because the partial date
-in the [2025-12 solstice](/2025-12-solstice/) filename (`2025-12-solstice.md`)
-is incomplete and does not have a day value, it gets parsed as part of the
-title. With [No title](/no-title/), the title in the built site comes from the
-[`basename`](https://lume.land/docs/creating-pages/urls/#basename) of the folder
-name (`no-title`) containing the file, `index.md`.
+Kiribati, Samoa, Tonga, and USA Minor Outlying Islands. Because the partial,
+incomplete date in (`2025-12-solstice.md`) does not have a day value, it gets
+parsed as part of the title, [2025-12 solstice](/2025-12-solstice/).
+
+When Lume processes the `index.md` file contained in the `no-title` folder, the
+[`basename`](https://lume.land/docs/creating-pages/urls/#basename) gets
+transformed to “[No title](/no-title/)” in the built site because the `index.md`
+file works like an `index.html` file and assumes the name of its directory.
 
 ## [Stardate](https://en.wikipedia.org/wiki/Stardate) 2161
 

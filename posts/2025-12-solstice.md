@@ -24,13 +24,13 @@ and author are in frontmatter, but there is no need to put a `title`, thanks to
 
 Since the current implementation uses a
 [negative lookahead](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
-to
-[remove hyphens that do not precede digits 0-9](https://github.com/famebot/xeo/blob/trunk/plugins.ts#L144),
+to remove hyphens that do not
+[precede digits 0-9](https://github.com/famebot/xeo/blob/trunk/plugins.ts#L144),
 `solstice-2025-12.md` would end up keeping the hyphen and render as
 “Solstice-2025-12” compared to “2025-12 solstice” here. I consider this
 inconsistency a limitation I can live with for now. There is a draft in the
 example posts that tests the scenario with a date and title in the filename.
 
 With [No title](/no-title/), the title in the built site comes from the
-[`basename`](https://lume.land/docs/creating-pages/urls/#basename) of the folder
-name (`no-title`) containing the file, `index.md`.
+[`basename`](https://lume.land/docs/creating-pages/urls/#basename) of the
+`no-title` folder containing the `index.md` file.
