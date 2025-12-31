@@ -1,11 +1,17 @@
 ---
 author: Ricky de Laveaga
+tags:
+  - Date
+  - Front Matter
+  - Lume
+  - Star Trek
+  - Title
 draft: true
 ---
 
-A post where all we have is `draft` set to true and the `author` in the
-[front matter](https://lume.land/docs/getting-started/page-data/). The `date`
-and `title` get set by
+A post where all we have is the `author`, the `tags`, and `draft` set to true in
+the [front matter](https://lume.land/docs/getting-started/page-data/). The
+`date` and `title` get set by
 [Lume’s Extract date plugin](https://lume.land/plugins/extract_date/) from the
 filename, (`2161-01-16-13-00-00-stardate-foundation.md`).
 
