@@ -9,6 +9,20 @@ tags:
 draft: false
 ---
 
+Once you
+[install Deno](https://docs.deno.com/runtime/getting_started/installation/), the
+**fastest and easiest** way to configure this theme is the
+[Lume init command](https://deno.land/x/lume_init), which you can also copy
+easily from the [Xeo theme page](https://lume.land/theme/xeo/). Running:
+
+```bash
+deno run -A https://lume.land/init.ts --theme=xeo
+```
+
+will create a new project with Xeo&nbsp;configured.
+
+<!--more-->
+
 > [!NOTE]
 > [**Xeo**](https://github.com/famebot/xeo) began as
 > [Ricky de Laveaga’s](https://rdela.com/) _deluxe_ variant of
@@ -27,20 +41,6 @@ draft: false
 > landed in Xeo first (like custom fonts and colors) without having to worry
 > about compatibility issues with Xeo or downstream themes and sites that depend
 > on&nbsp;Xeo.
-
-<!--more-->
-
-Once you
-[install Deno](https://docs.deno.com/runtime/getting_started/installation/), the
-**fastest and easiest** way to configure this theme is the
-[Lume init command](https://deno.land/x/lume_init), which you can also copy
-easily from the [Xeo theme page](https://lume.land/theme/xeo/). Running:
-
-```bash
-deno run -A https://lume.land/init.ts --theme=xeo
-```
-
-will create a new project with Xeo&nbsp;configured.
 
 ## Personalize Xeo
 
