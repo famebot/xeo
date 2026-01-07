@@ -48,6 +48,10 @@ title: Home
 
   <hr>
 
-  <p>{{ i18n.nav.archive }}</p>
+  <p>
+    {{ i18n.nav.archive_search }} <a href="/{{ archives.basename }}/">{{
+      i18n.nav.archive_title
+    }}</a>
+  </p>
   <div class="search" id="search"></div>
 </main>

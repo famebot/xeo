@@ -3,7 +3,10 @@ export const layout = "layouts/archive_result.vto";
 export default function* ({ search, paginate, i18n, archives }) {
   // Generate a page for each tag
   for (const tag of search.values("tags")) {
-    const url = (n) => (n === 1) ? `/archive/${tag}/` : `/archive/${tag}/${n}/`;
+    const url = (n) =>
+      (n === 1)
+        ? `/${archives.basename}/${tag}/`
+        : `/${archives.basename}/${tag}/${n}/`;
     const pages = search.pages(`type=post '${tag}'`, "date=desc");
 
     for (const page of paginate(pages, { url, size: archives.tag })) {
@@ -19,7 +22,9 @@ export default function* ({ search, paginate, i18n, archives }) {
   // Generate a page for each author
   for (const author of search.values("author")) {
     const url = (n) =>
-      (n === 1) ? `/author/${author}/` : `/archive/${author}/${n}/`;
+      (n === 1)
+        ? `/author/${author}/`
+        : `/${archives.basename}/${author}/${n}/`;
     const pages = search.pages(`type=post author='${author}'`);
 
     for (const page of paginate(pages, { url, size: archives.author })) {

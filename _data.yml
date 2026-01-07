@@ -8,6 +8,7 @@ archives:
   posts: 12
   tag: 10
   author: 10
+  basename: archive
 
 copyright: "[Xeo](https://github.com/famebot/xeo) &copy; 2022-present [Óscar&nbsp;Otero](https://oscarotero.com/) &amp; [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/)"
 
