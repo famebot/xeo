@@ -12,7 +12,7 @@ title: Home
 <main class="{{ it.bodyClass }}">
   <section class="postList">
     <br>
-    {{ for post of search.pages("type=post", "date=desc", 3) }}
+    {{ for post of search.pages("type=post", "date=desc", home.posts) }}
       <article class="post">
         <header class="post-header">
           <h2 class="post-title">
@@ -48,6 +48,10 @@ title: Home
 
   <hr>
 
-  <p>{{ i18n.nav.archive }}</p>
+  <p>
+    {{ i18n.nav.archive_search }} <a href="/{{ archives.basename }}/">{{
+      i18n.nav.archive_title
+    }}</a>
+  </p>
   <div class="search" id="search"></div>
 </main>

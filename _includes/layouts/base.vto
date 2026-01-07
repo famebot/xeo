@@ -38,10 +38,10 @@
   <body>
     <nav class="navbar">
       <a href="/" class="navbar-home" aria-label="Homepage">
-        {{ if it.logo }}
+        {{ if it.logo.svg }}
           <img
-            src="{{ it.logo }}"
-            height="{{ it.logo_height }}"
+            src="{{ it.logo.svg }}"
+            height="{{ it.logo.height }}"
             alt="{{ metas.site }}"
             title="{{ metas.site }}"
           />

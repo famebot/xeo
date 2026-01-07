@@ -1,10 +1,18 @@
 export const layout = "layouts/archive.vto";
 
-export default function* ({ search, paginate, i18n }) {
+export default function* ({ search, paginate, i18n, archives }) {
   const posts = search.pages("type=post", "date=desc");
 
+  function url(n) {
+    if (n === 1) {
+      return `/${archives.basename}/`;
+    }
+
+    return `/${archives.basename}/${n}/`;
+  }
+
   for (
-    const data of paginate(posts, { url, size: 12 })
+    const data of paginate(posts, { url, size: archives.posts })
   ) {
     // Show the first page in the menu
     if (data.pagination.page === 1) {
@@ -19,12 +27,4 @@ export default function* ({ search, paginate, i18n }) {
       title: i18n.nav.archive_title,
     };
   }
-}
-
-function url(n) {
-  if (n === 1) {
-    return "/archive/";
-  }
-
-  return `/archive/${n}/`;
 }
