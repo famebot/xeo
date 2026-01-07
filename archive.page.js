@@ -1,10 +1,10 @@
 export const layout = "layouts/archive.vto";
 
-export default function* ({ search, paginate, i18n }) {
+export default function* ({ search, paginate, i18n, archives }) {
   const posts = search.pages("type=post", "date=desc");
 
   for (
-    const data of paginate(posts, { url, size: 12 })
+    const data of paginate(posts, { url, size: archives.posts })
   ) {
     // Show the first page in the menu
     if (data.pagination.page === 1) {

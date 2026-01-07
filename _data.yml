@@ -2,13 +2,20 @@ lang: en
 home:
   welcome: "\U0001F525 <a href=\"https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xeo&op=translate\">Lume e Xeo</a> \U0001F9CA"
   intro: "Welcome to [**Xeo**](https://github.com/famebot/xeo), a *deluxe* [**Lume&nbsp;theme**](https://lume.land/theme/xeo/)."
+  posts: 3
+
+archives:
+  posts: 12
+  tag: 10
+  author: 10
 
 copyright: "[Xeo](https://github.com/famebot/xeo) &copy; 2022-present [Óscar&nbsp;Otero](https://oscarotero.com/) &amp; [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/)"
 
 menu_links: []
 
-logo: "/favicon.svg"
-logo_height: 48
+logo:
+  svg: "/favicon.svg"
+  height: 48
 
 metas:
   site: Xeo (demo)
