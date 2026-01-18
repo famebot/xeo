@@ -46,13 +46,16 @@ will create a new project with Xeo configured.
 
 - `deno task serve` to start a local server
 
-- [`deno task d`](./deno.json) also runs `serve`, if you are into the whole
+- `deno task d` (short for `dev`, or `develop`) and `deno task s` also run
+  `serve`, if you are into the whole
   [brevity thing](https://en.wikiquote.org/wiki/The_Big_Lebowski#Jeffrey_%22The_Dude%22_Lebowski).
 
 - `deno task lup` upgrades Lume via `deno task lume upgrade`
 
-- `deno task up` upgrades dependencies with
+- `deno task up` upgrades dependencies (including Lume) with
   [`nudd`](https://github.com/oscarotero/nudd)
+
+- View entire [`deno.json` configuration file](./deno.json).
 
 ## Personalize Xeo 💅
 

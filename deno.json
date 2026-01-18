@@ -21,6 +21,7 @@
       "command": "deno task lume -s"
     },
     "d": "deno task serve",
+    "s": "deno task serve",
     "lup": {
       "description": "Update Lume, for latest, add: --dev",
       "command": "deno task lume upgrade"
