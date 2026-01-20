@@ -1,7 +1,7 @@
 lang: en
 home:
-  welcome: "\U0001F525 <a href=\"https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xogo&op=translate\">Lume e Xogo</a> \U0001F9CA"
-  intro: "Welcome to [**Xeo**](https://github.com/famebot/xeo), a *deluxe* [**Lume&nbsp;theme**](https://lume.land/theme/xeo/)."
+  welcome: "\U0001F525 <a href=\"https://translate.google.com/?sl=gl&tl=en&text=Xogo%20de%20Lume&op=translate\">Xogo de Lume</a> \U0001F9CA"
+  intro: "[**Lume theme page**](https://lume.land/theme/xeo/) • [**Source code**](https://github.com/famebot/xeo/tree/xogo)"
   posts: 4
 
 archives:
@@ -10,7 +10,7 @@ archives:
   author: 12
   basename: arquivo
 
-copyright: "[Xeo](https://github.com/famebot/xeo) &copy; 2022-2025 [Óscar&nbsp;Otero](https://oscarotero.com/) &amp; [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/)"
+copyright: "[Xeo](https://github.com/famebot/xeo) &copy; 2022-present [Óscar&nbsp;Otero](https://oscarotero.com/) &amp; [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/)"
 
 menu_links: []
 
