@@ -2,7 +2,7 @@ lang: en
 home:
   welcome: "\U0001F525 <a href=\"https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xogo&op=translate\">Lume e Xogo</a> \U0001F9CA"
   intro: "Welcome to [**Xeo**](https://github.com/famebot/xeo), a *deluxe* [**Lume&nbsp;theme**](https://lume.land/theme/xeo/)."
-  posts: 6
+  posts: 4
 
 archives:
   posts: 12

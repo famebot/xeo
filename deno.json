@@ -1,11 +1,11 @@
 {
   "imports": {
     "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.4/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.6/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.11/",
     "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts",
-    "lume/markdown-plugins/": "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.10.0/",
+    "lume/markdown-plugins/": "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.10.1/",
     "mdit/plugin-alert": "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@0.22.3/lib/index.js",
-    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@8.0.0/"
+    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@8.0.1/"
   },
   "tasks": {
     "lume": {
