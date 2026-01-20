@@ -1,13 +1,13 @@
 lang: en
 home:
-  welcome: "\U0001F525 <a href=\"https://translate.google.com/?sl=gl&tl=en&text=Lume%20e%20Xeo&op=translate\">Lume e Xeo</a> \U0001F9CA"
-  intro: "Welcome to [**Xeo**](https://github.com/famebot/xeo), a *deluxe* [**Lume&nbsp;theme**](https://lume.land/theme/xeo/)."
-  posts: 3
+  welcome: "\U0001F9CA Xeo for Lume \U0001F525"
+  intro: "[**Lume theme page**](https://lume.land/theme/xeo/) • [**Source code**](https://github.com/famebot/xeo)"
+  posts: 12
 
 archives:
-  posts: 12
-  tag: 10
-  author: 10
+  posts: 24
+  tag: 12
+  author: 12
   basename: archive
 
 copyright: "[Xeo](https://github.com/famebot/xeo) &copy; 2022-present [Óscar&nbsp;Otero](https://oscarotero.com/) &amp; [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/)"
@@ -20,7 +20,7 @@ logo:
 
 metas:
   site: Xeo (demo)
-  description: A deluxe Lume theme
+  description: A splendid Lume theme
   title: "=title"
   image: "=image"
   # twitter: "@famebot"

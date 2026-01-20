@@ -1,32 +1,22 @@
-/* 
- * Lume Design System 0.5.2
- * Local to support offline dev, removed Inter
- * https://github.com/lumeland/ds
- * https://unpkg.com/@lumeland/ds@0.5.2/ds.css
- */
+/* See https://github.com/lumeland/ds/issues/6 */
 
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-*, :after, :before {
+/* modern-normalize v3.0.1 - MIT License
+ * https://github.com/sindresorhus/modern-normalize
+ * https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css
+ */
+*, ::after, ::before {
   box-sizing: border-box;
 }
 html {
-  -webkit-text-size-adjust: 100%;
+  font-family:
+    system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.15;
-  -moz-tab-size: 4;
+  -webkit-text-size-adjust: 100%;
   tab-size: 4;
 }
 body {
-  font-family:
-    system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji;
   margin: 0;
-}
-hr {
-  color: inherit;
-  height: 0;
-}
-abbr[title] {
-  text-decoration: underline dotted;
 }
 b, strong {
   font-weight: bolder;
@@ -52,8 +42,7 @@ sup {
   top: -0.5em;
 }
 table {
-  border-color: inherit;
-  text-indent: 0;
+  border-color: currentcolor;
 }
 button, input, optgroup, select, textarea {
   font-family: inherit;
@@ -61,21 +50,8 @@ button, input, optgroup, select, textarea {
   line-height: 1.15;
   margin: 0;
 }
-button, select {
-  text-transform: none;
-}
 [type="button"], [type="reset"], [type="submit"], button {
   -webkit-appearance: button;
-}
-::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-:-moz-ui-invalid {
-  box-shadow: none;
 }
 legend {
   padding: 0;
@@ -100,6 +76,11 @@ progress {
 summary {
   display: list-item;
 }
+
+/* @lumeland/ds v0.6.0 - Unreleased
+ * https://github.com/lumeland/ds
+ * https://cdn.jsdelivr.net/npm/@lumeland/ds/ds.css
+ */
 details {
   border: 1px solid;
 }
@@ -240,7 +221,7 @@ input[type="range"] {
   background-color: transparent;
   color: currentColor;
   cursor: pointer;
-  /* display: block; */
+  display: block;
   height: 1.5em;
   margin: 0;
   vertical-align: middle;
@@ -454,7 +435,7 @@ button[role="switch"][aria-checked="true"]:before {
   --code-background: var(--color-highlight);
   --code-background-selection: #b3d4fc;
   --font-family-code:
-    Monaco,ui-monospace,SFMono-Regular,Menlo,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace;
+    Consolas,Menlo,Monaco,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace;
   --font-family-ui: -apple-system,system-ui,sans-serif;
   --font-family-display: var(--font-family-ui);
   --font-bold: 600;
@@ -464,7 +445,7 @@ button[role="switch"][aria-checked="true"]:before {
   );
   --font-display-spacing: -0.02em;
   --font-title: var(--font-bold) clamp(1.5rem, 8vw, 2rem)/1.2 var(
-    --font-family-display
+    --font-family-ui
   );
   --font-title-spacing: -0.015em;
   --font-body: clamp(1rem, 5vw, 1.125rem)/1.6 var(--font-family-ui);
@@ -514,28 +495,29 @@ button[role="switch"][aria-checked="true"]:before {
   --code-background-selection: hsla(0, 0%, 93%, 0.15);
   color-scheme: dark;
 }
-@supports (font-variation-settings: normal) {
-  :root {
-    --font-family-display: display, var(--font-family-ui);
-    --font-family-ui: text,system-ui,sans-serif;
-    --font-display-spacing: 0;
-    --font-title-spacing: 0.00625em;
-    --font-body-spacing: 0;
-    font-feature-settings: "liga" 1, "calt" 1;
-  }
+*, :after, :before {
+  box-sizing: border-box;
 }
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: 120px;
+  tab-size: 4;
   text-rendering: auto;
+}
+body, html {
+  overflow-wrap: break-word;
 }
 body, html {
   background-color: var(--color-background);
   color: var(--color-base);
   font: var(--font-ui);
-  overflow-wrap: break-word;
+  margin: 0;
+}
+:focus-visible {
+  outline-color: currentColor;
 }
 main > :first-child {
   margin-top: 0;
@@ -548,15 +530,22 @@ a:hover {
   text-decoration: none;
 }
 table {
+  border-color: currentcolor;
   margin: 1em 0;
 }
 table td, table th {
   padding-right: 1em;
 }
-code, pre {
+code, kbd, pre, samp {
   font: var(--font-code);
   font-variant-ligatures: none;
   letter-spacing: 0;
+}
+pre {
+  overflow-x: auto;
+}
+small {
+  font-size: 80%;
 }
 :not(pre) > code {
   background: var(--color-highlight);
@@ -580,11 +569,54 @@ hr {
   border: none;
   border-top: 1px solid;
   color: var(--color-line);
-  margin: var(--row-gap-small) 0;
+  margin: var(--row-gap-medium) 0;
 }
 b, h1, h2, h3, h4, h5, h6, strong {
   color: var(--color-text);
   font-weight: var(--font-bold);
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+[type="button"], [type="reset"], [type="submit"], button {
+  -webkit-appearance: button;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+legend {
+  padding: 0;
+}
+progress {
+  vertical-align: baseline;
+}
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+summary {
+  display: list-item;
 }
 .icon {
   align-items: center;
@@ -636,6 +668,21 @@ b, h1, h2, h3, h4, h5, h6, strong {
 .body {
   :not(pre) > code, b, h1, h2, strong {
     color: var(--color-base);
+  }
+  table {
+    border: 1px solid var(--color-line);
+    border-collapse: collapse;
+    margin: 2em 0;
+    width: 100%;
+  }
+  th {
+    background: var(--color-highlight);
+    color: var(--color-base);
+  }
+  td, th {
+    border-bottom: 1px solid var(--color-line);
+    border-top: 1px solid var(--color-line);
+    padding: 0.2em 1em;
   }
 }
 .body img {

@@ -1,6 +1,6 @@
-# [🔥&nbsp;Lume](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate) + [Xeo&nbsp;🧊](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
+# 🧊 Xeo for Lume 🔥
 
-Welcome to **Xeo**, a _deluxe_
+Welcome to **Xeo**, a _splendid_
 [**Lume theme**](https://lume.land/theme/simple-blog/).
 
 Visit [xeo.land](https://xeo.land) for the live demo.
@@ -9,32 +9,70 @@ Visit [xeo.land](https://xeo.land) for the live demo.
 welcome: [famebot/xeo on GitHub](https://github.com/famebot/xeo))
 
 &copy; 2022-present [Óscar Otero](https://oscarotero.com/) &amp;
-[Ricky de Laveaga](https://rdela.com/); [MIT License](./LICENSE.md)
+[Ricky de Laveaga](https://rdela.com/);
+[MIT License](https://github.com/famebot/xeo/blob/trunk/LICENSE.md)
+
+## 📇 Sites built with Xeo ❄️
+
+- ### [Artist Activist](https://artact.io/artact-xeo/)
+
+- ### [Ricky de Laveaga](https://rdela.com/credits/)
+
+## Migration steps for versions 7 and lower
+
+[Version 8](https://github.com/famebot/xeo/releases/tag/v8.0.0) introduced more
+customization options that need to be set when you upgrade.
+
+1. Set these
+   [new options](https://github.com/famebot/xeo/blob/v8.0.0/_data.yml#L5-L11) in
+   `_data.yml` to configure them:
+
+   - `home.posts` (default: `3`) - The number of recent posts shown on the home
+     page.
+
+   - `archives.posts` (default: `12`) - The number of posts shown on archive
+     pages.
+
+   - `archives.tag` (default: `10`) - The number of posts shown on tag pages.
+
+   - `archives.author` (default: `10`) - The number of posts shown on author
+     pages.
+
+   - `archives.basename` (default: `archive`) - The path/slug of the post
+     archive. (The “Archive” title is set by `i18n.nav.archive_title` in
+     [`_data/i18n.yml`](https://github.com/famebot/xeo/blob/trunk/_data/i18n.yml),
+     which you can create a copy of in your Xeo site to add, customize, or
+     override values. The search box label, `i18n.nav.archive_search`, is also
+     set there.)
+
+2. Rename
+   [logo options](https://github.com/famebot/xeo/blob/v8.0.0/_data.yml#L17-L19)
+   in `_data.yml`
+
+   - `logo` is now `logo.svg` (default is still: `/favicon.svg`)
+
+   - `logo_height` is now `logo.height` (default is still: `48`)
 
 > [!NOTE]
-> **Xeo** began as Ricky de Laveaga’s _deluxe_ variant of
-> [**Simple Blog**](https://lume.land/theme/simple-blog/) by Óscar Otero, a
-> clean and minimal blog theme for [**Lume**](https://lume.land/) with support
-> for tags and authors. Simple Blog and Xeo both provide Atom and JSON feeds for
-> subscribers, and share the same design foundation. Over time, eventually Xeo
-> diverged substantially enough from Simple Blog that Óscar and Ricky agreed it
-> was time for Xeo to become a fully stand-alone
-> [Lume theme](https://lume.land/theme/xeo/).
+> **Xeo** began as a variant of the
+> [**Simple Blog**](https://lume.land/theme/simple-blog/) theme for
+> [**Lume**](https://lume.land/) by [Óscar Otero](https://oscarotero.com/). Over
+> time, eventually Xeo diverged substantially enough from Simple Blog that Óscar
+> and Ricky agreed it was time for Xeo to become a fully stand-alone theme.
 >
-> As of Xeo version 7.0, the successor to v6.3.8, Xeo no longer depends on
-> Simple Blog as its parent theme. Because Xeo is no longer a child theme, using
-> Xeo as a parent theme to make your own child theme just got easier. Another
-> bonus of the split is that Simple Blog can now freely implement features that
-> landed in Xeo first (like custom fonts and colors) without having to worry
-> about compatibility issues with Xeo or downstream themes and sites that depend
-> on Xeo.
+> Starting with version 7, Xeo no longer depends on Simple Blog as its parent
+> theme. Because Xeo is no longer a child theme, using Xeo as a parent theme to
+> make your own child theme just got easier. Another bonus of the split is that
+> Simple Blog can now freely implement features that landed in Xeo first (like
+> custom fonts and colors) without having to worry about compatibility issues
+> with Xeo or downstream themes and sites that depend on Xeo.
 
 ## Quick start 🎬
 
 Once you
 [install Deno](https://docs.deno.com/runtime/getting_started/installation/), the
 **fastest and easiest** way to configure this theme is the
-[Lume init command](https://deno.land/x/lume_init), which you can also copy
+[Lume init command](https://github.com/lumeland/init), which you can also copy
 easily from the [Xeo theme page](https://lume.land/theme/xeo/). Running:
 
 ```bash
@@ -47,13 +85,17 @@ will create a new project with Xeo configured.
 
 - `deno task serve` to start a local server
 
-- [`deno task d`](./deno.json) also runs `serve`, if you are into the whole
+- `deno task d` (short for `dev`, or `develop`) and `deno task s` also run
+  `serve`, if you are into the whole
   [brevity thing](https://en.wikiquote.org/wiki/The_Big_Lebowski#Jeffrey_%22The_Dude%22_Lebowski).
 
 - `deno task lup` upgrades Lume via `deno task lume upgrade`
 
-- `deno task up` upgrades dependencies with
+- `deno task up` upgrades dependencies (including Lume) with
   [`nudd`](https://github.com/oscarotero/nudd)
+
+- View entire
+  [`deno.json` configuration file](https://github.com/famebot/xeo/blob/trunk/deno.json).
 
 ## Personalize Xeo 💅
 
