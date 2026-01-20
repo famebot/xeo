@@ -8,9 +8,9 @@ menu:
 
 # 📇 Sites built with Xeo ❄️
 
-- ## [Artist Activist](https://artact.io/artact-xeo/)
+- ## [Artist Activist - artact.io](https://artact.io/artact-xeo/)
 
-- ## [Ricky de Laveaga](https://rdela.com/credits/)
+- ## [Ricky de Laveaga - rdela.com](https://rdela.com/credits/)
 
 ---
 
