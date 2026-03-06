@@ -98,9 +98,9 @@ Where do they diverge?
 - **Color:** Xeo has a
   [foundation](https://github.com/famebot/xeo/blob/trunk/styles.css) that will
   lead to eventual support of
-  [Rainbow Mode](https://eleventeen.blog/about/#rainbow-mode) powered by
+  [Rainbow Mode](https://eleventeen.netlify.app/about/#rainbow-mode) powered by
   [Chromagen](https://chromagen.io/), like Xeo’s predecessor
-  [eleventeen](https://eleventeen.blog/about/). Chromagen generated Xeo’s
+  [eleventeen](https://eleventeen.netlify.app/about/). Chromagen generated Xeo’s
   current color schemes, but has not yet been wired up to Xeo to the degree it
   has been integrated into&nbsp;eleventeen.
 
