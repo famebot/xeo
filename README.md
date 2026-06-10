@@ -103,6 +103,39 @@ Edit the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
 in your blog root folder with your data to customize the site title,
 description, and metadata.
 
+## Personalize Xeo
+
+Edit the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
+in your blog root folder with your data to customize the site title,
+description, and&nbsp;metadata.
+
+Xeo uses [Lume’s favicon plugin](https://lume.land/plugins/favicon/), and
+starting with Xeo version 8.1, Xeo allows you to control the favicon plugin’s
+`input` option to provide an alternate file other than the default,
+`./favicon.svg`, which had been hardcoded up through version 8.0.1. Thanks to
+[pamubay on GitHub](https://github.com/pamubay) for raising
+[this issue](https://github.com/famebot/xeo/issues/45) in
+[Lume GitHub&nbsp;discussions](https://github.com/lumeland/lume/discussions/814).
+
+> ℹ️
+> [Accepted formats](https://github.com/lumeland/lume/blob/main/plugins/favicon.ts)
+> are **SVG, PNG, JPG, GIF, BMP, TIFF,&nbsp;WEBP**
+
+Xogo ([live site](https://xogo.xeo.land/) /
+[code](https://github.com/famebot/xeo/tree/xogo)) demonstrates all the
+customization options,&nbsp;including:
+
+- using an alternate favicon file (`/favicon.png`),
+- customizing the logo (`/logo.svg`),
+- fonts (Playpen & Poppins, see [Typography](#typography-) below),
+- and custom colors.
+
+[**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
+in Galician, like
+[**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
+and
+[**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
+
 ### Domains and URLs&nbsp;🕸️
 
 The [`location`](https://lume.land/docs/configuration/config-file/#location)
@@ -169,11 +202,6 @@ Preview the defaults,
 [Lexend](https://fonts.google.com/specimen/Lexend), at
 **[xeo.land](https://xeo.land/).**
 
-[**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
-in Galician, like
-[**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
-and
-[**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
 The source code powering the example is in the
 [`xogo` branch on GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L18).
 
