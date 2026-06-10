@@ -4,7 +4,7 @@ import { merge } from "lume/core/utils/object.ts";
 import basePath from "lume/plugins/base_path.ts";
 import date, { Options as DateOptions } from "lume/plugins/date.ts";
 import extractDate from "lume/plugins/extract_date.ts";
-import favicon from "lume/plugins/favicon.ts";
+import favicon, { Options as FaviconOptions } from "lume/plugins/favicon.ts";
 import feed, { Options as FeedOptions } from "lume/plugins/feed.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
 import metas from "lume/plugins/metas.ts";
@@ -46,6 +46,7 @@ export interface Options {
   };
 
   date?: Partial<DateOptions>;
+  favicon?: Partial<FaviconOptions>;
   feed?: Partial<FeedOptions>;
 
   fonts?: {
@@ -133,7 +134,7 @@ export default function (userOptions?: Options) {
       .use(sitemap())
       .use(feed(options.feed))
       .use(extractDate())
-      .use(favicon())
+      .use(favicon(options.favicon))
       .ignore("README.md")
       .ignore("LICENSE.md")
       .add("fonts")
