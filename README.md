@@ -8,11 +8,11 @@ Visit [xeo.land](https://xeo.land) for the live demo.
 [**Release Notes**](https://github.com/famebot/xeo/releases) (Contributions
 welcome: [famebot/xeo on GitHub](https://github.com/famebot/xeo))
 
-[![](https://data.jsdelivr.com/v1/package/gh/famebot/xeo/badge)](https://www.jsdelivr.com/package/gh/famebot/xeo)
-
 &copy; 2022-present [Óscar Otero](https://oscarotero.com/) &amp;
 [Ricky de Laveaga](https://rdela.com/);
 [MIT License](https://github.com/famebot/xeo/blob/trunk/LICENSE.md)
+
+[![](https://data.jsdelivr.com/v1/package/gh/famebot/xeo/badge)](https://www.jsdelivr.com/package/gh/famebot/xeo)
 
 ## 📇 Sites built with Xeo ❄️
 
