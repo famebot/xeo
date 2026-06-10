@@ -203,12 +203,13 @@ alongside your built site, ideally
 ## Install as a remote theme
 
 To add the theme to an existing Lume project, import it in your `_config.ts`
-file as a remote module. Update it by changing the version number in the
-import&nbsp;URL:
+file as a remote module. Update it by changing the version number in the import
+URL (or by using [Nudd](https://www.jsdelivr.com/package/gh/oscarotero/nudd)
+like Xeo and Xogo both&nbsp;do):
 
 ```ts
 import lume from "lume/mod.ts";
-import xeo from "https://deno.land/x/xeo@v5.0.0/mod.ts";
+import xeo from "https://cdn.jsdelivr.net/gh/famebot/xeo@8.1.0/mod.ts";
 
 const site = lume();
 
