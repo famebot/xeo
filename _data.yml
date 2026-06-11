@@ -8,14 +8,17 @@ archives:
   posts: 12
   tag: 12
   author: 12
-  basename: arquivo
+  # When customizing `archives.basename` here in _data.yml, remember to also
+  # change `archive_title` in _data/i18n.yml to title-case version of
+  # `archives.basename`: Updates
+  basename: updates
 
 copyright: "[Xeo](https://github.com/famebot/xeo) &copy; 2022-present [Óscar&nbsp;Otero](https://oscarotero.com/) &amp; [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/)"
 
 menu_links: []
 
 logo:
-  svg: "/favicon.svg"
+  svg: "/logo.svg"
   height: 48
 
 metas:

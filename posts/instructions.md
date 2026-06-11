@@ -23,25 +23,54 @@ will create a new project with Xeo&nbsp;configured.
 
 <!--more-->
 
-> [!NOTE]
+> [!note]
+>
 > **Xeo** began as a variant of the
 > [**Simple Blog**](https://lume.land/theme/simple-blog/) theme for
 > [**Lume**](https://lume.land/) by [Óscar Otero](https://oscarotero.com/). Over
 > time, eventually Xeo diverged substantially enough from Simple Blog that Óscar
-> and Ricky agreed it was time for Xeo to become a fully stand-alone theme.
+> and Ricky agreed it was time for Xeo to become a fully stand-alone&nbsp;theme.
 >
-> Starting with version 7, Xeo no longer depends on Simple Blog as its parent
-> theme. Because Xeo is no longer a child theme, using Xeo as a parent theme to
-> make your own child theme just got easier. Another bonus of the split is that
-> Simple Blog can now freely implement features that landed in Xeo first (like
-> custom fonts and colors) without having to worry about compatibility issues
-> with Xeo or downstream themes and sites that depend on&nbsp;Xeo.
+> Starting with Xeo version 7, Xeo no longer depends on Simple Blog as its
+> parent theme. Because Xeo is no longer a child theme, using Xeo as a parent
+> theme to make your own child theme just got easier. Another bonus of the split
+> is that Simple Blog can now freely implement features that landed in Xeo first
+> (like custom fonts and colors) without having to worry about compatibility
+> issues with Xeo or downstream themes and sites that depend on&nbsp;Xeo.
 
 ## Personalize Xeo
 
 Edit the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
 in your blog root folder with your data to customize the site title,
 description, and&nbsp;metadata.
+
+Xeo uses [Lume’s favicon plugin](https://lume.land/plugins/favicon/), and
+starting with Xeo version 8.1, Xeo allows you to control the favicon plugin’s
+`input` option to provide an alternate file other than the default,
+`./favicon.svg`, which had been hardcoded up through version 8.0.1. Thanks to
+[pamubay on GitHub](https://github.com/pamubay) for raising
+[this issue](https://github.com/famebot/xeo/issues/45) in
+[Lume GitHub&nbsp;discussions](https://github.com/lumeland/lume/discussions/814).
+
+> [!note]
+>
+> [Accepted formats](https://github.com/lumeland/lume/blob/main/plugins/favicon.ts)
+> are **SVG, PNG, JPG, GIF, BMP, TIFF,&nbsp;WEBP**
+
+Xogo ([live site](https://xogo.xeo.land/) /
+[code](https://github.com/famebot/xeo/tree/xogo)) demonstrates all the
+customization options,&nbsp;including:
+
+- using an alternate favicon file (`/favicon.png`),
+- customizing the logo (`/logo.svg`),
+- fonts (Playpen & Poppins, see [Typography](#typography) below),
+- and custom colors.
+
+[**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
+in Galician, like
+[**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
+and
+[**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
 
 > [!tip]
 >
@@ -54,12 +83,12 @@ The [`location`](https://lume.land/docs/configuration/config-file/#location)
 (development, production) and can be changed dynamically from the CLI
 (`deno task serve --location=https://example.com`). We encourage you to either
 configure `location` dynamically, as Xeo does for [xeo.land](https://xeo.land)
-(in [`deno.json`](https://github.com/famebot/xeo/blob/trunk/deno.json#L9) and
-[`netlify.toml`](https://github.com/famebot/xeo/blob/trunk/netlify.toml#L5)), or
-to set `location` in
-[`_config.ts`](https://github.com/lumeland/lume.land/blob/2f6da036fb0be93d9689ca29bb87c57c08b7f560/_config.ts#L34)
+(in [`deno.json`](https://github.com/famebot/xeo/blob/trunk/deno.json) and
+[`netlify.toml`](https://github.com/famebot/xeo/blob/trunk/netlify.toml)), or to
+set `location` in
+[`_config.ts`](https://github.com/lumeland/lume.land/blob/2f6da036fb0be93d9689ca29bb87c57c08b7f560/_config.ts)
 as [lume.land](https://lume.land/) does. The default value is
-[`https://localhost`](https://github.com/lumeland/lume.land/blob/main/docs/advanced/cheatsheet.md?plain=1#L27).
+[`https://localhost`](https://lume.land/docs/advanced/cheatsheet/#lume-instantiation).
 
 > [!note]
 >
@@ -105,13 +134,8 @@ Preview the defaults,
 [Lexend](https://fonts.google.com/specimen/Lexend),
 at&nbsp;**[xeo.land](https://xeo.land/).**
 
-[**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
-in Galician, like
-[**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
-and
-[**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
 The source code powering the example is in the
-[`xogo` branch on&nbsp;GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L18).
+[`xogo` branch on&nbsp;GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts).
 
 > [!note]
 >
@@ -156,7 +180,17 @@ Posts must be saved in the `posts` folder (for example,
 `posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
 directory, by setting
 [`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/`
-in&nbsp;[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml#L3).
+in&nbsp;[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml).
+
+To change the name of the archives in both the URL and in the site navigation,
+customize `archives.basename` in `_data.yml`, and remember to also change
+`archive_title` in `_data/i18n.yml` to title-case version of
+`archives.basename`. [Xogo does this](https://xogo.xeo.land/updates/), setting
+`archives.basename` in
+[`_data.yml`](https://github.com/famebot/xeo/blob/xogo/_data.yml) to `updates`
+and `archive_title` in
+[`_data/i18n.yml`](https://github.com/famebot/xeo/blob/xogo/_data/i18n.yml)
+to&nbsp;`Updates`.
 
 ### CMS
 
@@ -168,13 +202,29 @@ alongside your built site, ideally
 
 ## Install as a remote theme
 
-To add the theme to an existing Lume project, import it in your `_config.ts`
-file as a remote module. Update it by changing the version number in the
-import&nbsp;URL:
+To add the theme to an existing Lume project, add Xeo to imports in `deno.json`
+then import it in your `_config.ts` file as a remote module. Update it by
+changing the version number in the import URL (or by using
+[Nudd](https://www.jsdelivr.com/package/gh/oscarotero/nudd) by
+[Óscar Otero](https://oscarotero.com/) like Xeo and Xogo both&nbsp;do):
+
+`deno.json`:
+
+```json
+// […]
+"imports": {
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.6/",
+    // […]
+    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@8.1.0/"
+  },
+  // […]
+```
+
+`_config.ts`:
 
 ```ts
 import lume from "lume/mod.ts";
-import xeo from "https://deno.land/x/xeo@v5.0.0/mod.ts";
+import xeo from "xeo/mod.ts";
 
 const site = lume();
 
