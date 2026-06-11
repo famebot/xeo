@@ -262,14 +262,29 @@ alongside your built site, ideally
 
 ## Install as a remote theme&nbsp;🛰️
 
-To add the theme to an existing Lume project, import it in your `_config.ts`
-file as a remote module. Update it by changing the version number in the import
-URL (or by using [Nudd](https://www.jsdelivr.com/package/gh/oscarotero/nudd)
-like Xeo and Xogo both&nbsp;do):
+To add the theme to an existing Lume project, add Xeo to imports in `deno.json`
+then import it in your `_config.ts` file as a remote module. Update it by
+changing the version number in the import URL (or by using
+[Nudd](https://www.jsdelivr.com/package/gh/oscarotero/nudd) by
+[Óscar Otero](https://oscarotero.com/) like Xeo and Xogo both&nbsp;do):
+
+`deno.json`:
+
+```json
+// […]
+"imports": {
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.4/",
+    // […]
+    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@8.1.0/"
+  },
+  // […]
+```
+
+`_config.ts`:
 
 ```ts
 import lume from "lume/mod.ts";
-import xeo from "https://cdn.jsdelivr.net/gh/famebot/xeo@8.1.0/mod.ts";
+import xeo from "xeo/mod.ts";
 
 const site = lume();
 
@@ -279,7 +294,7 @@ export default site;
 ```
 
 Copy the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
-to your blog root folder and edit it with your data.
+to your blog root folder and edit it with your&nbsp;data.
 
 ## Use Xeo as a base template&nbsp;🧱
 
