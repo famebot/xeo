@@ -33,6 +33,7 @@ export default function (options: Partial<Options> = {}) {
       "archive.page.js",
       "favicon.svg",
       "index.vto",
+      "logo.svg",
       "styles.css",
     ];
 

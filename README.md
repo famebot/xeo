@@ -273,7 +273,7 @@ changing the version number in the import URL (or by using
 ```json
 // […]
 "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.4/",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.6/",
     // […]
     "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@8.1.0/"
   },
