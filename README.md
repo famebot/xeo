@@ -12,6 +12,8 @@ welcome: [famebot/xeo on GitHub](https://github.com/famebot/xeo))
 [Ricky de Laveaga](https://rdela.com/);
 [MIT License](https://github.com/famebot/xeo/blob/trunk/LICENSE.md)
 
+[![](https://data.jsdelivr.com/v1/package/gh/famebot/xeo/badge)](https://www.jsdelivr.com/package/gh/famebot/xeo)
+
 ## 📇 Sites built with Xeo ❄️
 
 - ### [Artist Activist](https://artact.io/artact-xeo/)
@@ -103,6 +105,39 @@ Edit the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
 in your blog root folder with your data to customize the site title,
 description, and metadata.
 
+## Personalize Xeo
+
+Edit the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
+in your blog root folder with your data to customize the site title,
+description, and&nbsp;metadata.
+
+Xeo uses [Lume’s favicon plugin](https://lume.land/plugins/favicon/), and
+starting with Xeo version 8.1, Xeo allows you to control the favicon plugin’s
+`input` option to provide an alternate file other than the default,
+`./favicon.svg`, which had been hardcoded up through version 8.0.1. Thanks to
+[pamubay on GitHub](https://github.com/pamubay) for raising
+[this issue](https://github.com/famebot/xeo/issues/45) in
+[Lume GitHub&nbsp;discussions](https://github.com/lumeland/lume/discussions/814).
+
+> ℹ️
+> [Accepted formats](https://github.com/lumeland/lume/blob/main/plugins/favicon.ts)
+> are **SVG, PNG, JPG, GIF, BMP, TIFF,&nbsp;WEBP**
+
+Xogo ([live site](https://xogo.xeo.land/) /
+[code](https://github.com/famebot/xeo/tree/xogo)) demonstrates all the
+customization options,&nbsp;including:
+
+- using an alternate favicon file (`/favicon.png`),
+- customizing the logo (`/logo.svg`),
+- fonts (Playpen & Poppins, see [Typography](#typography-) below),
+- and custom colors.
+
+[**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
+in Galician, like
+[**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
+and
+[**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
+
 ### Domains and URLs&nbsp;🕸️
 
 The [`location`](https://lume.land/docs/configuration/config-file/#location)
@@ -169,11 +204,6 @@ Preview the defaults,
 [Lexend](https://fonts.google.com/specimen/Lexend), at
 **[xeo.land](https://xeo.land/).**
 
-[**Xogo** means _play_ or _game_](https://translate.google.com/?sl=gl&tl=en&text=Xogo&op=translate)
-in Galician, like
-[**Xeo** means _ice_](https://translate.google.com/?sl=gl&tl=en&text=Xeo&op=translate)
-and
-[**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
 The source code powering the example is in the
 [`xogo` branch on GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L18).
 
@@ -232,13 +262,29 @@ alongside your built site, ideally
 
 ## Install as a remote theme&nbsp;🛰️
 
-To add the theme to an existing Lume project, import it in your `_config.ts`
-file as a remote module. Update it by changing the version number in the import
-URL:
+To add the theme to an existing Lume project, add Xeo to imports in `deno.json`
+then import it in your `_config.ts` file as a remote module. Update it by
+changing the version number in the import URL (or by using
+[Nudd](https://www.jsdelivr.com/package/gh/oscarotero/nudd) by
+[Óscar Otero](https://oscarotero.com/) like Xeo and Xogo both&nbsp;do):
+
+`deno.json`:
+
+```json
+// […]
+"imports": {
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.6/",
+    // […]
+    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@8.1.0/"
+  },
+  // […]
+```
+
+`_config.ts`:
 
 ```ts
 import lume from "lume/mod.ts";
-import xeo from "https://deno.land/x/xeo@v5.0.0/mod.ts";
+import xeo from "xeo/mod.ts";
 
 const site = lume();
 
@@ -248,7 +294,7 @@ export default site;
 ```
 
 Copy the [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml) file
-to your blog root folder and edit it with your data.
+to your blog root folder and edit it with your&nbsp;data.
 
 ## Use Xeo as a base template&nbsp;🧱
 
