@@ -137,6 +137,7 @@ export default function (userOptions?: Options) {
       .use(favicon(options.favicon))
       .ignore("README.md")
       .ignore("LICENSE.md")
+      .ignore("changelog_template.md")
       .add("fonts")
       .add([".css"])
       .add("js")

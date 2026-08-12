@@ -1,10 +1,10 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.4/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.6/",
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts",
-    "lume/markdown-plugins/": "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.10.0/",
-    "mdit/plugin-alert": "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@0.22.3/lib/index.js"
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.3.1/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.15.8/",
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.15/jsx-runtime.ts",
+    "lume/markdown-plugins/": "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.12.0/",
+    "mdit/plugin-alert": "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@2.0.0/dist/index.js"
   },
   "tasks": {
     "lume": {
@@ -28,7 +28,7 @@
     },
     "up": {
       "description": "Upgrade dependencies, including Lume",
-      "command": "deno run -A --quiet 'https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.11/cli.ts' update plugins.ts deno.json"
+      "command": "deno run -A --quiet 'https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.15/cli.ts' update plugins.ts deno.json"
     }
   },
   "compilerOptions": {
@@ -51,7 +51,7 @@
       ]
     },
     "plugins": [
-      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.4/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.3.1/lint.ts"
     ]
   },
   "fmt": {

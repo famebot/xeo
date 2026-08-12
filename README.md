@@ -1,7 +1,8 @@
 # 🧊 Xeo for Lume 🔥
 
 Welcome to **Xeo**, a _splendid_
-[**Lume theme**](https://lume.land/theme/simple-blog/).
+[**Lume theme**](https://lume.land/theme/simple-blog/) descended from Simple
+Blog.
 
 Visit [xeo.land](https://xeo.land) for the live demo.
 
