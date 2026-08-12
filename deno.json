@@ -1,11 +1,11 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.6/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.15.5/",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.3.1/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.15.8/",
     "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.15/jsx-runtime.ts",
     "lume/markdown-plugins/": "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.12.0/",
-    "mdit/plugin-alert": "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@0.22.3/lib/index.js",
-    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@8.1.0/"
+    "mdit/plugin-alert": "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@2.0.0/dist/index.js",
+    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@8.1.1/"
   },
   "tasks": {
     "lume": {
@@ -25,7 +25,7 @@
     "cms": "deno task lume cms",
     "lup": "deno task lume upgrade",
     "lupd": "deno task lume upgrade --dev",
-    "up": "deno run -A --quiet 'https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.11/cli.ts' update deno.json"
+    "up": "deno run -A --quiet 'https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.15/cli.ts' update deno.json"
   },
   "compilerOptions": {
     "types": [
@@ -47,7 +47,7 @@
       ]
     },
     "plugins": [
-      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.6/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.3.1/lint.ts"
     ]
   },
   "fmt": {
