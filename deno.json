@@ -5,7 +5,7 @@
     "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.15/jsx-runtime.ts",
     "lume/markdown-plugins/": "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.12.0/",
     "mdit/plugin-alert": "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@2.0.0/dist/index.js",
-    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@8.1.1/"
+    "xeo/": "https://cdn.jsdelivr.net/gh/famebot/xeo@9.0.1/"
   },
   "tasks": {
     "lume": {
