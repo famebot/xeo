@@ -28,9 +28,7 @@
         {{ set page = search.page(`type=tag tag="${tag}"`) }}
 
         {{ if page }}
-          <a data-pagefind-filter="tag" class="badge" href="{{ page.url }}">{{
-            tag
-          }}</a>
+          <a data-pagefind-filter="tag" class="badge" href="{{ page.url }}">{{ tag }}</a>
         {{ /if }}
       {{ /for }}
     </p>

@@ -4,7 +4,9 @@
  * https://github.com/sindresorhus/modern-normalize
  * https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css
  */
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 html {
@@ -18,10 +20,14 @@ html {
 body {
   margin: 0;
 }
-b, strong {
+b,
+strong {
   font-weight: bolder;
 }
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family:
     ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 1em;
@@ -29,7 +35,8 @@ code, kbd, pre, samp {
 small {
   font-size: 80%;
 }
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -44,13 +51,20 @@ sup {
 table {
   border-color: currentcolor;
 }
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
 }
-[type="button"], [type="reset"], [type="submit"], button {
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
   -webkit-appearance: button;
 }
 legend {
@@ -59,7 +73,8 @@ legend {
 progress {
   vertical-align: baseline;
 }
-::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
   height: auto;
 }
 [type="search"] {
@@ -118,29 +133,11 @@ input[type="submit"] {
   text-align: center;
   text-decoration: none;
 }
-:is(
-  button,
-  input[type="button"],
-  input[type="reset"],
-  input[type="submit"],
-  a[role="button"]
-):not(:disabled) {
+:is(button, input[type="button"], input[type="reset"], input[type="submit"], a[role="button"]):not(:disabled) {
   cursor: pointer;
 }
-:is(
-  button,
-  input[type="button"],
-  input[type="reset"],
-  input[type="submit"],
-  a[role="button"]
-):disabled,
-[aria-disabled="true"]:is(
-  button,
-  input[type="button"],
-  input[type="reset"],
-  input[type="submit"],
-  a[role="button"]
-) {
+:is(button, input[type="button"], input[type="reset"], input[type="submit"], a[role="button"]):disabled,
+[aria-disabled="true"]:is(button, input[type="button"], input[type="reset"], input[type="submit"], a[role="button"]) {
   opacity: 0.33;
   pointer-events: none;
 }
@@ -300,37 +297,11 @@ textarea {
   padding: 0.7em;
   width: 100%;
 }
-:is(
-  input[type="date"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="password"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"],
-  textarea
-):disabled {
+:is(input[type="date"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea):disabled {
   opacity: 0.33;
   pointer-events: none;
 }
-:is(
-  input[type="date"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="password"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"],
-  textarea
-)::placeholder {
+:is(input[type="date"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea)::placeholder {
   color: currentColor;
   opacity: 0.5;
 }
@@ -495,7 +466,9 @@ button[role="switch"][aria-checked="true"]:before {
   --code-background-selection: hsla(0, 0%, 93%, 0.15);
   color-scheme: dark;
 }
-*, :after, :before {
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
 html {
@@ -507,10 +480,12 @@ html {
   tab-size: 4;
   text-rendering: auto;
 }
-body, html {
+body,
+html {
   overflow-wrap: break-word;
 }
-body, html {
+body,
+html {
   background-color: var(--color-background);
   color: var(--color-base);
   font: var(--font-ui);
@@ -533,10 +508,14 @@ table {
   border-color: currentcolor;
   margin: 1em 0;
 }
-table td, table th {
+table td,
+table th {
   padding-right: 1em;
 }
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font: var(--font-code);
   font-variant-ligatures: none;
   letter-spacing: 0;
@@ -571,11 +550,19 @@ hr {
   color: var(--color-line);
   margin: var(--row-gap-medium) 0;
 }
-b, h1, h2, h3, h4, h5, h6, strong {
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   color: var(--color-text);
   font-weight: var(--font-bold);
 }
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -587,13 +574,20 @@ sub {
 sup {
   top: -0.5em;
 }
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
 }
-[type="button"], [type="reset"], [type="submit"], button {
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
   -webkit-appearance: button;
 }
 [type="search"] {
@@ -608,7 +602,8 @@ legend {
 progress {
   vertical-align: baseline;
 }
-::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
   height: auto;
 }
 ::-webkit-file-upload-button {
@@ -646,7 +641,11 @@ summary {
 .body > :first-child {
   margin-top: 0;
 }
-.body h2, .body h3, .body h4, .body h5, .body h6 {
+.body h2,
+.body h3,
+.body h4,
+.body h5,
+.body h6 {
   text-wrap: balance;
   color: var(--color-base);
   margin: 1.5em 0 0.5em;
@@ -657,7 +656,8 @@ summary {
   letter-spacing: var(--font-display-spacing);
   padding-bottom: 0.1em;
 }
-.body h1, .body h2 {
+.body h1,
+.body h2 {
   border-bottom: 1px solid var(--color-line);
 }
 .body h2 {
@@ -666,7 +666,11 @@ summary {
   padding-bottom: 0.2em;
 }
 .body {
-  :not(pre) > code, b, h1, h2, strong {
+  :not(pre) > code,
+  b,
+  h1,
+  h2,
+  strong {
     color: var(--color-base);
   }
   table {
@@ -679,7 +683,8 @@ summary {
     background: var(--color-highlight);
     color: var(--color-base);
   }
-  td, th {
+  td,
+  th {
     border-bottom: 1px solid var(--color-line);
     border-top: 1px solid var(--color-line);
     padding: 0.2em 1em;
@@ -823,7 +828,8 @@ blockquote {
   transition-duration: var(--animation-duration);
   transition-property: background-color, color;
 }
-.button:disabled, .button[aria-disabled="true"] {
+.button:disabled,
+.button[aria-disabled="true"] {
   cursor: default;
   opacity: 0.33;
   pointer-events: none;
@@ -850,7 +856,8 @@ blockquote {
   background: var(--background-hover, none);
   color: var(--color-hover, currentColor);
 }
-code[class*="language-"], pre[class*="language-"] {
+code[class*="language-"],
+pre[class*="language-"] {
   border-radius: var(--border-radius);
   color: var(--code-text);
   direction: ltr;
@@ -873,21 +880,24 @@ pre[class*="language-"] {
   overflow: auto;
   padding: 1em;
 }
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
   background: var(--code-background);
   border: 1px solid var(--code-border);
 }
 :not(pre) > code[class*="language-"] {
   padding: 0.15em 0.2em 0.05em;
 }
-.namespace, .token.punctuation {
+.namespace,
+.token.punctuation {
   opacity: 0.7;
 }
 .token {
   position: relative;
   z-index: 1;
 }
-.token.bold, .token.important {
+.token.bold,
+.token.important {
   font-weight: 700;
 }
 .token.italic {
@@ -896,7 +906,10 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
-.token.cdata, .token.comment, .token.doctype, .token.prolog {
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
   color: var(--code-comment);
 }
 .token.builtin,
@@ -907,7 +920,9 @@ pre[class*="language-"] {
 .token.symbol {
   color: var(--code-token-1);
 }
-.token.boolean, .token.number, .token.tag {
+.token.boolean,
+.token.number,
+.token.tag {
   color: var(--code-token-2);
 }
 .token.deleted {
@@ -925,7 +940,10 @@ pre[class*="language-"] {
 .token.variable {
   color: var(--code-token-3);
 }
-.token.atrule, .token.attr-name, .token.important, .token.regex {
+.token.atrule,
+.token.attr-name,
+.token.important,
+.token.regex {
   color: var(--code-token-4);
 }
 .emptyState {

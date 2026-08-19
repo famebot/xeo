@@ -23,6 +23,19 @@ welcome: [famebot/xeo on GitHub](https://github.com/famebot/xeo))
 
 ## Migration steps for versions 7 and lower
 
+[Version 9](https://github.com/famebot/xeo/releases/tag/v9.0.0) requires an
+update to `deno.json` for `@mdit/plugin-alert@2`:
+
+**Change this in `deno.json`**
+
+```diff
+-    "mdit/plugin-alert": "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@0.22.3/lib/index.js",
++    "mdit/plugin-alert": "https://cdn.jsdelivr.net/npm/@mdit/plugin-alert@2.0.0/dist/index.js",
+```
+
+That is, change **`/lib/`** to **`/dist/`** at the end of the line:
+`/lib/index.js",` to `/dist/index.js",`.
+
 [Version 8](https://github.com/famebot/xeo/releases/tag/v8.0.0) introduced more
 customization options that need to be set when you upgrade.
 
@@ -115,7 +128,7 @@ description, and&nbsp;metadata.
 Xeo uses [Lume’s favicon plugin](https://lume.land/plugins/favicon/), and
 starting with Xeo version 8.1, Xeo allows you to control the favicon plugin’s
 `input` option to provide an alternate file other than the default,
-`./favicon.svg`, which had been hardcoded up through version 8.0.1. Thanks to
+`/favicon.svg`, which had been hardcoded up through version 8.0.1. Thanks to
 [pamubay on GitHub](https://github.com/pamubay) for raising
 [this issue](https://github.com/famebot/xeo/issues/45) in
 [Lume GitHub&nbsp;discussions](https://github.com/lumeland/lume/discussions/814).
@@ -206,7 +219,7 @@ Preview the defaults,
 **[xeo.land](https://xeo.land/).**
 
 The source code powering the example is in the
-[`xogo` branch on GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L18).
+[`xogo` branch on GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L20).
 
 > ℹ️ Discover how to
 > [find the correct “share page link”](https://xeo.land/differences/#typography),

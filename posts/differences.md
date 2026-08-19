@@ -75,7 +75,7 @@ Where do they diverge?
   and
   [**Lume** means _fire_](https://translate.google.com/?sl=gl&tl=en&text=Lume&op=translate).
   The source code powering the example is in the
-  [`xogo` branch on&nbsp;GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L18).
+  [`xogo` branch on&nbsp;GitHub](https://github.com/famebot/xeo/blob/xogo/_config.ts#L6-L20).
   We chose Lexend over Poppins because
   [variable fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   have performance benefits since they combine many different variations of a
@@ -91,18 +91,25 @@ Where do they diverge?
 
 ## Design
 
-- **Spacing:** Xeo adjusts spacing around various elements, particularly page
-  headers and the [search box](/archive/), which is relocated to the bottom of
-  pages to reduce layout shift when search results&nbsp;appear.
+- **Favicon:** Starting with Xeo version 8.1,
+  [you can control the favicon plugin’s `input` option](/instructions/#personalize-xeo),
+  providing an alternate file instead of the default, `favicon.svg` (which you
+  can more easily override the usual way by adding a file of the same name). For
+  an example, see how
+  [Xogo uses `favicon.png`](https://github.com/famebot/xeo/blob/xogo/_config.ts#L13).
 
 - **Color:** Xeo has a
-  [foundation](https://github.com/famebot/xeo/blob/trunk/styles.css) that will
-  lead to eventual support of
+  [foundation](https://github.com/famebot/xeo/blob/trunk/styles.css) that allows
+  you to use custom colors already, and will lead to eventual support of
   [Rainbow Mode](https://eleventeen.netlify.app/about/#rainbow-mode) powered by
   [Chromagen](https://chromagen.io/), like Xeo’s predecessor
   [eleventeen](https://eleventeen.netlify.app/about/). Chromagen generated Xeo’s
   current color schemes, but has not yet been wired up to Xeo to the degree it
   has been integrated into&nbsp;eleventeen.
+
+- **Spacing:** Xeo adjusts spacing around various elements, particularly page
+  headers and the [search box](/archive/), which is relocated to the bottom of
+  pages to reduce layout shift when search results&nbsp;appear.
 
 ## [Front matter optional](/2025-12-solstice/)
 
@@ -135,3 +142,9 @@ posts both have `date` and `author` in the
 incomplete date in the `2025-12-solstice.md` source filename does not have a day
 value, it gets parsed as part of the title,
 [2025-12&nbsp;solstice](/2025-12-solstice/).
+
+---
+
+> [!tip]
+>
+> Read [How to install&nbsp;Xeo](/instructions/) next.

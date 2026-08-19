@@ -1,11 +1,9 @@
 {{ if pagination.totalPages !== 1 }}
   <nav class="page-pagination pagination">
-    <ul>
+  <ul>
       {{- if pagination.previous }}
         <li class="pagination-prev">
-          <a href="{{ pagination.previous }}" rel="prev">{{
-            i18n.nav.previous
-          }}</a>
+          <a href="{{ pagination.previous }}" rel="prev">{{ i18n.nav.previous }}</a>
         </li>
       {{ /if }}
 
@@ -19,5 +17,5 @@
         </li>
       {{ /if }}
     </ul>
-  </nav>
+</nav>
 {{ /if }}
