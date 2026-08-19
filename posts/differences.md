@@ -40,7 +40,7 @@ Where do they diverge?
 Xeo serves your posts from the root directory instead of `/posts`. Xeo also
 allows you to change the name of the archives in both the URL and in the site
 navigation.
-[Read about how to set up both options here](instructions/#blogging).
+[Read about how to set up both options here](/instructions/#blogging).
 
 ## Typography
 
