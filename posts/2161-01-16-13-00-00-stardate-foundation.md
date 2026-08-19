@@ -37,13 +37,14 @@ Kiribati, Samoa, Tonga, and USA Minor Outlying Islands. Because the partial,
 incomplete date in (`2025-12-solstice.md`) does not have a day value, it gets
 parsed as part of the title, [2025-12&nbsp;solstice](/2025-12-solstice/).
 
-When Lume processes the `index.md` file contained in the `no-title` folder, the
-[`basename`](https://lume.land/docs/creating-pages/urls/#basename) gets
-transformed to “[No title](/no-title/)” in the built site because the `index.md`
-file works like an `index.html` file and assumes the name of its&nbsp;directory.
-
 ## [Stardate](https://en.wikipedia.org/wiki/Stardate) 2161
 
 Feeling great about the founding of
 [The United Federation of Planets](https://en.wikipedia.org/wiki/United_Federation_of_Planets)
 by Earth, Tellar, Andoria, and&nbsp;Vulcan&nbsp;🖖
+
+---
+
+> [!tip]
+>
+> Read [How to install&nbsp;Xeo](/instructions/) next.

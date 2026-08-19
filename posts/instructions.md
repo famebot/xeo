@@ -47,7 +47,7 @@ description, and&nbsp;metadata.
 Xeo uses [Lume’s favicon plugin](https://lume.land/plugins/favicon/), and
 starting with Xeo version 8.1, Xeo allows you to control the favicon plugin’s
 `input` option to provide an alternate file other than the default,
-`./favicon.svg`, which had been hardcoded up through version 8.0.1. Thanks to
+`/favicon.svg`, which had been hardcoded up through version 8.0.1. Thanks to
 [pamubay on GitHub](https://github.com/pamubay) for raising
 [this issue](https://github.com/famebot/xeo/issues/45) in
 [Lume GitHub&nbsp;discussions](https://github.com/lumeland/lume/discussions/814).
@@ -241,3 +241,9 @@ to your blog root folder and edit it with your&nbsp;data.
 To use this theme as a base template for a more customized blog, clone
 [famebot/xeo](https://github.com/famebot/xeo) on GitHub and edit the
 [`_data.yml`](https://github.com/famebot/xeo/blob/trunk/_data.yml)&nbsp;file.
+
+---
+
+> [!tip]
+>
+> Read [Differences between Xeo and Simple&nbsp;Blog](/differences/) next.

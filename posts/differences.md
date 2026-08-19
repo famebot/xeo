@@ -91,11 +91,12 @@ Where do they diverge?
 
 ## Design
 
-- **Favicon:** Starting with Xeo version 8.1, you can control the favicon
-  plugin’s `input` option, providing an alternate file instead of the default,
-  `./favicon.svg` (which you can more easily override the usual way by adding a
-  file of the same name). For an example, see how
-  [Xogo uses `/favicon.png`](https://github.com/famebot/xeo/blob/xogo/_config.ts#L13).
+- **Favicon:** Starting with Xeo version 8.1,
+  [you can control the favicon plugin’s `input` option](/instructions/#personalize-xeo),
+  providing an alternate file instead of the default, `favicon.svg` (which you
+  can more easily override the usual way by adding a file of the same name). For
+  an example, see how
+  [Xogo uses `favicon.png`](https://github.com/famebot/xeo/blob/xogo/_config.ts#L13).
 
 - **Color:** Xeo has a
   [foundation](https://github.com/famebot/xeo/blob/trunk/styles.css) that allows
@@ -141,3 +142,9 @@ posts both have `date` and `author` in the
 incomplete date in the `2025-12-solstice.md` source filename does not have a day
 value, it gets parsed as part of the title,
 [2025-12&nbsp;solstice](/2025-12-solstice/).
+
+---
+
+> [!tip]
+>
+> Read [How to install&nbsp;Xeo](/instructions/) next.
