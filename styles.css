@@ -1,4 +1,4 @@
-/* 
+/*
  * Lume Design System 0.6.0 - Unreleased
  * https://github.com/lumeland/ds
  * https://cdn.jsdelivr.net/npm/@lumeland/ds/ds.css
@@ -174,7 +174,14 @@ footer {
 prevent --color-text override in _includes/css/ds.css 0.5.2 L604
 https://github.com/lumeland/ds/blob/v0.5.2/src/reset.css#L78
 */
-b, h1, h2, h3, h4, h5, h6, strong {
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   color: currentColor;
 }
 /*
@@ -182,7 +189,11 @@ prevent --color-base override in _includes/css/ds.css 0.5.2 L656
 https://github.com/lumeland/ds/blob/v0.5.2/src/components/body.css#L34
 */
 .body {
-  :not(pre) > code, b, h1, h2, strong {
+  :not(pre) > code,
+  b,
+  h1,
+  h2,
+  strong {
     color: currentColor;
   }
 }
