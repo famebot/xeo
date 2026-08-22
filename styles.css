@@ -19,8 +19,8 @@
   :root {
     --font-family-display: display, var(--font-family-ui);
     --font-family-ui: text,system-ui,sans-serif;
-    --font-display-spacing: 0;
-    --font-title-spacing: 0.00625em;
+    --font-display-spacing: 0.03125ch;
+    --font-title-spacing: 0.0625ch;
     --font-body-spacing: 0;
     font-feature-settings: "liga" 1, "calt" 1;
   }
@@ -32,7 +32,11 @@
     "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
     "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono",
     "Nimbus Mono L", "Courier New", Courier, monospace;
-  --font-title: var(--font-bold) clamp(1.5rem, 8vw, 2rem)/1.2 var(
+  --font-regular: 400;
+  --font-title: var(--font-regular) clamp(1.5rem, 8vw, 2rem)/1.2 var(
+    --font-family-display
+  );
+  --font-display: var(--font-regular) clamp(2rem, 10vw, 4rem)/1 var(
     --font-family-display
   );
 }
