@@ -101,6 +101,32 @@ as [lume.land](https://lume.land/) does. The default value is
 > and [`lume cms`](https://lume.land/cms/#run-in-localhost) to change the
 > default `localhost` value there as&nbsp;well.
 
+### Blogging
+
+Posts must be saved in the `posts` folder (for example,
+`posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
+directory, by setting
+[`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/`
+in&nbsp;[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml).
+
+To change the name of the archives in both the URL and in the site navigation,
+customize `archives.basename` in `_data.yml`, and remember to also change
+`archive_title` in `_data/i18n.yml` to title-case version of
+`archives.basename`. [Xogo does this](https://xogo.xeo.land/updates/), setting
+`archives.basename` in
+[`_data.yml`](https://github.com/famebot/xeo/blob/xogo/_data.yml) to `updates`
+and `archive_title` in
+[`_data/i18n.yml`](https://github.com/famebot/xeo/blob/xogo/_data/i18n.yml)
+to&nbsp;`Updates`.
+
+### CMS
+
+Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
+site easily in a web browser. You can
+[run LumeCMS locally](https://lume.land/cms/#run-in-localhost) or publish it
+alongside your built site, ideally
+[deployed to a&nbsp;VPS](https://lume.land/cms/deployment/vps/).
+
 ### Typography
 
 To [**configure which Google fonts Xeo uses**](/differences/#typography),
@@ -173,32 +199,6 @@ from the configuration&nbsp;above.
 See the defaults in
 [`plugins.ts`](https://github.com/famebot/xeo/blob/trunk/plugins.ts) for a list
 of all `colors` options.
-
-### Blogging
-
-Posts must be saved in the `posts` folder (for example,
-`posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
-directory, by setting
-[`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/`
-in&nbsp;[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml).
-
-To change the name of the archives in both the URL and in the site navigation,
-customize `archives.basename` in `_data.yml`, and remember to also change
-`archive_title` in `_data/i18n.yml` to title-case version of
-`archives.basename`. [Xogo does this](https://xogo.xeo.land/updates/), setting
-`archives.basename` in
-[`_data.yml`](https://github.com/famebot/xeo/blob/xogo/_data.yml) to `updates`
-and `archive_title` in
-[`_data/i18n.yml`](https://github.com/famebot/xeo/blob/xogo/_data/i18n.yml)
-to&nbsp;`Updates`.
-
-### CMS
-
-Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
-site easily in a web browser. You can
-[run LumeCMS locally](https://lume.land/cms/#run-in-localhost) or publish it
-alongside your built site, ideally
-[deployed to a&nbsp;VPS](https://lume.land/cms/deployment/vps/).
 
 ## Install as a remote theme
 

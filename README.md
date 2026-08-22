@@ -15,16 +15,28 @@ welcome: [famebot/xeo on GitHub](https://github.com/famebot/xeo))
 
 [![](https://data.jsdelivr.com/v1/package/gh/famebot/xeo/badge)](https://www.jsdelivr.com/package/gh/famebot/xeo)
 
-## 📇 Sites built with Xeo ❄️
+> [!NOTE]
+> **Xeo** began as a variant of the
+> [**Simple Blog**](https://lume.land/theme/simple-blog/) theme for
+> [**Lume**](https://lume.land/) by [Óscar Otero](https://oscarotero.com/). Over
+> time, eventually Xeo diverged substantially enough from Simple Blog that Óscar
+> and Ricky agreed it was time for Xeo to become a fully stand-alone theme.
+>
+> Starting with version 7, Xeo no longer depends on Simple Blog as its parent
+> theme. Because Xeo is no longer a child theme, using Xeo as a parent theme to
+> make your own child theme just got easier. Another bonus of the split is that
+> Simple Blog can now freely implement features that landed in Xeo first (like
+> custom fonts and colors) without having to worry about compatibility issues
+> with Xeo or downstream themes and sites that depend on Xeo.
 
-- ### [Artist Activist](https://artact.io/artact-xeo/)
+## Migration steps for older versions
 
-- ### [Ricky de Laveaga](https://rdela.com/credits/)
+### 8.1.1+
 
-## Migration steps for versions 7 and lower
-
-[Version 9](https://github.com/famebot/xeo/releases/tag/v9.0.0) requires an
-update to `deno.json` for `@mdit/plugin-alert@2`:
+[Version 8.1.1](https://github.com/famebot/xeo/releases/tag/v8.1.1) (re-released
+as [Version 9](https://github.com/famebot/xeo/releases/tag/v9.0.0) to reflect
+its unfortunate breaking change) and higher require an update to `deno.json` for
+`@mdit/plugin-alert@2`:
 
 **Change this in `deno.json`**
 
@@ -35,6 +47,8 @@ update to `deno.json` for `@mdit/plugin-alert@2`:
 
 That is, change **`/lib/`** to **`/dist/`** at the end of the line:
 `/lib/index.js",` to `/dist/index.js",`.
+
+### 8.0.0+
 
 [Version 8](https://github.com/famebot/xeo/releases/tag/v8.0.0) introduced more
 customization options that need to be set when you upgrade.
@@ -68,20 +82,6 @@ customization options that need to be set when you upgrade.
    - `logo` is now `logo.svg` (default is still: `/favicon.svg`)
 
    - `logo_height` is now `logo.height` (default is still: `48`)
-
-> [!NOTE]
-> **Xeo** began as a variant of the
-> [**Simple Blog**](https://lume.land/theme/simple-blog/) theme for
-> [**Lume**](https://lume.land/) by [Óscar Otero](https://oscarotero.com/). Over
-> time, eventually Xeo diverged substantially enough from Simple Blog that Óscar
-> and Ricky agreed it was time for Xeo to become a fully stand-alone theme.
->
-> Starting with version 7, Xeo no longer depends on Simple Blog as its parent
-> theme. Because Xeo is no longer a child theme, using Xeo as a parent theme to
-> make your own child theme just got easier. Another bonus of the split is that
-> Simple Blog can now freely implement features that landed in Xeo first (like
-> custom fonts and colors) without having to worry about compatibility issues
-> with Xeo or downstream themes and sites that depend on Xeo.
 
 ## Quick start 🎬
 
@@ -175,6 +175,25 @@ as [lume.land](https://lume.land/) does. The default value is
 > and [`lume cms`](https://lume.land/cms/#run-in-localhost) to change the
 > default `localhost` value there as well.
 
+## Blogging 📝
+
+Posts must be saved in the `posts` folder (for example,
+`posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
+directory, by setting
+[`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/` in
+[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml#L3).
+
+## CMS ✍️
+
+> 💡 Use [LumeCMS](https://lume.land/cms/) to customize the blog and add content
+> easily.
+
+Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
+site easily in a web browser. You can
+[run LumeCMS locally](https://lume.land/cms/#run-in-localhost) or publish it
+alongside your built site, ideally
+[deployed to a VPS](https://lume.land/cms/deployment/vps/).
+
 ### Typography 🔤
 
 Xeo uses [Lume’s Google Fonts plugin](https://lume.land/plugins/google_fonts/)
@@ -255,25 +274,6 @@ See the defaults in
 [`plugins.ts`](https://github.com/famebot/xeo/blob/trunk/plugins.ts) for a list
 of all `colors` options.
 
-## Blogging 📝
-
-Posts must be saved in the `posts` folder (for example,
-`posts/my-first-post.md`). Unlike Simple Blog, Xeo serves them from the root
-directory, by setting
-[`basename`](https://lume.land/docs/creating-pages/urls/#basename) to `/` in
-[`posts/_data.yml`](https://github.com/famebot/xeo/blob/trunk/posts/_data.yml#L3).
-
-## CMS ✍️
-
-> 💡 Use [LumeCMS](https://lume.land/cms/) to customize the blog and add content
-> easily.
-
-Like Simple Blog, Xeo includes [LumeCMS](https://lume.land/cms) to edit your
-site easily in a web browser. You can
-[run LumeCMS locally](https://lume.land/cms/#run-in-localhost) or publish it
-alongside your built site, ideally
-[deployed to a VPS](https://lume.land/cms/deployment/vps/).
-
 ## Install as a remote theme&nbsp;🛰️
 
 To add the theme to an existing Lume project, add Xeo to imports in `deno.json`
@@ -329,3 +329,9 @@ To use this theme as a base template for a more customized blog, clone
   report issues
 
 - [Support Lume](https://opencollective.com/lume) development ❤️‍🔥
+
+## 📇 Sites built with Xeo ❄️
+
+- ### [Artist Activist](https://artact.io/artact-xeo/)
+
+- ### [Ricky de Laveaga](https://rdela.com/credits/)
