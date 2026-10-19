@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if it.title === "Home" }}{{ metas.site }}{{ else }}{{ it.title || metas.title }} - {{ metas.site }}{{ /if }}</title>
+    <title>{{ if it.title === metas.site }}{{ metas.site }}{{ else }}{{ it.title || metas.title }} - {{ metas.site }}{{ /if }}</title>
     <link rel="stylesheet" href="/color-options.css">
     <link rel="stylesheet" href="/styles.css">
     <link
