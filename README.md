@@ -1,8 +1,7 @@
 # 🧊 Xeo for Lume 🔥
 
-Welcome to **Xeo**, a _splendid_
-[**Lume theme**](https://lume.land/theme/simple-blog/) descended from Simple
-Blog.
+Welcome to [**Xeo**](https://lume.land/theme/xeo/), an image and video blogging
+theme for [**Lume**](https://lume.land/).
 
 Visit [xeo.land](https://xeo.land) for the live demo.
 
@@ -18,16 +17,7 @@ welcome: [famebot/xeo on GitHub](https://github.com/famebot/xeo))
 > [!NOTE]
 > **Xeo** began as a variant of the
 > [**Simple Blog**](https://lume.land/theme/simple-blog/) theme for
-> [**Lume**](https://lume.land/) by [Óscar Otero](https://oscarotero.com/). Over
-> time, eventually Xeo diverged substantially enough from Simple Blog that Óscar
-> and Ricky agreed it was time for Xeo to become a fully stand-alone theme.
->
-> Starting with version 7, Xeo no longer depends on Simple Blog as its parent
-> theme. Because Xeo is no longer a child theme, using Xeo as a parent theme to
-> make your own child theme just got easier. Another bonus of the split is that
-> Simple Blog can now freely implement features that landed in Xeo first (like
-> custom fonts and colors) without having to worry about compatibility issues
-> with Xeo or downstream themes and sites that depend on Xeo.
+> [**Lume**](https://lume.land/) by [Óscar Otero](https://oscarotero.com/).
 
 ## Migration steps for older versions
 
