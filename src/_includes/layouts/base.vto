@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="{{ it.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ it.title || metas.title }} - {{ metas.site }}</title>
+
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metas.site }}">
+    <link rel="alternate" href="/feed.json" type="application/json" title="{{ metas.site }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="canonical" href="{{ url |> url(true) }}">
+    <script src="/script.js" type="module"></script>
+    <script>
+      let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light");
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.setAttribute("data-pf-theme", theme);
+      function changeTheme() {
+        theme = theme === "dark" ? "light" : "dark";
+        localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.setAttribute("data-pf-theme", theme);
+      }
+    </script>
+    {{ it.extra_head?.join("\n") }}
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar-home">
+        {{ if it.logo }}
+          {{ it.logo }}
+        {{ else }}
+          <strong>{{ metas.site }}</strong>
+        {{ /if }}
+      </a>
+
+      <ul class="navbar-links">
+      {{- for entry of search.pages("menu.visible=true", "menu.order") }}
+        <li>
+          <a href="{{ entry.url }}"{{ if entry.url == url }} aria-current="page"{{ /if }}>
+            {{ entry.menu.title || entry.title }}
+          </a>
+        </li>
+      {{ /for }}
+      {{- for link of it.menu_links }}
+        <li>
+          <a href="{{ link.href }}"{{ if link.target }} target="{{link.target}}"{{ /if }}>
+            {{ link.text }}
+          </a>
+        </li>
+      {{ /for }}
+      </ul>
+
+      <div class="navbar-search">
+        <pagefind-config bundle-path="{{ '/pagefind/' |> url(true) }}"></pagefind-config>
+        <pagefind-modal-trigger></pagefind-modal-trigger>
+        <pagefind-modal></pagefind-modal>
+      </div>
+    </nav>
+
+    <main class="{{ it.bodyClass }}">
+      {{ content }}
+    </main>
+
+    <footer class="footer">
+      <button class="button" onclick="changeTheme()" title="{{ i18n.footer.theme_button }}">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24M40 128a88.1 88.1 0 0 1 88-88v176a88.1 88.1 0 0 1-88-88"/></svg>
+      </button>
+      <p>{{ i18n.footer.text }}</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "name": "@famebot/xeo",
+  "version": "10.0.0",
+  "description": "Image and video blogging theme for Lume",
+  "keywords": [
+    "lume-theme"
+  ],
+  "license": "MIT",
+  "contributors": [
+    "Óscar Otero (https://oscarotero.com/)",
+    "Ricky de Laveaga (https://rdela.com)"
+  ],
+  "files": [
+    "build",
+    "CHANGELOG.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "scripts": {
+    "start": "lume build -s",
+    "build": "rm -rf package && tsc -p . && cp -r src build && pnpm pack --out=package.tgz && rm -rf build && tar -xzf package.tgz && rm package.tgz && node build.js && oxfmt package/*",
+    "fmt": "oxfmt ."
+  },
+  "dependencies": {
+    "@lumeland/cms": "^1.0.0",
+    "@lumeland/plugin-base-path": "^1.0.0",
+    "@lumeland/plugin-cms": "^1.0.0",
+    "@lumeland/plugin-date": "^1.0.0",
+    "@lumeland/plugin-feed": "^1.0.0",
+    "@lumeland/plugin-lightningcss": "^1.0.0",
+    "@lumeland/plugin-markdown-footnotes": "^1.0.1",
+    "@lumeland/plugin-metas": "^1.0.0",
+    "@lumeland/plugin-pagefind": "^1.0.0",
+    "@lumeland/plugin-prism": "^1.0.0",
+    "@lumeland/plugin-reading-info": "^1.0.0",
+    "@lumeland/plugin-resolve-urls": "^1.0.0",
+    "@lumeland/plugin-sitemap": "^1.0.0",
+    "@lumeland/plugin-slugify-urls": "^1.0.0",
+    "@lumeland/plugin-terser": "^1.0.0",
+    "@lumeland/plugin-toc": "^1.0.0",
+    "@mdit/plugin-alert": "^2.0.3"
+  },
+  "devDependencies": {
+    "@lumeland/lume": "^4.0.0",
+    "@types/node": "^26.6.6",
+    "oxfmt": "^0.75.0",
+    "typescript": "^7.0.2"
+  },
+  "peerDependencies": {
+    "@lumeland/core": "^1.0.1"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.18.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.18.0"
+}

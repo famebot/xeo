@@ -1,0 +1,78 @@
+---
+layout: layouts/base.vto
+bodyClass: body-post
+---
+<article class="post" data-pagefind-body data-title="{{ title }}" data-pagefind-index-attrs="data-title">
+  <header class="post-header">
+    <h1 class="post-title">{{ title }}</h1>
+
+    {{ include "templates/post-details.vto" }}
+  </header>
+
+  <nav toc="content" class="toc">
+    <h2>{{ i18n.nav.toc }}</h2>
+
+  </nav>
+
+  <div id="content" class="post-body body">
+    {{ content }}
+  </div>
+
+  {{ if footnotes?.length }}
+  <aside role="note" class="footnotes">
+    <dl>
+      {{ for note of footnotes }}
+      <div id={{ note.id }} class="footnote">
+        <dt><a href="#{{ note.refId }}">{{ note.label }}</a></dt>
+        <dd>{{ note.content }}</dd>
+      </div>
+      {{ /for }}
+    </dl>
+  </aside>
+  {{ /if }}
+
+  {{ if comments?.src || comments?.bluesky }}
+  <aside class="comments-section">
+    <header class="comments-header">
+      <h2>{{ i18n.comments.title }}</h2>
+      {{ if comments.bluesky && comments.src }}
+      <p>{{ i18n.comments.description_all.replace(":src:", comments.src).replace(":bluesky:", comments.bluesky) }}</p>
+      {{ else if comments.src }}
+      <p>{{ i18n.comments.description.replace(":src:", comments.src) }}</p>
+      {{ else }}
+      <p>{{ i18n.comments.description_bluesky.replace(":bluesky:", comments.bluesky) }}</p>
+      {{ /if }}
+    </header>
+    <mastodon-comments bluesky="{{ it.comments.bluesky}}" mastodon="{{ it.comments.src }}" cache="{{ it.comments.cache ?? 60 }}" class="comments">
+      {{ i18n.comments.empty }}
+    </mastodon-comments>
+  </aside>
+  {{ /if }}
+</article>
+
+{{- set previousPost = search.previousPage(url, "type=post") }}
+{{- set nextPost = search.nextPage(url, "type=post") }}
+
+{{ if previousPost || nextPost }}  
+  <nav class="page-pagination pagination">
+    <ul>
+      {{- if previousPost }}
+      <li class="pagination-prev">
+        <a href="{{ previousPost.url }}" rel="prev">
+          <span>{{ i18n.nav.previous_post }}</span>
+          <strong>{{ previousPost.title }}</strong>
+        </a>
+      </li>
+      {{ /if }}
+
+      {{- if nextPost }}
+      <li class="pagination-next">
+        <a href="{{ nextPost.url }}" rel="next">
+          <span>{{ i18n.nav.next_post }}</span>
+          <strong>{{ nextPost.title }}</strong>
+        </a>
+      </li>
+      {{ /if }}
+    </ul>
+  </nav>
+{{ /if }}
