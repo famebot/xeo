@@ -70,7 +70,8 @@ export default function (userOptions?: Options) {
       .add("fonts")
       .add([".css"])
       .add("js")
-      .add("favicon.png")
+      .add("favicon.svg")
+      .add("logo.svg")
       .add("uploads")
       .mergeKey("extra_head", "stringArray")
       .preprocess([".md"], (pages) => {

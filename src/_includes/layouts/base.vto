@@ -4,12 +4,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ it.title || metas.title }} - {{ metas.site }}</title>
+    <title>{{ if it.title === metas.site }}{{ metas.site }}{{ else }}{{ it.title || metas.title }} - {{ metas.site }}{{ /if }}</title>
 
     <meta name="supported-color-schemes" content="light dark">
     <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+    {{# 
+    <meta
+      name="theme-color"
+      content="hsl(var(--a), 20%, 100%)"
+      media="(prefers-color-scheme: light)"
+    >
+    <meta
+      name="theme-color"
+      content="hsl(var(--a), 65%, 0%)"
+      media="(prefers-color-scheme: dark)"
+    >
+    #}}
     
+    {{# <link rel="stylesheet" href="/color-options.css"> #}}
     <link rel="stylesheet" href="/style.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metas.site }}">
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ metas.site }}">
@@ -35,7 +48,12 @@
     <nav class="navbar">
       <a href="/" class="navbar-home">
         {{ if it.logo }}
-          {{ it.logo }}
+          <img
+            src="{{ it.logo.svg }}"
+            height="{{ it.logo.height }}"
+            alt="{{ metas.site }}"
+            title="{{ metas.site }}"
+          />
         {{ else }}
           <strong>{{ metas.site }}</strong>
         {{ /if }}

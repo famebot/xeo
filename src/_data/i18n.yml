@@ -11,7 +11,7 @@ nav:
   previous: ← Previous
 footer:
   theme_button: Switch light/dark mode
-  text: Powered by <a href="https://lume.land">Lume + Simple Theme</a>
+  text: Powered by <a href="https://lume.land">Lume</a> + <a href="https://xeo.land">Xeo</a> theme
 post:
   by: by
   reading_time: min read

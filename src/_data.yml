@@ -1,16 +1,32 @@
 lang: en
 
 home:
-  welcome: Hello, I am a person that writes stuff.
+  welcome: "\U0001F9CA Xeo for Lume \U0001F525"
+  intro: "[**Lume theme page**](https://lume.land/theme/xeo/) • [**Source code**](https://github.com/famebot/xeo)"
+  posts: 12
+
+archives:
+  posts: 12
+  tag: 12
+  author: 12
+  basename: archive
+
+copyright: "[Xeo](https://github.com/famebot/xeo) &copy; 2022-present [Óscar&nbsp;Otero](https://oscarotero.com/) &amp; [Ricky&nbsp;de&nbsp;Laveaga](https://rdela.com/)"
+
+logo:
+  svg: "/logo.svg"
+  height: 64
 
 menu_links: []
 extra_head: []
 
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
-  site: Blog name
-  description: General description of the blog
-  title: "=title"
-  image: "=image"
-  twitter: "@username"
+  site: Xeo (demo)
+  description: =excerpt || Image and video blogging theme for Lume
+  title: =title
+  image: =image || /img/xeo-720p.png
+  # twitter: "@famebot"
+  mastodon: "@famebot@mastodon.social"
   lang: en
+  generator: false
